@@ -4,6 +4,3 @@ parts:
   - caption: Introduction
     chapters:
     - file: 01-introduction
-  - caption: Methodology
-    chapters:
-    - file: 02-methodology
