@@ -1,6 +1,6 @@
 format: jb-book
-root: 00-setup
+root: "00-setup.ipynb"
 parts:
   - caption: Introduction
     chapters:
-    - file: 01-introduction
+    - file: "01-introduction.ipynb"
