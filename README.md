@@ -29,4 +29,9 @@ Neurolibre format for `Nonlinear Dimensionality Reduction for Enhanced Unsupervi
         - name: Checkout
             uses: actions/checkout@v4
     ```
-- 
+- `draft-pdf.yml` :  Github now requires v1 instead of `actions/upload-artifact@v2`
+
+    ```
+    - name: Upload
+        uses: actions/upload-artifact@v2
+    ```
