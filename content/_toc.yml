@@ -1,9 +1,9 @@
 format: jb-book
-root: 00-simple_markdown
+root: 00-setup
 parts:
-  - caption: Ipynb
+  - caption: Introduction
     chapters:
-    - file: 01-simple_notebook
-  - caption: MyST
+    - file: 01-introduction
+  - caption: Methodology
     chapters:
-    - file: 02-simple-myst
+    - file: 02-methodology
