@@ -6,12 +6,27 @@ Neurolibre format for `Nonlinear Dimensionality Reduction for Enhanced Unsupervi
 
 ### content
 
-- '_config.yml' : Configuration (reference [here](https://jupyterbook.org/en/stable/customize/config.html))
+- `_config.yml` : Configuration (reference [here](https://jupyterbook.org/en/stable/customize/config.html))
     - Used default
-- '_toc.yml' : File structure (reference [here](https://jupyterbook.org/en/stable/structure/toc.html))
+- `_toc.yml` : File structure (reference [here](https://jupyterbook.org/en/stable/structure/toc.html))
 
 ### binder
 
-- 'data_requirement.json' : Template for Zenodo
-- 'requirements.txt' : Necessary packages
-- 'runtime.txt' " Python-3.12
+- `data_requirement.json` : Template for Zenodo
+- `requirements.txt` : Necessary packages
+- `runtime.txt` : Python-3.12
+
+### draft pdf
+
+- `draft-pdf.yml` : Github now requires v4 instead of `actions/checkout@v3`
+
+    ```
+    jobs:
+    paper:
+        runs-on: ubuntu-latest
+        name: Paper Draft
+        steps:
+        - name: Checkout
+            uses: actions/checkout@v4
+    ```
+- 
