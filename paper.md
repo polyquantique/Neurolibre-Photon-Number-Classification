@@ -27,7 +27,7 @@ affiliations:
     index: 3
 date: 2 november 2024
 bibliography: paper.bib
-  style: unsrt
+  - style: unsrt
 ---
 
 # Abstract
