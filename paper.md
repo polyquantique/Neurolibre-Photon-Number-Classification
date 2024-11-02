@@ -27,6 +27,7 @@ affiliations:
     index: 3
 date: 2 november 2024
 bibliography: paper.bib
+  style: unsrt
 ---
 
 # Abstract
@@ -110,6 +111,6 @@ To validate the hypothesis that more training data can help parametric implement
 
 # References
 
-```{bibliography}
+<!-- ```{bibliography}
 :style: unsrt
-```
+``` -->
