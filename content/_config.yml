@@ -60,4 +60,4 @@ html_theme_options:
 
 
 bibtex_bibfiles:
-  - Sections/reference.bib
+  - ../paper.bib
