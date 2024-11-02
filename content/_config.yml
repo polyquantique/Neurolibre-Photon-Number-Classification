@@ -5,10 +5,10 @@
 
 #######################################################################################
 # Book settings
-title                       : "Nonlinear Dimensionality Reduction for Enhanced Unsupervised Classification in Transition Edge Sensors"  # The title of the book. Will be placed in the left navbar.
-author                      : Nicolas Dalbec-Constant  # The author of the book
+title                       : "Accurate Unsupervised\nPhoton Counting from\nTransition Edge Sensor Signal"  # The title of the book. Will be placed in the left navbar.
+author                      : "Nicolas Dalbec-Constant"  # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
-logo                        : "content/Polytechnique_signature-RGB-gauche_FR.png"  # A path to the book logo
+logo                        : "Sections/Figures/Polytechnique_signature-RGB-gauche_FR.jpg"  # A path to the book logo
 exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
@@ -34,9 +34,9 @@ html:
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : https://test.conp.cloud  # The URL of the Neurolibre BinderHub
-  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+  # binderhub_url             : https://test.conp.cloud  # The URL of the Neurolibre BinderHub
+  # thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
   url                       : https://github.com/NDalbec/Neurolibre-Photon-Number-Classification  # The URL to your book's repository
@@ -46,7 +46,18 @@ repository:
 
 html_theme_options:
   logo:
-    image_light: "content/Polytechnique_signature-RGB-gauche_FR.png"
-    image_dark: "content/Polytechnique_signature-RGB-inverse-gauche_FR.png"
+    image_light: "Figures/Polytechnique_signature-RGB-gauche_FR.png"
+    image_dark: "Figures/Polytechnique_signature-RGB-inverse-gauche_FR.png"
 
 #######################################################################################
+
+# New
+
+# sphinx:
+#   config:
+#     bibtex_reference_style: author_year
+#     bibtex_bibfiles: reference.bib
+
+
+bibtex_bibfiles:
+  - Sections/reference.bib

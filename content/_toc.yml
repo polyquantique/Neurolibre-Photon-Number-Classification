@@ -1,6 +1,11 @@
 format: jb-book
-root: "00-setup.ipynb"
+root: "Sections/Results.ipynb"
+options:
+  numbered: True
 parts:
-  - caption: Introduction
+  - caption: Confidence
     chapters:
-    - file: "01-introduction.ipynb"
+    - file: "Sections/Methods_Geometric.ipynb"
+    - file: "Sections/Methods_Uniform.ipynb"
+    - file: "Sections/Methods_Large.ipynb"
+    

@@ -16,6 +16,13 @@ Neurolibre format for `Nonlinear Dimensionality Reduction for Enhanced Unsupervi
 - `requirements.txt` : Necessary packages
 - `runtime.txt` : Python-3.12
 
+### Build
+
+```
+cd /your/repo/directory
+jupyter-book build ./content
+```
+
 ### draft pdf
 
 - `draft-pdf.yml` : Github now requires v4 instead of `actions/checkout@v3`

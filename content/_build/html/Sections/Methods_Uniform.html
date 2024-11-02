@@ -1,0 +1,1519 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Synthetic Uniform &#8212; Accurate Unsupervised
+Photon Counting from
+Transition Edge Sensor Signal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Sections/Methods_Uniform';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Synthetic Large" href="Methods_Large.html" />
+    <link rel="prev" title="Synthetic Geometric" href="Methods_Geometric.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="Results.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/Polytechnique_signature-RGB-gauche_FR.jpg" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/Polytechnique_signature-RGB-gauche_FR.jpg" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Methods_Geometric.html">
+                        Synthetic Geometric
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Synthetic Uniform
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Methods_Large.html">
+                        Synthetic Large
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Methods_Geometric.html">
+                        Synthetic Geometric
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Synthetic Uniform
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Methods_Large.html">
+                        Synthetic Large
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="Results.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/Polytechnique_signature-RGB-gauche_FR.jpg" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/Polytechnique_signature-RGB-gauche_FR.jpg" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Results.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Confidence</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Methods_Geometric.html">Synthetic Geometric</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Synthetic Uniform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Methods_Large.html">Synthetic Large</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/Sections/Methods_Uniform.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Synthetic Uniform</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-value">
+     Max Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area">
+     Area
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+     Principal Component Analysis (PCA)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
+     Kernel PCA (Radial basis function)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
+     Kernel PCA (Sigmoid)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-cosine">
+     Kernel PCA (Cosine)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
+     t-distributed Stochastic Neighbor Embedding (t-SNE)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#umap">
+     UMAP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
+     Non-Negative Matrix Factorization (NMF)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#isomap">
+     Isomap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-t-sne">
+     Parametric t-SNE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-umap">
+     Parametric UMAP
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="synthetic-uniform">
+<h1>Synthetic Uniform<a class="headerlink" href="#synthetic-uniform" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.Utils</span> <span class="kn">import</span> <span class="n">save_results</span><span class="p">,</span> <span class="n">get_means</span>
+<span class="kn">from</span> <span class="nn">src.ExistingAlgorithms</span> <span class="kn">import</span> <span class="n">max_value</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">sklearn_available</span>
+<span class="kn">from</span> <span class="nn">src.GaussianMixture</span> <span class="kn">import</span> <span class="n">gaussian_mixture</span>
+
+<span class="kn">from</span> <span class="nn">src.Parametric_UMAP</span> <span class="kn">import</span> <span class="n">load_pumap</span>
+<span class="kn">from</span> <span class="nn">src.Parametric_TSNE.train</span> <span class="kn">import</span> <span class="n">load_model</span>
+<span class="kn">from</span> <span class="nn">src.Parametric_TSNE.model</span> <span class="kn">import</span> <span class="n">Network</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span> <span class="n">NMF</span>
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">Isomap</span><span class="p">,</span> <span class="n">TSNE</span>
+
+<span class="kn">import</span> <span class="nn">umap</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/Low Dimension&#39;</span>
+<span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/Density&#39;</span>
+<span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform&#39;</span>
+<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;/home/nicolasdc/Documents/Datasets/Photon-Number-Classification/NIST CSV&#39;</span>
+
+<span class="n">data_train</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/uniform_train.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">data_test</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/uniform_test.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">expected_prob</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/uniform_expected_prob.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">db_train</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/db_train.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">db_test</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/db_test.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
+<section id="max-value">
+<h3>Max Value<a class="headerlink" href="#max-value" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_MAX</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span><span class="n">data_test</span><span class="p">,</span> <span class="n">filtering</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;MAX&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_MAX</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">),</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">17</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                      <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b7bc63038869ef8be88107c931abddde05f7239881117e9efd38e09bd4fe0530.png" src="../_images/b7bc63038869ef8be88107c931abddde05f7239881117e9efd38e09bd4fe0530.png" />
+<img alt="../_images/e8b1a9ef85325f40528eb41cf74b4b31562719cc5e14382dc60a8faf58bbb287.png" src="../_images/e8b1a9ef85325f40528eb41cf74b4b31562719cc5e14382dc60a8faf58bbb287.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span><span class="o">=</span><span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ca4a723fb83ae06593ee55e59af913186dda41707c3181b28684ea9084390ef1.png" src="../_images/ca4a723fb83ae06593ee55e59af913186dda41707c3181b28684ea9084390ef1.png" />
+</div>
+</div>
+</section>
+<section id="area">
+<h3>Area<a class="headerlink" href="#area" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_AREA</span>  <span class="o">=</span> <span class="n">area</span><span class="p">(</span><span class="n">data_test</span><span class="p">[:,:</span><span class="mi">150</span><span class="p">],</span> <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">plot_filter</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c07ef21041b21a6ec573ded359b67b46672e429ccd91f2ab50be471b20957391.png" src="../_images/c07ef21041b21a6ec573ded359b67b46672e429ccd91f2ab50be471b20957391.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;AREA&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_AREA</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/83e16ac8016c154b425a049bc64f3a9f2c5848550f69357c66fdaa48a1df04ec.png" src="../_images/83e16ac8016c154b425a049bc64f3a9f2c5848550f69357c66fdaa48a1df04ec.png" />
+<img alt="../_images/4b22ea74e6024b2e499728e544dddbe5f64c07624fe0cd9ca2c31c1d4ad9458e.png" src="../_images/4b22ea74e6024b2e499728e544dddbe5f64c07624fe0cd9ca2c31c1d4ad9458e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/565a6139b7eaf333dc7f59602b08e47526716ab9b79c983f740f8b8146342ccc.png" src="../_images/565a6139b7eaf333dc7f59602b08e47526716ab9b79c983f740f8b8146342ccc.png" />
+</div>
+</div>
+</section>
+<section id="principal-component-analysis-pca">
+<h3>Principal Component Analysis (PCA)<a class="headerlink" href="#principal-component-analysis-pca" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_PCA</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_PCA</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">info_sweep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                      <span class="n">plot_sweep</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                      <span class="n">latex</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span>
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b3065a9eed9f17dfa54543bcce1be78b99cf275d44c52155c49227a894189e00.png" src="../_images/b3065a9eed9f17dfa54543bcce1be78b99cf275d44c52155c49227a894189e00.png" />
+<img alt="../_images/d3701f14a1f268db6eaeae7343bee1d667acd5f1b9e09fca69806b00ff988dd4.png" src="../_images/d3701f14a1f268db6eaeae7343bee1d667acd5f1b9e09fca69806b00ff988dd4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/91aeba084c92e5cf53f457a3ed956e2cdf8d9edc3a77ead386357bdb4d60f5e1.png" src="../_images/91aeba084c92e5cf53f457a3ed956e2cdf8d9edc3a77ead386357bdb4d60f5e1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_PCA</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 2D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_PCA</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
+</pre></div>
+</div>
+<img alt="../_images/72e9db967fafc92d36f4c072fd428e2db2c6ea76988f144c255655496f2432a6.png" src="../_images/72e9db967fafc92d36f4c072fd428e2db2c6ea76988f144c255655496f2432a6.png" />
+<img alt="../_images/fc5f44711ec43399ad24c6d3ee3fe8d41ed82fcc037d337565850d91a3d7079c.png" src="../_images/fc5f44711ec43399ad24c6d3ee3fe8d41ed82fcc037d337565850d91a3d7079c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c3405835a12a45b1ef371d4f49960c08ab7ad0e32b005f48ea79bda90a1e4296.png" src="../_images/c3405835a12a45b1ef371d4f49960c08ab7ad0e32b005f48ea79bda90a1e4296.png" />
+</div>
+</div>
+</section>
+<section id="kernel-pca-radial-basis-function">
+<h3>Kernel PCA (Radial basis function)<a class="headerlink" href="#kernel-pca-radial-basis-function" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_RBF</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span> <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA RBF&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_KPCA_RBF</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
+</pre></div>
+</div>
+<img alt="../_images/59e68f2bcc477c90c215dfd9e9dfa0d8926a3f92191d7ebb24150d856041568c.png" src="../_images/59e68f2bcc477c90c215dfd9e9dfa0d8926a3f92191d7ebb24150d856041568c.png" />
+<img alt="../_images/ab1bcd72095b31b69d960fb11934caa0520da04725548627b296710f9c2e02d9.png" src="../_images/ab1bcd72095b31b69d960fb11934caa0520da04725548627b296710f9c2e02d9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="c1"># gm.plot_trustworthiness()</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3a4f9d91cbbe8df1640b6b37364b6ca8494d7a4f05377b64691b7878c90a531e.png" src="../_images/3a4f9d91cbbe8df1640b6b37364b6ca8494d7a4f05377b64691b7878c90a531e.png" />
+</div>
+</div>
+</section>
+<section id="kernel-pca-sigmoid">
+<h3>Kernel PCA (Sigmoid)<a class="headerlink" href="#kernel-pca-sigmoid" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_S</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">,</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Sig&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_KPCA_S</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
+</pre></div>
+</div>
+<img alt="../_images/a1230bd599c373445b04733374fe39e4a69829d6c06322c7cea4be4ccfc0d1f0.png" src="../_images/a1230bd599c373445b04733374fe39e4a69829d6c06322c7cea4be4ccfc0d1f0.png" />
+<img alt="../_images/08d958d2dd959bef65db284bd7caef7002520f47156eb182374e9dd2b213a2f5.png" src="../_images/08d958d2dd959bef65db284bd7caef7002520f47156eb182374e9dd2b213a2f5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4318d199abc40ed132ae3c5033471ad63bbc0a606d3a6b1b2ac7e8ed11444b03.png" src="../_images/4318d199abc40ed132ae3c5033471ad63bbc0a606d3a6b1b2ac7e8ed11444b03.png" />
+</div>
+</div>
+</section>
+<section id="kernel-pca-cosine">
+<h3>Kernel PCA (Cosine)<a class="headerlink" href="#kernel-pca-cosine" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_C</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;cosine&quot;</span><span class="p">,</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Cos&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_KPCA_C</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
+</pre></div>
+</div>
+<img alt="../_images/1d3856ebc5577d6067cb0024d6f5bb2e49403455f3f7f921eb92630d7c055618.png" src="../_images/1d3856ebc5577d6067cb0024d6f5bb2e49403455f3f7f921eb92630d7c055618.png" />
+<img alt="../_images/2f35a9f4c930d53fd5fefcf1ac657f47f52822c54e31e619334c546f8388c384.png" src="../_images/2f35a9f4c930d53fd5fefcf1ac657f47f52822c54e31e619334c546f8388c384.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5b4d41fa828381c97efc69da9771eccac171bb4e75c31e949ac018d8ca8bddfe.png" src="../_images/5b4d41fa828381c97efc69da9771eccac171bb4e75c31e949ac018d8ca8bddfe.png" />
+</div>
+</div>
+</section>
+<section id="t-distributed-stochastic-neighbor-embedding-t-sne">
+<h3>t-distributed Stochastic Neighbor Embedding (t-SNE)<a class="headerlink" href="#t-distributed-stochastic-neighbor-embedding-t-sne" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_tSNE</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">TSNE</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 2D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_tSNE</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
+</pre></div>
+</div>
+<img alt="../_images/0b5c801d5aa64a3bc672e210c4d2fb881f300de1503ed34b00536ccb6d353677.png" src="../_images/0b5c801d5aa64a3bc672e210c4d2fb881f300de1503ed34b00536ccb6d353677.png" />
+<img alt="../_images/80835f6b03257f15f95f4a92675ff92fa53e42c1f9fc5a9063f5bc14eac27021.png" src="../_images/80835f6b03257f15f95f4a92675ff92fa53e42c1f9fc5a9063f5bc14eac27021.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6ddc36e313e41591ebda9942fdfd81a069c418b9451dac3bb32699d3133f3a49.png" src="../_images/6ddc36e313e41591ebda9942fdfd81a069c418b9451dac3bb32699d3133f3a49.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_tSNE</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">TSNE</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_tSNE</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b33b3d69b7972d3a7bffd38bb9f3a97320728b50fd1719c1de88fe09efb4c173.png" src="../_images/b33b3d69b7972d3a7bffd38bb9f3a97320728b50fd1719c1de88fe09efb4c173.png" />
+<img alt="../_images/898e04deccb9a448ffaaf96db10d5164749ca304da6f6ca6cb44af66a1c996d5.png" src="../_images/898e04deccb9a448ffaaf96db10d5164749ca304da6f6ca6cb44af66a1c996d5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/814969614925ab239569b369ead76401729d38ffabfc6343e631c7304558cec1.png" src="../_images/814969614925ab239569b369ead76401729d38ffabfc6343e631c7304558cec1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D genGauss&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_tSNE</span><span class="p">,</span>
+                      <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/36914d42847136546e0fd77715ac7a23c04244337adb0fc42ab24d7833faff5a.png" src="../_images/36914d42847136546e0fd77715ac7a23c04244337adb0fc42ab24d7833faff5a.png" />
+<img alt="../_images/28c7c2764d19c9e53aa68473a34e3db07cc4e0f5b8fa49fadf1b0747a897fc3a.png" src="../_images/28c7c2764d19c9e53aa68473a34e3db07cc4e0f5b8fa49fadf1b0747a897fc3a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
+<span class="c1"># gm.plot_trustworthiness()</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1456e0e2e4652507d5e6d560a17a977bda12b770986b03ab63d5a75ed4a73d69.png" src="../_images/1456e0e2e4652507d5e6d560a17a977bda12b770986b03ab63d5a75ed4a73d69.png" />
+</div>
+</div>
+</section>
+<section id="umap">
+<h3>UMAP<a class="headerlink" href="#umap" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap1d&#39;</span><span class="p">,</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> <span class="s1">&#39;1000.npy&#39;</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">28</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c3df459a88c63b3069354c57e4faaf87100430209b56ee63d95df7960ac07e54.png" src="../_images/c3df459a88c63b3069354c57e4faaf87100430209b56ee63d95df7960ac07e54.png" />
+<img alt="../_images/14af2d8c7343ba36bc5e87be631e1b6b95a5a89e3de1cd06e506ed60e5f75a8f.png" src="../_images/14af2d8c7343ba36bc5e87be631e1b6b95a5a89e3de1cd06e506ed60e5f75a8f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d1f047d9150941ef911ebdfe8f7e60660cb7826612cef9ef840d3d59f069b3bc.png" src="../_images/d1f047d9150941ef911ebdfe8f7e60660cb7826612cef9ef840d3d59f069b3bc.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap2d&#39;</span><span class="p">,</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> <span class="s1">&#39;700.npy&#39;</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 2D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
+</pre></div>
+</div>
+<img alt="../_images/5f7ba321a035d77d649b32372f280ac16787ee4289d392bbe0e3f08d28b10e59.png" src="../_images/5f7ba321a035d77d649b32372f280ac16787ee4289d392bbe0e3f08d28b10e59.png" />
+<img alt="../_images/24ed78e23e6eb9235a62c95b203b2790ca9fee6c53b0f4acadbca8d3501cff2f.png" src="../_images/24ed78e23e6eb9235a62c95b203b2790ca9fee6c53b0f4acadbca8d3501cff2f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04ccf4a4c391e31071ed7471399d863070e1315dedc964f70429ba74158dcd0c.png" src="../_images/04ccf4a4c391e31071ed7471399d863070e1315dedc964f70429ba74158dcd0c.png" />
+</div>
+</div>
+</section>
+<section id="non-negative-matrix-factorization-nmf">
+<h3>Non-Negative Matrix Factorization (NMF)<a class="headerlink" href="#non-negative-matrix-factorization-nmf" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_NMF</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">NMF</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">beta_loss</span><span class="o">=</span><span class="s1">&#39;kullback-leibler&#39;</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;NMF 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">,</span>
+                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a8bb83b6ef6805c0a86096b62ac0553adf8aaeb42192342a17549f3148fc288e.png" src="../_images/a8bb83b6ef6805c0a86096b62ac0553adf8aaeb42192342a17549f3148fc288e.png" />
+<img alt="../_images/0aa2a5980feb361f9c82d2a2be8f39d6ecac1cd4ed5aa72fc5e723f2e7a86854.png" src="../_images/0aa2a5980feb361f9c82d2a2be8f39d6ecac1cd4ed5aa72fc5e723f2e7a86854.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6b8e90b20f80ff612ff4b5d3d354f3b9210093eb4e981caf107d9f4c775cfa2b.png" src="../_images/6b8e90b20f80ff612ff4b5d3d354f3b9210093eb4e981caf107d9f4c775cfa2b.png" />
+</div>
+</div>
+</section>
+<section id="isomap">
+<h3>Isomap<a class="headerlink" href="#isomap" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_ISO</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">Isomap</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">eigen_solver</span><span class="o">=</span><span class="s2">&quot;arpack&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;ISO 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">,</span>
+                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/417589cf3a782d1388faf2e3a3cfdf997c6efab51e1bb788ab59dc9e832aa466.png" src="../_images/417589cf3a782d1388faf2e3a3cfdf997c6efab51e1bb788ab59dc9e832aa466.png" />
+<img alt="../_images/85d13b7338ffad0fb1d69dd5f93ac528ab85dceaf45c2a6414599de3297d5c48.png" src="../_images/85d13b7338ffad0fb1d69dd5f93ac528ab85dceaf45c2a6414599de3297d5c48.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7f56dacc2299278112a57d9cb893542d088d8843e51d95b801b0ba26451e443f.png" src="../_images/7f56dacc2299278112a57d9cb893542d088d8843e51d95b801b0ba26451e443f.png" />
+</div>
+</div>
+</section>
+<section id="parametric-t-sne">
+<h3>Parametric t-SNE<a class="headerlink" href="#parametric-t-sne" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="n">Network</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;src/Parametric_TSNE/model 1D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+
+<span class="n">data_test_</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">data_test</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+<span class="n">data_test_</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_test_</span> <span class="o">-</span> <span class="n">data_test_</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">data_test_</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">data_test_</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+    <span class="n">X_l_PTSNE</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">data_test_</span><span class="p">,</span> <span class="n">encode</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PTSNE 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PTSNE</span><span class="p">,</span>
+                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span> 
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1df49706ce6616c5f789bcfa5a59459cff94be4eb1d53ae215020d4e9e99a90e.png" src="../_images/1df49706ce6616c5f789bcfa5a59459cff94be4eb1d53ae215020d4e9e99a90e.png" />
+<img alt="../_images/04b468dbe61960377ee9de6b852363ab3d48779f14fdba203fa87d9e5a3953a2.png" src="../_images/04b468dbe61960377ee9de6b852363ab3d48779f14fdba203fa87d9e5a3953a2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/017d2875cbafb8653ddd3c1dd6c19120f9872f2ee106924a5c9aeed9f59d822d.png" src="../_images/017d2875cbafb8653ddd3c1dd6c19120f9872f2ee106924a5c9aeed9f59d822d.png" />
+</div>
+</div>
+</section>
+<section id="parametric-umap">
+<h3>Parametric UMAP<a class="headerlink" href="#parametric-umap" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">load_pumap</span><span class="p">(</span><span class="s1">&#39;src/Parametric_UMAP/model 1D/model.ckpt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+<span class="n">X_PUMAP</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">data_test</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">350</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">))</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/pytorch_lightning/utilities/parsing.py:208: Attribute &#39;encoder&#39; is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=[&#39;encoder&#39;])`.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PUMAP 1D&#39;</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="o">-</span><span class="n">X_PUMAP</span><span class="p">,</span>
+                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-5</span><span class="p">)</span>
+
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9f4bd3eee67d989ef22c2767c36cee2a7a9811603c5a4a752ec5e476e9ff2610.png" src="../_images/9f4bd3eee67d989ef22c2767c36cee2a7a9811603c5a4a752ec5e476e9ff2610.png" />
+<img alt="../_images/7963d7d2c925d4ffb88f3f70fe398e65d7ff9c04f1cc3bc818b2f9782b7bd576.png" src="../_images/7963d7d2c925d4ffb88f3f70fe398e65d7ff9c04f1cc3bc818b2f9782b7bd576.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/51156cdca9bae6211d81640871546f04ea1eb9bdbd33f23fb5387657a9a027da.png" src="../_images/51156cdca9bae6211d81640871546f04ea1eb9bdbd33f23fb5387657a9a027da.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Sections"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="Methods_Geometric.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Synthetic Geometric</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="Methods_Large.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Synthetic Large</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-value">
+     Max Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area">
+     Area
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+     Principal Component Analysis (PCA)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
+     Kernel PCA (Radial basis function)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
+     Kernel PCA (Sigmoid)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-cosine">
+     Kernel PCA (Cosine)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
+     t-distributed Stochastic Neighbor Embedding (t-SNE)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#umap">
+     UMAP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
+     Non-Negative Matrix Factorization (NMF)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#isomap">
+     Isomap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-t-sne">
+     Parametric t-SNE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-umap">
+     Parametric UMAP
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nicolas Dalbec-Constant
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
