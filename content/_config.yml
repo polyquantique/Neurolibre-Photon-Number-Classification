@@ -8,7 +8,7 @@
 title                       : "Accurate Unsupervised\nPhoton Counting from\nTransition Edge Sensor Signal"  # The title of the book. Will be placed in the left navbar.
 author                      : "Nicolas Dalbec-Constant"  # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
-logo                        : "Sections/Figures/Polytechnique_signature-RGB-gauche_FR.jpg"  # A path to the book logo
+logo                        : "Sections/Figures/polytechnique_gauche_rgb.png"  # A path to the book logo
 exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
@@ -46,8 +46,8 @@ repository:
 
 html_theme_options:
   logo:
-    image_light: "Figures/Polytechnique_signature-RGB-gauche_FR.png"
-    image_dark: "Figures/Polytechnique_signature-RGB-inverse-gauche_FR.png"
+    image_light: "Figures/polytechnique_gauche_rgb.png"
+    image_dark: "Figures/polytechnique_gauche_inverse_rgb.png"
 
 #######################################################################################
 
