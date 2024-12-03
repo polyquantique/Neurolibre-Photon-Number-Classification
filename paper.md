@@ -109,6 +109,6 @@ To validate the hypothesis that more training data can help parametric implement
 
 # References
 
-```{bibliography}
+<!-- ```{bibliography}
 :style: unsrt
-```
+``` -->
