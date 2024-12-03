@@ -49,7 +49,7 @@ Clustering refers to identifying groups of similar samples inside a latent space
 
 The choice is highly inspired by a similar model previously used in the tomography of TESs in combination with PCA [@humphreys_tomography_2015]. Mixture models offer a statistical interpretation of latent spaces convenient for metrology and performance evaluation. 
 
-The mixture model gives a continuous probability density function for the position $s$ of samples given optimal parameters $\theta=\{(\omega_k, \mu_k$, $\Sigma_k):k=1,\cdots,K\}$. In the model, every cluster $k$ is weighted by a value $\omega_k$ (where $\sum_{k=1}^K \omega_k = 1$), and modelled by a Gaussian with mean $\mu_k$ and covariance matrices $\Sigma_k$. The individual Gaussians $\mathcal{N}$ give the cluster probability density function and the probability of observing samples in position $s$ given parameters $\theta$ are defined by
+The mixture model gives a continuous probability density function for the position $s$ of samples given optimal parameters $\theta=\{(\omega_k, \mu_k, \Sigma_k):k=1,\cdots,K\}$. In the model, every cluster $k$ is weighted by a value $\omega_k$ (where $\sum_{k=1}^K \omega_k = 1$), and modelled by a Gaussian with mean $\mu_k$ and covariance matrices $\Sigma_k$. The individual Gaussians $\mathcal{N}$ give the cluster probability density function and the probability of observing samples in position $s$ given parameters $\theta$ are defined by
 $$
 p(s|\theta) = \sum_{k=1}^K \omega_k \mathcal{N}(s|\mu_k , \Sigma_k).
 $$
