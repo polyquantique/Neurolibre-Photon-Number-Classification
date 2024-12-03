@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Synthetic Large &#8212; Accurate Unsupervised
+    <title>Large &#8212; Accurate Unsupervised
 Photon Counting from
 Transition Edge Sensor Signal</title>
   
@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Sections/Methods_Large';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Synthetic Uniform" href="Methods_Uniform.html" />
+    <link rel="prev" title="Uniform Distribution" href="Methods_Uniform.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -146,14 +146,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Methods_Uniform.html">
-                        Synthetic Uniform
+                        Uniform Distribution
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Synthetic Large
+                        Large
                       </a>
                     </li>
                 
@@ -236,14 +236,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Methods_Uniform.html">
-                        Synthetic Uniform
+                        Uniform Distribution
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Synthetic Large
+                        Large
                       </a>
                     </li>
                 
@@ -318,8 +318,9 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Confidence</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Methods_Geometric.html">Synthetic Geometric</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Methods_Uniform.html">Synthetic Uniform</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Synthetic Large</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Methods_Uniform.html">Uniform Distribution</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Large</a></li>
 </ul>
 
     </div>
@@ -433,7 +434,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Synthetic Large</h1>
+    <h1>Large</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -444,13 +445,8 @@ title="Print to PDF"
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#methods">
-   Methods
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -484,11 +480,12 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="synthetic-large">
-<h1>Synthetic Large<a class="headerlink" href="#synthetic-large" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="large">
+<h1>Large<a class="headerlink" href="#large" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.Utils</span> <span class="kn">import</span> <span class="n">save_results</span><span class="p">,</span> <span class="n">get_means</span>
+<span class="kn">from</span> <span class="nn">src.Dataset</span> <span class="kn">import</span> <span class="n">dataset_csv</span>
 <span class="kn">from</span> <span class="nn">src.ExistingAlgorithms</span> <span class="kn">import</span> <span class="n">area</span><span class="p">,</span> <span class="n">sklearn_available</span>
 <span class="kn">from</span> <span class="nn">src.GaussianMixture</span> <span class="kn">import</span> <span class="n">gaussian_mixture</span>
 
@@ -497,11 +494,9 @@ title="Print to PDF"
 <span class="kn">from</span> <span class="nn">src.Parametric_UMAP</span> <span class="kn">import</span> <span class="n">load_pumap</span>
 <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
 <span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
 <span class="kn">import</span> <span class="nn">umap</span>
 
-<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;/home/nicolasdc/Documents/Datasets/Photon-Number-Classification/NRC CSV&#39;</span>
+<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;src/Dataset/Data_Ottawa/data.zip&#39;</span>
 <span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Large&#39;</span>
 <span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Large/Low Dimension&#39;</span>
 <span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Large/Density&#39;</span>
@@ -509,39 +504,22 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<section id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files_</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;traces_attn_37dB.csv&#39;</span><span class="p">,</span>
-          <span class="c1">#&#39;traces_attn_35dB.csv&#39;,</span>
-          <span class="s1">&#39;traces_attn_33dB.csv&#39;</span><span class="p">,</span>
-          <span class="c1">#&#39;traces_attn_31dB.csv&#39;,</span>
-          <span class="s1">&#39;traces_attn_29dB.csv&#39;</span><span class="p">,</span>
-          <span class="c1">#&#39;traces_attn_27dB.csv&#39;,</span>
-          <span class="s1">&#39;traces_attn_25dB.csv&#39;</span><span class="p">,</span>
-          <span class="c1">#&#39;traces_attn_23dB.csv&#39;,</span>
-          <span class="s1">&#39;traces_attn_21dB.csv&#39;</span><span class="p">,</span>
-          <span class="c1">#&#39;traces_attn_19dB.csv&#39;,</span>
-          <span class="s1">&#39;traces_attn_17dB.csv&#39;</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">files_</span><span class="p">:</span>
-    <span class="n">data_</span> <span class="o">=</span>  <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="n">mean_it</span> <span class="o">=</span> <span class="n">data_</span><span class="p">[:,:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">data_</span><span class="p">[:,::</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_it</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files_</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data/traces_attn_37dB.csv&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;data/traces_attn_33dB.csv&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;data/traces_attn_29dB.csv&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;data/traces_attn_25dB.csv&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;data/traces_attn_21dB.csv&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;data/traces_attn_17dB.csv&#39;</span><span class="p">]</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data_train</span> <span class="o">=</span> <span class="n">data</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">data_test</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">mean_</span> <span class="o">=</span> <span class="n">data_train</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">std_</span> <span class="o">=</span> <span class="n">data_train</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-<span class="n">data_train</span>  <span class="o">=</span> <span class="p">(</span><span class="n">data_train</span> <span class="o">-</span> <span class="n">mean_</span><span class="p">)</span> <span class="o">/</span> <span class="n">std_</span>
-<span class="n">data_test</span>  <span class="o">=</span> <span class="p">(</span><span class="n">data_test</span> <span class="o">-</span> <span class="n">mean_</span><span class="p">)</span> <span class="o">/</span> <span class="n">std_</span>
+<span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span> <span class="o">=</span> <span class="n">dataset_csv</span><span class="p">(</span><span class="n">PATH_DATA</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files_</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Initialize PCA with a distribution that is closer to uniform to remove the bias of over represented low photon numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train</span><span class="p">)</span>
@@ -551,49 +529,34 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files_</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;traces_attn_37dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_35dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_33dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_31dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_29dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_27dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_25dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_23dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_21dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_19dB.csv&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;traces_attn_17dB.csv&#39;</span><span class="p">]</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">files_</span><span class="p">:</span>
-    <span class="n">data_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="n">mean_it</span> <span class="o">=</span> <span class="n">data_</span><span class="p">[:,:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">data_</span><span class="p">[:,::</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_it</span><span class="p">))</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data_train</span> <span class="o">=</span> <span class="n">data</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">data_test</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="n">data_train</span>  <span class="o">=</span> <span class="p">(</span><span class="n">data_train</span> <span class="o">-</span> <span class="n">mean_</span><span class="p">)</span> <span class="o">/</span> <span class="n">std_</span>
-<span class="n">data_test</span>  <span class="o">=</span> <span class="p">(</span><span class="n">data_test</span> <span class="o">-</span> <span class="n">mean_</span><span class="p">)</span> <span class="o">/</span> <span class="n">std_</span>
-
-<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">data_test</span><span class="p">)</span>
-<span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">data_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span> <span class="o">=</span> <span class="n">dataset_csv</span><span class="p">(</span><span class="n">PATH_DATA</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_PCA</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(550000, 200)
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_test</span><span class="p">[::</span><span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b8327d5d486ab5c9a3349878b9f96ca151be90a92384c21a48a5d7a7dd0701a7.png" src="../_images/b8327d5d486ab5c9a3349878b9f96ca151be90a92384c21a48a5d7a7dd0701a7.png" />
+</div>
+</div>
 <section id="area">
 <h3>AREA<a class="headerlink" href="#area" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -603,7 +566,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8ce0df2d60972bfdf9e32db01e84e09bdda3334fab6107ec09f7e361cfef57a5.png" src="../_images/8ce0df2d60972bfdf9e32db01e84e09bdda3334fab6107ec09f7e361cfef57a5.png" />
+<img alt="../_images/00dd3f822bbcf071d73ef8fb9be51f84290bbd46f35da005d1bbe9f0c190a5f4.png" src="../_images/00dd3f822bbcf071d73ef8fb9be51f84290bbd46f35da005d1bbe9f0c190a5f4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -626,7 +589,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/67eb21cfd7d58241954565bea9c56ec07dd8bbb0bb4026911e9209f635fc4fd9.png" src="../_images/67eb21cfd7d58241954565bea9c56ec07dd8bbb0bb4026911e9209f635fc4fd9.png" />
+<img alt="../_images/c374e8b10ea5db1b79d89ef7b98023a28fb5fcf1abc218e4614af6db3d8ca1a4.png" src="../_images/c374e8b10ea5db1b79d89ef7b98023a28fb5fcf1abc218e4614af6db3d8ca1a4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -637,12 +600,24 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1e6b04aefdae6fde94a292e775f0262356dc1ec57c745b4a3c9b8fa5a87d6f7.png" src="../_images/d1e6b04aefdae6fde94a292e775f0262356dc1ec57c745b4a3c9b8fa5a87d6f7.png" />
+<img alt="../_images/10ffcdb63ecb10a2b2667e72c37664f1d6806395fc583ea88bd6b0da6b9180ce.png" src="../_images/10ffcdb63ecb10a2b2667e72c37664f1d6806395fc583ea88bd6b0da6b9180ce.png" />
 </div>
 </div>
 </section>
 <section id="parametric-umap">
 <h3>Parametric UMAP<a class="headerlink" href="#parametric-umap" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(550000, 200)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">load_pumap</span><span class="p">(</span><span class="s1">&#39;src/Parametric_UMAP/model 1D/modelLarge.ckpt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
@@ -677,7 +652,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c89196ca999e705bcc18e0faab75f8cf7e9c7bc9f08a494da814b8a66115a3ff.png" src="../_images/c89196ca999e705bcc18e0faab75f8cf7e9c7bc9f08a494da814b8a66115a3ff.png" />
+<img alt="../_images/a663d512ec1fe5f5fdd8b9c8d4d670843a4c7ddbaa5dc008ba1a2f24889f9fc1.png" src="../_images/a663d512ec1fe5f5fdd8b9c8d4d670843a4c7ddbaa5dc008ba1a2f24889f9fc1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -688,12 +663,20 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a513f2c4a23becab2a2fd108f849d9027b0531e131754a2d46482a37f8542f01.png" src="../_images/a513f2c4a23becab2a2fd108f849d9027b0531e131754a2d46482a37f8542f01.png" />
+<img alt="../_images/d93c7fa32ef1e746d8df9f85df820443cd005ece47698a021444c39305e9c9a6.png" src="../_images/d93c7fa32ef1e746d8df9f85df820443cd005ece47698a021444c39305e9c9a6.png" />
 </div>
 </div>
 </section>
 <section id="pca">
 <h3>PCA<a class="headerlink" href="#pca" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train</span><span class="p">)</span>
+<span class="n">X_PCA</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 1D&#39;</span>
@@ -702,7 +685,7 @@ title="Print to PDF"
                       <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
                       <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
                       <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">,</span>
                       <span class="n">info_sweep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                       <span class="n">plot_sweep</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                       <span class="n">latex</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
@@ -715,7 +698,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/aece0cf2fdb19bf3a4457aa078c20614644e7afd669fc14355b187fd819eb290.png" src="../_images/aece0cf2fdb19bf3a4457aa078c20614644e7afd669fc14355b187fd819eb290.png" />
+<img alt="../_images/09042a921afede8dcf49ddce65b7b18d1a3af1d6f7d443607827d64671bdf838.png" src="../_images/09042a921afede8dcf49ddce65b7b18d1a3af1d6f7d443607827d64671bdf838.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -744,7 +727,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9b8b14fd76786c11ab026990a80f37e10b1b2113d5d0e8e7eed60c542d178f70.png" src="../_images/9b8b14fd76786c11ab026990a80f37e10b1b2113d5d0e8e7eed60c542d178f70.png" />
+<img alt="../_images/1adcb9fe38e06881300d0c17377599b4264be045401cbd95e236ceb983c1fe2b.png" src="../_images/1adcb9fe38e06881300d0c17377599b4264be045401cbd95e236ceb983c1fe2b.png" />
 </div>
 </div>
 </section>
@@ -752,7 +735,7 @@ title="Print to PDF"
 <h3>UMAP<a class="headerlink" href="#umap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap1d&#39;</span><span class="p">,</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> <span class="s1">&#39;100.npy&#39;</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap1d&#39;</span><span class="p">,</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> <span class="s1">&#39;100.npy&#39;</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -760,33 +743,41 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span>
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span>
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e084a6426ac1736f60632344ee9156ecd11dfab2c6fdc23e227aba08f5771652.png" src="../_images/e084a6426ac1736f60632344ee9156ecd11dfab2c6fdc23e227aba08f5771652.png" />
+<img alt="../_images/232f4949b6128480ab935a40149c366f0267184af8185a849d207d90cb328a7a.png" src="../_images/232f4949b6128480ab935a40149c366f0267184af8185a849d207d90cb328a7a.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4952b4e5c3cc9f438c87b9adc3be4bb5138b73e88f891201972fc25b9ef045ff.png" src="../_images/4952b4e5c3cc9f438c87b9adc3be4bb5138b73e88f891201972fc25b9ef045ff.png" />
+<img alt="../_images/c1401d9e7f212f67a282c35f2bc2e692ab3de0df65dda4195d36a81c5f9a6490.png" src="../_images/c1401d9e7f212f67a282c35f2bc2e692ab3de0df65dda4195d36a81c5f9a6490.png" />
 </div>
 </div>
 </section>
@@ -825,7 +816,7 @@ title="Print to PDF"
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Synthetic Uniform</p>
+          <p class="prev-next-title">Uniform Distribution</p>
       </div>
   </a>
 </div>
@@ -845,13 +836,8 @@ title="Print to PDF"
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#methods">
-   Methods
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">

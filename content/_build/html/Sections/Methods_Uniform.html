@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Synthetic Uniform &#8212; Accurate Unsupervised
+    <title>Uniform Distribution &#8212; Accurate Unsupervised
 Photon Counting from
 Transition Edge Sensor Signal</title>
   
@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Sections/Methods_Uniform';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Synthetic Large" href="Methods_Large.html" />
+    <link rel="next" title="Large" href="Methods_Large.html" />
     <link rel="prev" title="Synthetic Geometric" href="Methods_Geometric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -147,14 +147,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Synthetic Uniform
+                        Uniform Distribution
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Methods_Large.html">
-                        Synthetic Large
+                        Large
                       </a>
                     </li>
                 
@@ -237,14 +237,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Synthetic Uniform
+                        Uniform Distribution
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Methods_Large.html">
-                        Synthetic Large
+                        Large
                       </a>
                     </li>
                 
@@ -319,8 +319,9 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Confidence</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Methods_Geometric.html">Synthetic Geometric</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Synthetic Uniform</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Methods_Large.html">Synthetic Large</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Uniform Distribution</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Methods_Large.html">Large</a></li>
 </ul>
 
     </div>
@@ -434,7 +435,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Synthetic Uniform</h1>
+    <h1>Uniform Distribution</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -444,75 +445,87 @@ title="Print to PDF"
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Uniform Distribution
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#methods">
-   Methods
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute">
+   Compute
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#max-value">
-     Max Value
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#area">
-     Area
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     Methods
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#principal-component-analysis-pca">
-     Principal Component Analysis (PCA)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
-     Kernel PCA (Radial basis function)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
-     Kernel PCA (Sigmoid)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kernel-pca-cosine">
-     Kernel PCA (Cosine)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
-     t-distributed Stochastic Neighbor Embedding (t-SNE)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#umap">
-     UMAP
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
-     Non-Negative Matrix Factorization (NMF)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#isomap">
-     Isomap
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parametric-t-sne">
-     Parametric t-SNE
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parametric-umap">
-     Parametric UMAP
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#max-value">
+       Max Value
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#area">
+       Area
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+       Principal Component Analysis (PCA)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
+       Kernel PCA (Radial basis function)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
+       Kernel PCA (Sigmoid)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kernel-pca-cosine">
+       Kernel PCA (Cosine)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
+       t-distributed Stochastic Neighbor Embedding (t-SNE)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#umap">
+       UMAP
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
+       Non-Negative Matrix Factorization (NMF)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#isomap">
+       Isomap
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parametric-t-sne">
+       Parametric t-SNE
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parametric-umap">
+       Parametric UMAP
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -525,8 +538,8 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="synthetic-uniform">
-<h1>Synthetic Uniform<a class="headerlink" href="#synthetic-uniform" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="uniform-distribution">
+<h1>Uniform Distribution<a class="headerlink" href="#uniform-distribution" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.Utils</span> <span class="kn">import</span> <span class="n">save_results</span><span class="p">,</span> <span class="n">get_means</span>
@@ -537,16 +550,22 @@ title="Print to PDF"
 <span class="kn">from</span> <span class="nn">src.Parametric_TSNE.train</span> <span class="kn">import</span> <span class="n">load_model</span>
 <span class="kn">from</span> <span class="nn">src.Parametric_TSNE.model</span> <span class="kn">import</span> <span class="n">Network</span>
 
+<span class="kn">from</span> <span class="nn">src.Dataset</span> <span class="kn">import</span> <span class="n">dataset_dat</span>
+
 <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span> <span class="n">NMF</span>
 <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">Isomap</span><span class="p">,</span> <span class="n">TSNE</span>
 
 <span class="kn">import</span> <span class="nn">umap</span>
 <span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="compute">
+<h1>Compute<a class="headerlink" href="#compute" title="Permalink to this heading">#</a></h1>
+<p>The entire file is precomputed and the results are saved in <code class="docutils literal notranslate"><span class="pre">src/Results_Uniform</span></code>.
+The file is programmed to load the results if they are available in <code class="docutils literal notranslate"><span class="pre">PATH_RESULTS</span></code>.</p>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -554,15 +573,29 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/Low Dimension&#39;</span>
 <span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/Density&#39;</span>
 <span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform&#39;</span>
-<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;/home/nicolasdc/Documents/Datasets/Photon-Number-Classification/NIST CSV&#39;</span>
+<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;src/Dataset/Data_Boulder/data.zip&#39;</span>
+<span class="n">PATH_R</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/randomIndexUniform.npy&#39;</span>
 
-<span class="n">data_train</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/uniform_train.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">data_test</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/uniform_test.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">expected_prob</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/uniform_expected_prob.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">db_train</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/db_train.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-<span class="n">db_test</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">PATH_DATA</span><span class="si">}</span><span class="s1">/db_test.csv&#39;</span><span class="p">,</span> <span class="n">has_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0003478958721172963</span><span class="p">,</span> <span class="mf">0.0003456379713743067</span><span class="p">,</span> <span class="mf">0.0003744276723215052</span><span class="p">,</span> <span class="mf">2.7560595871623853e-07</span><span class="p">,</span>
+           <span class="mf">5.1048808392493295e-18</span><span class="p">,</span> <span class="mf">0.28842984940480537</span><span class="p">,</span> <span class="mf">0.9999999999999999</span><span class="p">,</span> <span class="mf">0.4483193456686096</span><span class="p">,</span>
+           <span class="mf">0.34462236788026945</span><span class="p">,</span> <span class="mf">0.42745454124885873</span><span class="p">,</span> <span class="mf">6.426683431466243e-24</span><span class="p">,</span> <span class="mf">3.0632312612371824e-29</span><span class="p">,</span> <span class="mf">0.477042684930801</span><span class="p">]</span>
+
+<span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">db_train</span><span class="p">,</span> <span class="n">db_test</span> <span class="o">=</span> <span class="n">dataset_dat</span><span class="p">(</span>
+   <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span><span class="p">,</span>
+   <span class="n">path_data</span> <span class="o">=</span> <span class="n">PATH_DATA</span><span class="p">,</span>
+   <span class="n">path_random_index</span> <span class="o">=</span> <span class="n">PATH_R</span><span class="p">,</span>
+   <span class="n">signal_size</span> <span class="o">=</span> <span class="mi">8192</span><span class="p">,</span>
+   <span class="n">interval</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">350</span><span class="p">],</span>
+   <span class="n">standardize</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">plot_expected</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">plot_traces</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+   <span class="n">n_photon_number</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a12e710fdc52139a837ba1f3dd2a0425cb4e88932d240fdaf29def451bec8728.png" src="../_images/a12e710fdc52139a837ba1f3dd2a0425cb4e88932d240fdaf29def451bec8728.png" />
 </div>
 </div>
 </section>
@@ -572,7 +605,10 @@ title="Print to PDF"
 <h3>Max Value<a class="headerlink" href="#max-value" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_MAX</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span><span class="n">data_test</span><span class="p">,</span> <span class="n">filtering</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_MAX</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -580,37 +616,45 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;MAX&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_MAX</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">),</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">17</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                      <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_MAX</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">),</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">17</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b7bc63038869ef8be88107c931abddde05f7239881117e9efd38e09bd4fe0530.png" src="../_images/b7bc63038869ef8be88107c931abddde05f7239881117e9efd38e09bd4fe0530.png" />
-<img alt="../_images/e8b1a9ef85325f40528eb41cf74b4b31562719cc5e14382dc60a8faf58bbb287.png" src="../_images/e8b1a9ef85325f40528eb41cf74b4b31562719cc5e14382dc60a8faf58bbb287.png" />
+<img alt="../_images/6f8e93e737839d2620819dd06a5fd319a8ea0a1e799b3793d3c58ed4feee40a5.png" src="../_images/6f8e93e737839d2620819dd06a5fd319a8ea0a1e799b3793d3c58ed4feee40a5.png" />
+<img alt="../_images/a69386104870389eec59e82ace5bd06b08529e84b1a99e5a1e4e02be69990d55.png" src="../_images/a69386104870389eec59e82ace5bd06b08529e84b1a99e5a1e4e02be69990d55.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span><span class="o">=</span><span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ca4a723fb83ae06593ee55e59af913186dda41707c3181b28684ea9084390ef1.png" src="../_images/ca4a723fb83ae06593ee55e59af913186dda41707c3181b28684ea9084390ef1.png" />
+<img alt="../_images/15fe6c89c6e996b8033c1e4880be56105ab246a2845235ae70f5e6c5a2fda718.png" src="../_images/15fe6c89c6e996b8033c1e4880be56105ab246a2845235ae70f5e6c5a2fda718.png" />
 </div>
 </div>
 </section>
@@ -618,48 +662,62 @@ title="Print to PDF"
 <h3>Area<a class="headerlink" href="#area" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_AREA</span>  <span class="o">=</span> <span class="n">area</span><span class="p">(</span><span class="n">data_test</span><span class="p">[:,:</span><span class="mi">150</span><span class="p">],</span> <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">plot_filter</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_AREA</span>  <span class="o">=</span> <span class="n">area</span><span class="p">(</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">[:,:</span><span class="mi">150</span><span class="p">],</span> 
+   <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">plot_filter</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c07ef21041b21a6ec573ded359b67b46672e429ccd91f2ab50be471b20957391.png" src="../_images/c07ef21041b21a6ec573ded359b67b46672e429ccd91f2ab50be471b20957391.png" />
+<img alt="../_images/cfe9d5e320e7f4dd0f946a8cf068e7e297412018e9c6f5251cf7ad54eba33c8b.png" src="../_images/cfe9d5e320e7f4dd0f946a8cf068e7e297412018e9c6f5251cf7ad54eba33c8b.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;AREA&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_AREA</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_AREA</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/aff4047c6862f6e87af3fd388a2650e595799f146fa5ca57cfd8e4d59fdbad07.png" src="../_images/aff4047c6862f6e87af3fd388a2650e595799f146fa5ca57cfd8e4d59fdbad07.png" />
-<img alt="../_images/4b22ea74e6024b2e499728e544dddbe5f64c07624fe0cd9ca2c31c1d4ad9458e.png" src="../_images/4b22ea74e6024b2e499728e544dddbe5f64c07624fe0cd9ca2c31c1d4ad9458e.png" />
+<img alt="../_images/812113d02be90efa7e4d6671664b97ff774831d19b0da3f1b45f90a7da65403e.png" src="../_images/812113d02be90efa7e4d6671664b97ff774831d19b0da3f1b45f90a7da65403e.png" />
+<img alt="../_images/a7baf61dcd87453d9c218a0ce45f1fecb2fcbe44f94931e8d5479508c5faed6e.png" src="../_images/a7baf61dcd87453d9c218a0ce45f1fecb2fcbe44f94931e8d5479508c5faed6e.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fe0b43eb83b7c52cbb25bd3dc879c5b5b236c2535ecb8ee29300aedb70b3dd13.png" src="../_images/fe0b43eb83b7c52cbb25bd3dc879c5b5b236c2535ecb8ee29300aedb70b3dd13.png" />
+<img alt="../_images/75739535420b5203a4dc944088b5b41300fdbd09b72df086d8edee90a599e263.png" src="../_images/75739535420b5203a4dc944088b5b41300fdbd09b72df086d8edee90a599e263.png" />
 </div>
 </div>
 </section>
@@ -667,7 +725,14 @@ title="Print to PDF"
 <h3>Principal Component Analysis (PCA)<a class="headerlink" href="#principal-component-analysis-pca" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_PCA</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_PCA</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">,</span> 
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -675,43 +740,58 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_PCA</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">info_sweep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                      <span class="n">plot_sweep</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                      <span class="n">latex</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">info_sweep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="n">plot_sweep</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+   <span class="n">latex</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span>
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span>
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a42108abae399722724167ab1eb989dafefd179415cafb0d922cbe0508f689a4.png" src="../_images/a42108abae399722724167ab1eb989dafefd179415cafb0d922cbe0508f689a4.png" />
-<img alt="../_images/d3701f14a1f268db6eaeae7343bee1d667acd5f1b9e09fca69806b00ff988dd4.png" src="../_images/d3701f14a1f268db6eaeae7343bee1d667acd5f1b9e09fca69806b00ff988dd4.png" />
+<img alt="../_images/b6b090053cf208aba62ceb571ac0682d06018567a3228c64e272f555f5459945.png" src="../_images/b6b090053cf208aba62ceb571ac0682d06018567a3228c64e272f555f5459945.png" />
+<img alt="../_images/5ebbb77c749d7e8b79bb85742188da8d0060575edf4785122b760d329cb2f6b5.png" src="../_images/5ebbb77c749d7e8b79bb85742188da8d0060575edf4785122b760d329cb2f6b5.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d8ce506dcb73cfb10123d13593e89ad547f6ec4bd99831fd4bb6654ab4d897f6.png" src="../_images/d8ce506dcb73cfb10123d13593e89ad547f6ec4bd99831fd4bb6654ab4d897f6.png" />
+<img alt="../_images/4a449a85bcc2f6276fb0a1990d5776bdc1e72179d8ce9359fcd9b54c7c95575c.png" src="../_images/4a449a85bcc2f6276fb0a1990d5776bdc1e72179d8ce9359fcd9b54c7c95575c.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_PCA</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_PCA</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">,</span> 
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -719,19 +799,23 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 2D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_PCA</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span><span class="o">=</span><span class="mi">6</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -741,19 +825,23 @@ title="Print to PDF"
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/895eaa0aae656924e23d516bda7c586a9477a3143675fe0364acd52c473b5820.png" src="../_images/895eaa0aae656924e23d516bda7c586a9477a3143675fe0364acd52c473b5820.png" />
-<img alt="../_images/fc5f44711ec43399ad24c6d3ee3fe8d41ed82fcc037d337565850d91a3d7079c.png" src="../_images/fc5f44711ec43399ad24c6d3ee3fe8d41ed82fcc037d337565850d91a3d7079c.png" />
+<img alt="../_images/0a06fbdaffd8b47e87c668b879fff1d5c5233b961f8ed127eb440602c518940e.png" src="../_images/0a06fbdaffd8b47e87c668b879fff1d5c5233b961f8ed127eb440602c518940e.png" />
+<img alt="../_images/c3f904ca45d06595d0997625e96980d10d8a9550677029337ed7f516f722125e.png" src="../_images/c3f904ca45d06595d0997625e96980d10d8a9550677029337ed7f516f722125e.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a7de2b456d3b31b186daec78e0a47e1e7b3c4d28aa21f2d6d98576d077eb0059.png" src="../_images/a7de2b456d3b31b186daec78e0a47e1e7b3c4d28aa21f2d6d98576d077eb0059.png" />
+<img alt="../_images/db4f4057df6cc89d9b089d7db7752fd4e8c23801411e376a417d2a5ea6eba917.png" src="../_images/db4f4057df6cc89d9b089d7db7752fd4e8c23801411e376a417d2a5ea6eba917.png" />
 </div>
 </div>
 </section>
@@ -761,7 +849,16 @@ title="Print to PDF"
 <h3>Kernel PCA (Radial basis function)<a class="headerlink" href="#kernel-pca-radial-basis-function" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_RBF</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span> <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_RBF</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">KernelPCA</span><span class="p">,</span> 
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+   <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> 
+   <span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -769,19 +866,23 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA RBF&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_KPCA_RBF</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_RBF</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -791,20 +892,24 @@ title="Print to PDF"
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/59e68f2bcc477c90c215dfd9e9dfa0d8926a3f92191d7ebb24150d856041568c.png" src="../_images/59e68f2bcc477c90c215dfd9e9dfa0d8926a3f92191d7ebb24150d856041568c.png" />
-<img alt="../_images/ab1bcd72095b31b69d960fb11934caa0520da04725548627b296710f9c2e02d9.png" src="../_images/ab1bcd72095b31b69d960fb11934caa0520da04725548627b296710f9c2e02d9.png" />
+<img alt="../_images/157abc87022b474834d0adb7b5abd9a3e391142988783240c3e8d704fcac22fb.png" src="../_images/157abc87022b474834d0adb7b5abd9a3e391142988783240c3e8d704fcac22fb.png" />
+<img alt="../_images/d635ff5b15d7622c732f9080d4c9c08bd72e289c11ca74a46f1d29825d1cdeda.png" src="../_images/d635ff5b15d7622c732f9080d4c9c08bd72e289c11ca74a46f1d29825d1cdeda.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
 <span class="c1"># gm.plot_trustworthiness()</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3a4f9d91cbbe8df1640b6b37364b6ca8494d7a4f05377b64691b7878c90a531e.png" src="../_images/3a4f9d91cbbe8df1640b6b37364b6ca8494d7a4f05377b64691b7878c90a531e.png" />
+<img alt="../_images/ff6505f1148498f6ea29a6be63c4075dc22b85ee821b6752a18ba87828495eb0.png" src="../_images/ff6505f1148498f6ea29a6be63c4075dc22b85ee821b6752a18ba87828495eb0.png" />
 </div>
 </div>
 </section>
@@ -812,7 +917,16 @@ title="Print to PDF"
 <h3>Kernel PCA (Sigmoid)<a class="headerlink" href="#kernel-pca-sigmoid" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_S</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">,</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_S</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">KernelPCA</span><span class="p">,</span>
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="n">kernel</span> <span class="o">=</span> <span class="s2">&quot;sigmoid&quot;</span><span class="p">,</span>
+   <span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.002</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -820,41 +934,45 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Sig&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_KPCA_S</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_S</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
-  cset = contour_func(
-</pre></div>
-</div>
-<img alt="../_images/dcabcd3b08b042e9a8f1d6a93ec30313841b91bb0a997e800ca82fda3c180ebe.png" src="../_images/dcabcd3b08b042e9a8f1d6a93ec30313841b91bb0a997e800ca82fda3c180ebe.png" />
-<img alt="../_images/08d958d2dd959bef65db284bd7caef7002520f47156eb182374e9dd2b213a2f5.png" src="../_images/08d958d2dd959bef65db284bd7caef7002520f47156eb182374e9dd2b213a2f5.png" />
+<img alt="../_images/a38bdad0148bd796951e92137e75ba0a898cae14a969861eb4750375b0a67e9b.png" src="../_images/a38bdad0148bd796951e92137e75ba0a898cae14a969861eb4750375b0a67e9b.png" />
+<img alt="../_images/db204c8207799cba925188373c4c8d5aca6747c1f67e1b1db17e1242c42b29cd.png" src="../_images/db204c8207799cba925188373c4c8d5aca6747c1f67e1b1db17e1242c42b29cd.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dc2ef59fb59bd15241470044da3ef4b3ebb86f22125d19d1a30fdffe59f4150e.png" src="../_images/dc2ef59fb59bd15241470044da3ef4b3ebb86f22125d19d1a30fdffe59f4150e.png" />
+<img alt="../_images/38df4f435d5d54b90aaf26d95815bcb9ad4d5ee51192b21ca83019b099b4b24b.png" src="../_images/38df4f435d5d54b90aaf26d95815bcb9ad4d5ee51192b21ca83019b099b4b24b.png" />
 </div>
 </div>
 </section>
@@ -862,7 +980,16 @@ title="Print to PDF"
 <h3>Kernel PCA (Cosine)<a class="headerlink" href="#kernel-pca-cosine" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_C</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;cosine&quot;</span><span class="p">,</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_KPCA_C</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">KernelPCA</span><span class="p">,</span>
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+   <span class="n">kernel</span> <span class="o">=</span> <span class="s2">&quot;cosine&quot;</span><span class="p">,</span>
+   <span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -870,19 +997,23 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Cos&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_KPCA_C</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_C</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -892,19 +1023,23 @@ title="Print to PDF"
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/1d3856ebc5577d6067cb0024d6f5bb2e49403455f3f7f921eb92630d7c055618.png" src="../_images/1d3856ebc5577d6067cb0024d6f5bb2e49403455f3f7f921eb92630d7c055618.png" />
-<img alt="../_images/a521363491cad94298d223c6e7fc6e84e3072402e69de818cbbb27c4a0d6904a.png" src="../_images/a521363491cad94298d223c6e7fc6e84e3072402e69de818cbbb27c4a0d6904a.png" />
+<img alt="../_images/4faea00dc6127a396c570f8cdc19ccae1a4a760c2b8e81e4c89461e7c0a9647b.png" src="../_images/4faea00dc6127a396c570f8cdc19ccae1a4a760c2b8e81e4c89461e7c0a9647b.png" />
+<img alt="../_images/b38a0be0e8e01a259f71041f3ce9d7d2d9b92fbe38b965d57259a6e4ed746e67.png" src="../_images/b38a0be0e8e01a259f71041f3ce9d7d2d9b92fbe38b965d57259a6e4ed746e67.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/203e68c84b5b7a08f01ac60f8b0df99cea650360d80c0ef66db6b2bf3a19645c.png" src="../_images/203e68c84b5b7a08f01ac60f8b0df99cea650360d80c0ef66db6b2bf3a19645c.png" />
+<img alt="../_images/c5a2a2fdf3292ce184333b2019157926a6d2bd12113e78af67ad8275ae3fa08e.png" src="../_images/c5a2a2fdf3292ce184333b2019157926a6d2bd12113e78af67ad8275ae3fa08e.png" />
 </div>
 </div>
 </section>
@@ -912,7 +1047,15 @@ title="Print to PDF"
 <h3>t-distributed Stochastic Neighbor Embedding (t-SNE)<a class="headerlink" href="#t-distributed-stochastic-neighbor-embedding-t-sne" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_tSNE</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">TSNE</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">450</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_tSNE</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">,</span>
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+   <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">450</span><span class="p">,</span> 
+   <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -920,19 +1063,23 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 2D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_tSNE</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -942,24 +1089,36 @@ title="Print to PDF"
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/0b5c801d5aa64a3bc672e210c4d2fb881f300de1503ed34b00536ccb6d353677.png" src="../_images/0b5c801d5aa64a3bc672e210c4d2fb881f300de1503ed34b00536ccb6d353677.png" />
-<img alt="../_images/80835f6b03257f15f95f4a92675ff92fa53e42c1f9fc5a9063f5bc14eac27021.png" src="../_images/80835f6b03257f15f95f4a92675ff92fa53e42c1f9fc5a9063f5bc14eac27021.png" />
+<img alt="../_images/b80df06c4402049f0268c4eb8a42f974f3bea7162799d906cd34bfea5557f8f5.png" src="../_images/b80df06c4402049f0268c4eb8a42f974f3bea7162799d906cd34bfea5557f8f5.png" />
+<img alt="../_images/9c4e84b37391be739eadb03292cebcd6762df577e94bd0588e66a1eb2c11bbed.png" src="../_images/9c4e84b37391be739eadb03292cebcd6762df577e94bd0588e66a1eb2c11bbed.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6ddc36e313e41591ebda9942fdfd81a069c418b9451dac3bb32699d3133f3a49.png" src="../_images/6ddc36e313e41591ebda9942fdfd81a069c418b9451dac3bb32699d3133f3a49.png" />
+<img alt="../_images/9cf9c92adfb275708bcdc698e0efc2bcba00a68ce92b500c26c76fdffdd1bd14.png" src="../_images/9cf9c92adfb275708bcdc698e0efc2bcba00a68ce92b500c26c76fdffdd1bd14.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_tSNE</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">TSNE</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">450</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_tSNE</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">,</span>
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+   <span class="n">perplexity</span> <span class="o">=</span> <span class="mi">450</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -967,74 +1126,91 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_tSNE</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0f3bbbb2f55dea664b32ea637a3c6b5439dad1f6e7642b4620d9c01677094387.png" src="../_images/0f3bbbb2f55dea664b32ea637a3c6b5439dad1f6e7642b4620d9c01677094387.png" />
-<img alt="../_images/89146b11e48de34679297d22ef3bc34cbc0f11b75c2ac151a2ba03996a79e61c.png" src="../_images/89146b11e48de34679297d22ef3bc34cbc0f11b75c2ac151a2ba03996a79e61c.png" />
+<img alt="../_images/bd365a3e6cdc30aa5b7cfa6c95269cc239a338444b696227ee8f3d7950ec0cc0.png" src="../_images/bd365a3e6cdc30aa5b7cfa6c95269cc239a338444b696227ee8f3d7950ec0cc0.png" />
+<img alt="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" src="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3c5cb8b56760bec4cc594ad3feefbff852855ab44f81a87e430ce56645a9b446.png" src="../_images/3c5cb8b56760bec4cc594ad3feefbff852855ab44f81a87e430ce56645a9b446.png" />
+<img alt="../_images/26d73a31fab3370fb58894910e08f77aaa27f92cd0ee5fa9dc0ddd8b8c92af9b.png" src="../_images/26d73a31fab3370fb58894910e08f77aaa27f92cd0ee5fa9dc0ddd8b8c92af9b.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D genGauss&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_l_tSNE</span><span class="p">,</span>
-                      <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+   <span class="n">plot_gen_gauss</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/371b0ae84c8c1c4d51bf16e8ebfbd01f5f8e8af0cae4a03dcbbd5dfaf8c283db.png" src="../_images/371b0ae84c8c1c4d51bf16e8ebfbd01f5f8e8af0cae4a03dcbbd5dfaf8c283db.png" />
-<img alt="../_images/46c8f6720ac19493336ac25243ae2bf438b12e787c89e36ca6b40ab72a005040.png" src="../_images/46c8f6720ac19493336ac25243ae2bf438b12e787c89e36ca6b40ab72a005040.png" />
+<img alt="../_images/b02c47d45ec206b3d0ad18ed31e3bb26fa79583143d586b8b2f2606da3d3477d.png" src="../_images/b02c47d45ec206b3d0ad18ed31e3bb26fa79583143d586b8b2f2606da3d3477d.png" />
+<img alt="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" src="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span> 
 <span class="c1"># gm.plot_trustworthiness()</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0e9fc2febc66aa77b338d5142c6111e45372644252ea90ef8aa4e64a2a2fc7a6.png" src="../_images/0e9fc2febc66aa77b338d5142c6111e45372644252ea90ef8aa4e64a2a2fc7a6.png" />
+<img alt="../_images/266f8425c45b012c21e1d33fd411aba15ca358dbb4a7552aad896fd12c7efe90.png" src="../_images/266f8425c45b012c21e1d33fd411aba15ca358dbb4a7552aad896fd12c7efe90.png" />
 </div>
 </div>
 </section>
@@ -1042,7 +1218,16 @@ title="Print to PDF"
 <h3>UMAP<a class="headerlink" href="#umap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap1d&#39;</span><span class="p">,</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> <span class="s1">&#39;1000.npy&#39;</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap1d&#39;</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> 
+   <span class="n">custom_name</span> <span class="o">=</span> <span class="s1">&#39;1000.npy&#39;</span><span class="p">,</span> 
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+   <span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1050,42 +1235,59 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">28</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">28</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0a38fca82be5aa381f3f0ca8ef8811278841247b4461a35cb72952e4eb80c61d.png" src="../_images/0a38fca82be5aa381f3f0ca8ef8811278841247b4461a35cb72952e4eb80c61d.png" />
-<img alt="../_images/14af2d8c7343ba36bc5e87be631e1b6b95a5a89e3de1cd06e506ed60e5f75a8f.png" src="../_images/14af2d8c7343ba36bc5e87be631e1b6b95a5a89e3de1cd06e506ed60e5f75a8f.png" />
+<img alt="../_images/fca101005e1f65f8f23a29d3e98301b5d99ba87991894f5f75fab1c6c741b849.png" src="../_images/fca101005e1f65f8f23a29d3e98301b5d99ba87991894f5f75fab1c6c741b849.png" />
+<img alt="../_images/abab9877568e1a874f8eec486b079ebb17ef2767338074f7836c62660d390733.png" src="../_images/abab9877568e1a874f8eec486b079ebb17ef2767338074f7836c62660d390733.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ca53b9259b1364d5d03a4d27356d08592a3cb66dcc04f15073d59e2b37005b15.png" src="../_images/ca53b9259b1364d5d03a4d27356d08592a3cb66dcc04f15073d59e2b37005b15.png" />
+<img alt="../_images/ad3e3f22b897a812ade43d08642040eee2eedb3c59c17590928d1256c08d2d12.png" src="../_images/ad3e3f22b897a812ade43d08642040eee2eedb3c59c17590928d1256c08d2d12.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap2d&#39;</span><span class="p">,</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> <span class="s1">&#39;700.npy&#39;</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_UMAP</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="o">+</span><span class="s1">&#39;/umap2d&#39;</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">,</span> 
+   <span class="n">custom_name</span> <span class="o">=</span> <span class="s1">&#39;700.npy&#39;</span><span class="p">,</span>
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+   <span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1093,41 +1295,53 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 2D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
+  warnings.warn(
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/5f7ba321a035d77d649b32372f280ac16787ee4289d392bbe0e3f08d28b10e59.png" src="../_images/5f7ba321a035d77d649b32372f280ac16787ee4289d392bbe0e3f08d28b10e59.png" />
-<img alt="../_images/24ed78e23e6eb9235a62c95b203b2790ca9fee6c53b0f4acadbca8d3501cff2f.png" src="../_images/24ed78e23e6eb9235a62c95b203b2790ca9fee6c53b0f4acadbca8d3501cff2f.png" />
+<img alt="../_images/971b87ed57a7906e38b11a03a1c658cfd1a86ee7977523abf8558e272b99d981.png" src="../_images/971b87ed57a7906e38b11a03a1c658cfd1a86ee7977523abf8558e272b99d981.png" />
+<img alt="../_images/592e95ab8fffe2d66c953d78f083b3a5f5101148ef617275959ddc0b84b71b91.png" src="../_images/592e95ab8fffe2d66c953d78f083b3a5f5101148ef617275959ddc0b84b71b91.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_2d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/caab731c8df6b66ba1de6643e2420e414f09ed2ceb0aa51d5a99e81b12a84859.png" src="../_images/caab731c8df6b66ba1de6643e2420e414f09ed2ceb0aa51d5a99e81b12a84859.png" />
+<img alt="../_images/1c7677eea567e2cf703a4807ef41ed946e3d4b0ca2689a0dfabba54e06065608.png" src="../_images/1c7677eea567e2cf703a4807ef41ed946e3d4b0ca2689a0dfabba54e06065608.png" />
 </div>
 </div>
 </section>
@@ -1135,7 +1349,18 @@ title="Print to PDF"
 <h3>Non-Negative Matrix Factorization (NMF)<a class="headerlink" href="#non-negative-matrix-factorization-nmf" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_NMF</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">NMF</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">beta_loss</span><span class="o">=</span><span class="s1">&#39;kullback-leibler&#39;</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_NMF</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">NMF</span><span class="p">,</span>
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+   <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> 
+   <span class="n">solver</span> <span class="o">=</span> <span class="s1">&#39;mu&#39;</span><span class="p">,</span> 
+   <span class="n">beta_loss</span> <span class="o">=</span> <span class="s1">&#39;kullback-leibler&#39;</span><span class="p">,</span> 
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-10</span><span class="p">,</span> 
+   <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1143,37 +1368,45 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;NMF 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/735b4c9a06fa08baab5528678641ff93b82cf4f64882f9062de4fa5ccd65f51e.png" src="../_images/735b4c9a06fa08baab5528678641ff93b82cf4f64882f9062de4fa5ccd65f51e.png" />
-<img alt="../_images/9594ca72cddfdffd917fac94b80f7ee0b5a637587aca5c931352a6a3380fab13.png" src="../_images/9594ca72cddfdffd917fac94b80f7ee0b5a637587aca5c931352a6a3380fab13.png" />
+<img alt="../_images/4fb14e5f15d1561f5deed98941eb0b1d23a6f8e1ef7928d7296a9c7436048b10.png" src="../_images/4fb14e5f15d1561f5deed98941eb0b1d23a6f8e1ef7928d7296a9c7436048b10.png" />
+<img alt="../_images/0f3fd3392d488d6164539a0039b05cce2641aa97b973f444f3828b6f57f92608.png" src="../_images/0f3fd3392d488d6164539a0039b05cce2641aa97b973f444f3828b6f57f92608.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/64bae367c29b24aee29477b158f4b9690bf98907a77e4188d12c80fcf011936c.png" src="../_images/64bae367c29b24aee29477b158f4b9690bf98907a77e4188d12c80fcf011936c.png" />
+<img alt="../_images/5e8830fd3a3117cb55b9ab1a7f88766c006af12351b27ccc7ec191590bb71c81.png" src="../_images/5e8830fd3a3117cb55b9ab1a7f88766c006af12351b27ccc7ec191590bb71c81.png" />
 </div>
 </div>
 </section>
@@ -1181,7 +1414,15 @@ title="Print to PDF"
 <h3>Isomap<a class="headerlink" href="#isomap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_ISO</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> <span class="n">Isomap</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">eigen_solver</span><span class="o">=</span><span class="s2">&quot;arpack&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_ISO</span> <span class="o">=</span> <span class="n">sklearn_available</span><span class="p">(</span>
+   <span class="n">X_train</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">,</span> 
+   <span class="n">X_test</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
+   <span class="n">path_save</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span><span class="p">,</span> 
+   <span class="n">function</span> <span class="o">=</span> <span class="n">Isomap</span><span class="p">,</span> 
+   <span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> 
+   <span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+   <span class="n">eigen_solver</span> <span class="o">=</span> <span class="s2">&quot;arpack&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1189,37 +1430,45 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;ISO 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">35</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/98ab1c79b0dfd7bf798dd0be30e4de7183ef4f3cd987b110af63cffc3a1ef811.png" src="../_images/98ab1c79b0dfd7bf798dd0be30e4de7183ef4f3cd987b110af63cffc3a1ef811.png" />
-<img alt="../_images/85d13b7338ffad0fb1d69dd5f93ac528ab85dceaf45c2a6414599de3297d5c48.png" src="../_images/85d13b7338ffad0fb1d69dd5f93ac528ab85dceaf45c2a6414599de3297d5c48.png" />
+<img alt="../_images/61af19ef06f44ab3ce16d75c2c57fa01868ab9b6a632a1f046e588893482a7bb.png" src="../_images/61af19ef06f44ab3ce16d75c2c57fa01868ab9b6a632a1f046e588893482a7bb.png" />
+<img alt="../_images/d7517ee9553abec8e09fd9459812398dd2a13629b23794bb4d139ffd7677ec85.png" src="../_images/d7517ee9553abec8e09fd9459812398dd2a13629b23794bb4d139ffd7677ec85.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6da4f60efd8987078c5c1960b3b51a3dc32004440b4f4b089bde8e4a1f1d2852.png" src="../_images/6da4f60efd8987078c5c1960b3b51a3dc32004440b4f4b089bde8e4a1f1d2852.png" />
+<img alt="../_images/edbb346c026eefc2114798ee7bcb94883a58521affc05b0adc3ad714c46c4870.png" src="../_images/edbb346c026eefc2114798ee7bcb94883a58521affc05b0adc3ad714c46c4870.png" />
 </div>
 </div>
 </section>
@@ -1241,37 +1490,45 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PTSNE 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PTSNE</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span> 
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-                      <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                      <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PTSNE</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span> 
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+   <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e1aa4506e80043b0ee1f1e79f7d20dce38080930cf3cd5242f6871b4c5bd27bd.png" src="../_images/e1aa4506e80043b0ee1f1e79f7d20dce38080930cf3cd5242f6871b4c5bd27bd.png" />
-<img alt="../_images/dab52f1414db8096352abbeb5cd3a3d9e47b40276bdf90d5278f021213f876d1.png" src="../_images/dab52f1414db8096352abbeb5cd3a3d9e47b40276bdf90d5278f021213f876d1.png" />
+<img alt="../_images/b2a864b76496afbaab11841b1ebe8bdff6ddf966f2e7667cd7444932015b34be.png" src="../_images/b2a864b76496afbaab11841b1ebe8bdff6ddf966f2e7667cd7444932015b34be.png" />
+<img alt="../_images/e4c3032ac79cc6fab54ef46a00f77088cb7c8058f72df07dd89e8a1e9d30082e.png" src="../_images/e4c3032ac79cc6fab54ef46a00f77088cb7c8058f72df07dd89e8a1e9d30082e.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/51393e59344280e39f4477e4ae9fe49cedd5a7e337559dc405a531a1496b89b1.png" src="../_images/51393e59344280e39f4477e4ae9fe49cedd5a7e337559dc405a531a1496b89b1.png" />
+<img alt="../_images/23260c65303aa92faeda6e40ab88ffd9f176051ba55dc3e2b94df6b27de09d98.png" src="../_images/23260c65303aa92faeda6e40ab88ffd9f176051ba55dc3e2b94df6b27de09d98.png" />
 </div>
 </div>
 </section>
@@ -1293,35 +1550,43 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PUMAP 1D&#39;</span>
-<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span><span class="n">X_low</span> <span class="o">=</span> <span class="o">-</span><span class="n">X_PUMAP</span><span class="p">,</span>
-                      <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-                      <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
-                      <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                      <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-                      <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-5</span><span class="p">)</span>
+<span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="o">-</span><span class="n">X_PUMAP</span><span class="p">,</span>
+   <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
+   <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-5</span>
+<span class="p">)</span>
 
-<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span><span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-                <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-                <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span><span class="p">)</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
+   <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
+   <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
+<span class="p">)</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">plot_g2</span><span class="p">(</span><span class="n">db_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a258f054e2bbbc6a74d2b0291bdd5ae5447befda0a16bc492f096a633e67de7a.png" src="../_images/a258f054e2bbbc6a74d2b0291bdd5ae5447befda0a16bc492f096a633e67de7a.png" />
-<img alt="../_images/ac41e5059f9e583c1287d1705c86ceba3ec8ae9e13280b62406375240b4c416c.png" src="../_images/ac41e5059f9e583c1287d1705c86ceba3ec8ae9e13280b62406375240b4c416c.png" />
+<img alt="../_images/2b1f99b14bcd6c50fce7dc68e1fbb440073ffc590686c14ac2f58ef919861384.png" src="../_images/2b1f99b14bcd6c50fce7dc68e1fbb440073ffc590686c14ac2f58ef919861384.png" />
+<img alt="../_images/5bce58bccbf697fe8b7bb4587c862d113cd0a68f8ed32f1f42f3c75069990805.png" src="../_images/5bce58bccbf697fe8b7bb4587c862d113cd0a68f8ed32f1f42f3c75069990805.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">plot_confidence_1d</span><span class="p">(</span><span class="n">expected_prob</span> <span class="o">=</span> <span class="n">expected_prob</span><span class="p">)</span>
-<span class="n">save_results</span><span class="p">(</span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">)</span>
+<span class="n">save_results</span><span class="p">(</span>
+   <span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span><span class="p">,</span> 
+   <span class="n">name_method</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span> 
+   <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e316a6a87d8e06798dc4a24010ab1e7f37e2257511b204774b3bc0c4fd779788.png" src="../_images/e316a6a87d8e06798dc4a24010ab1e7f37e2257511b204774b3bc0c4fd779788.png" />
+<img alt="../_images/ac4d45777d8dba2423e0422075721d903e8a44a1dce2c06392f2740f0d0454ff.png" src="../_images/ac4d45777d8dba2423e0422075721d903e8a44a1dce2c06392f2740f0d0454ff.png" />
 </div>
 </div>
 </section>
@@ -1366,7 +1631,7 @@ title="Print to PDF"
   <a class='right-next' id="next-link" href="Methods_Large.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Synthetic Large</p>
+      <p class="prev-next-title">Large</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -1386,75 +1651,87 @@ title="Print to PDF"
 </div>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Uniform Distribution
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#methods">
-   Methods
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute">
+   Compute
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#max-value">
-     Max Value
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#area">
-     Area
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     Methods
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#principal-component-analysis-pca">
-     Principal Component Analysis (PCA)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
-     Kernel PCA (Radial basis function)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
-     Kernel PCA (Sigmoid)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kernel-pca-cosine">
-     Kernel PCA (Cosine)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
-     t-distributed Stochastic Neighbor Embedding (t-SNE)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#umap">
-     UMAP
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
-     Non-Negative Matrix Factorization (NMF)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#isomap">
-     Isomap
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parametric-t-sne">
-     Parametric t-SNE
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parametric-umap">
-     Parametric UMAP
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#max-value">
+       Max Value
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#area">
+       Area
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+       Principal Component Analysis (PCA)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
+       Kernel PCA (Radial basis function)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
+       Kernel PCA (Sigmoid)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kernel-pca-cosine">
+       Kernel PCA (Cosine)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
+       t-distributed Stochastic Neighbor Embedding (t-SNE)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#umap">
+       UMAP
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
+       Non-Negative Matrix Factorization (NMF)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#isomap">
+       Isomap
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parametric-t-sne">
+       Parametric t-SNE
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parametric-umap">
+       Parametric UMAP
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
