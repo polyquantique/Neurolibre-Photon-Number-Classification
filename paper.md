@@ -25,7 +25,7 @@ affiliations:
     index: 2
   - name: National Institute of Standards and~Technology, 100 Bureau Drive, Gaithersburg, MD 20899, USA
     index: 3
-date: 2 november 2024
+date: 3 december 2024
 bibliography: paper.bib
 ---
 
@@ -97,6 +97,6 @@ To validate the hypothesis that more training data can help parametric implement
 
 # References
 
-```{bibliography}
+<!-- ```{bibliography}
 :style: unsrt
-```
+``` -->
