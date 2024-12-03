@@ -5,7 +5,7 @@ options:
 parts:
   - caption: Confidence
     chapters:
-    - file: "Sections/Methods_Geometric.ipynb"
     - file: "Sections/Methods_Uniform.ipynb"
+    - file: "Sections/Methods_Geometric.ipynb"
     - file: "Sections/Methods_Large.ipynb"
     
