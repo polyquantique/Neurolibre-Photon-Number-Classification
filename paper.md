@@ -23,7 +23,7 @@ affiliations:
     index: 1
   - name: National Research Council of Canada, 100 Sussex Drive, Ottawa, Ontario K1N 5A2, Canada
     index: 2
-  - name: National Institute of Standards and~Technology, 100 Bureau Drive, Gaithersburg, MD 20899, USA
+  - name: National Institute of Standards and Technology, 100 Bureau Drive, Gaithersburg, MD 20899, USA
     index: 3
 date: 3 december 2024
 bibliography: paper.bib
