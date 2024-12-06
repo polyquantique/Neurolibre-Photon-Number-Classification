@@ -493,7 +493,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">umap</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">SKIP</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">SKIP</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">PATH_INIT_MEANS</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Large/Mean_Clusters&#39;</span>
 <span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Large/Low_Dimension&#39;</span>
 <span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;Dataset/Data_Ottawa/data.zip&#39;</span>
@@ -522,7 +522,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(275000, 200)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(550000, 200)
 </pre></div>
 </div>
 </div>
@@ -539,6 +539,12 @@ title="Print to PDF"
    <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
    <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span>
 <span class="p">)</span>
+<span class="n">X_AREA</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(550000, 1)
 </pre></div>
 </div>
 </div>
@@ -567,7 +573,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/47e6e145efd8919ff3957c2ee2a523f5ee0ec0d0f6f05b9662ebd91289f63dfe.png" src="../_images/47e6e145efd8919ff3957c2ee2a523f5ee0ec0d0f6f05b9662ebd91289f63dfe.png" />
+<img alt="../_images/6e20c4a3d70f644070c83fdcd4df2c6be6f1001d6f5185cd497ad83ccb0341d2.png" src="../_images/6e20c4a3d70f644070c83fdcd4df2c6be6f1001d6f5185cd497ad83ccb0341d2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -582,7 +588,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f5d8f39c8d585bcb56f46e1f22a09fb9c428c584314161b2173255f1f977fe28.png" src="../_images/f5d8f39c8d585bcb56f46e1f22a09fb9c428c584314161b2173255f1f977fe28.png" />
+<img alt="../_images/1955fdb0632e7ec49be7e7e1a33047629e87b289f4d3c8e65b7d4b92c2c62ff3.png" src="../_images/1955fdb0632e7ec49be7e7e1a33047629e87b289f4d3c8e65b7d4b92c2c62ff3.png" />
 </div>
 </div>
 </div>
@@ -595,7 +601,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(275000, 200)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(550000, 200)
 </pre></div>
 </div>
 </div>
@@ -642,7 +648,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0fe3a05cedb7eb3e600dda41f422e7cc69c93e14b647e7375ec202b2b38eb602.png" src="../_images/0fe3a05cedb7eb3e600dda41f422e7cc69c93e14b647e7375ec202b2b38eb602.png" />
+<img alt="../_images/92a8db98dba647933caf96e67250a275e75edc3304a1116f675d7f7e6e2a2686.png" src="../_images/92a8db98dba647933caf96e67250a275e75edc3304a1116f675d7f7e6e2a2686.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -653,7 +659,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9db9ca8c2db63edb1535354f04fedb962f6b0d2eca7d842f6b4171ebf7f79553.png" src="../_images/9db9ca8c2db63edb1535354f04fedb962f6b0d2eca7d842f6b4171ebf7f79553.png" />
+<img alt="../_images/7c74463baa69e28babcbd70abe45c2d5eb8b0822d36c154095bb2bc920943364.png" src="../_images/7c74463baa69e28babcbd70abe45c2d5eb8b0822d36c154095bb2bc920943364.png" />
 </div>
 </div>
 </div>
@@ -700,7 +706,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5a75e791d9f4c86cb3afc03b779232445714ed083765e32882da541196014390.png" src="../_images/5a75e791d9f4c86cb3afc03b779232445714ed083765e32882da541196014390.png" />
+<img alt="../_images/a78ce51f3c9f9984634851a3419531f514041ea0a3c145bff10e4120bd36f7fd.png" src="../_images/a78ce51f3c9f9984634851a3419531f514041ea0a3c145bff10e4120bd36f7fd.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -711,7 +717,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d059cee491ccf227f3cf74c508826c36a4e821455b0f475fde115f22b154af08.png" src="../_images/d059cee491ccf227f3cf74c508826c36a4e821455b0f475fde115f22b154af08.png" />
+<img alt="../_images/61a9fdd120118755541697698ba3a312a0775793afa9d8f5801c8ca2b8bdc1b7.png" src="../_images/61a9fdd120118755541697698ba3a312a0775793afa9d8f5801c8ca2b8bdc1b7.png" />
 </div>
 </div>
 </div>
@@ -754,7 +760,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7dc3da187d7cf5cbd9e1b0c7709014f0ca96943acb4bd4f1f02432e5f0de93bd.png" src="../_images/7dc3da187d7cf5cbd9e1b0c7709014f0ca96943acb4bd4f1f02432e5f0de93bd.png" />
+<img alt="../_images/9d9a3ceff26fb75b52f58ba7ef6ad2d8b23943b36700aa6d526e831f5e19c125.png" src="../_images/9d9a3ceff26fb75b52f58ba7ef6ad2d8b23943b36700aa6d526e831f5e19c125.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -769,7 +775,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6ebd7c519065c5fae1b6ab2b0286bfc6ad45908edd57c0233e65316babf87bbc.png" src="../_images/6ebd7c519065c5fae1b6ab2b0286bfc6ad45908edd57c0233e65316babf87bbc.png" />
+<img alt="../_images/b828db5ae65ef988cc7e94bce63b6cafb37f6d5ec379a45fe816665580208361.png" src="../_images/b828db5ae65ef988cc7e94bce63b6cafb37f6d5ec379a45fe816665580208361.png" />
 </div>
 </div>
 </div>
