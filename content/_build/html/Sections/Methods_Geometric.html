@@ -4,8 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Synthetic Geometric &#8212; Accurate Unsupervised
 Photon Counting from
 Transition Edge Sensor Signal</title>
@@ -319,7 +318,6 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Confidence</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Methods_Uniform.html">Synthetic Uniform</a></li>
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Synthetic Geometric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Methods_Large.html">Large</a></li>
 </ul>
@@ -446,11 +444,6 @@ title="Print to PDF"
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compute">
-   Compute
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data">
    Data
   </a>
@@ -531,7 +524,7 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="synthetic-geometric">
+  <div class="tex2jax_ignore mathjax_ignore section" id="synthetic-geometric">
 <h1>Synthetic Geometric<a class="headerlink" href="#synthetic-geometric" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -552,20 +545,20 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<section id="compute">
-<h2>Compute<a class="headerlink" href="#compute" title="Permalink to this heading">#</a></h2>
-<p>The entire file is precomputed and the results are saved in <code class="docutils literal notranslate"><span class="pre">src/Results_Geometric</span></code>.
-The file is programmed to load the results if they are available in <code class="docutils literal notranslate"><span class="pre">PATH_RESULTS</span></code>.</p>
-</section>
-<section id="data">
+<div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Geometric/Low Dimension&#39;</span>
-<span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Geometric/Density&#39;</span>
-<span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Geometric&#39;</span>
-<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;src/Dataset/Data_Boulder/data.zip&#39;</span>
-<span class="n">PATH_R</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Geometric/randomIndexGeometric.npy&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SKIP</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># DATA</span>
+<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;Dataset/Data_Boulder/data.zip&#39;</span>
+<span class="n">PATH_RANDOM</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Geometric/randomIndexGeometric.npy&#39;</span>
+<span class="c1"># PREPROCESS</span>
+<span class="n">PATH_INIT_MEANS</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Geometric/Mean_Clusters&#39;</span>
+<span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Geometric/Low_Dimension&#39;</span>
+<span class="c1"># SAVE PLOTS</span>
+<span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;Results/Geometric/Density&#39;</span>
+<span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;Results/Geometric&#39;</span>
 
 <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.07051088775512344</span><span class="p">,</span> <span class="mf">0.21031270568057314</span><span class="p">,</span> <span class="mf">0.38445365365055423</span><span class="p">,</span> <span class="mf">0.6780434874139336</span><span class="p">,</span> 
            <span class="mf">0.6001082447024342</span><span class="p">,</span> <span class="mf">0.9999999999999999</span><span class="p">,</span> <span class="mf">0.629191619746778</span><span class="p">,</span> <span class="mf">1.1954682934335052e-17</span><span class="p">,</span> 
@@ -574,7 +567,7 @@ The file is programmed to load the results if they are available in <code class=
 <span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">db_train</span><span class="p">,</span> <span class="n">db_test</span> <span class="o">=</span> <span class="n">dataset_dat</span><span class="p">(</span>
    <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span><span class="p">,</span>
    <span class="n">path_data</span> <span class="o">=</span> <span class="n">PATH_DATA</span><span class="p">,</span>
-   <span class="n">path_random_index</span> <span class="o">=</span> <span class="n">PATH_R</span><span class="p">,</span>
+   <span class="n">path_random_index</span> <span class="o">=</span> <span class="n">PATH_RANDOM</span><span class="p">,</span>
    <span class="n">signal_size</span> <span class="o">=</span> <span class="mi">8192</span><span class="p">,</span>
    <span class="n">interval</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">350</span><span class="p">],</span>
    <span class="n">standardize</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -584,27 +577,32 @@ The file is programmed to load the results if they are available in <code class=
 <span class="p">)</span>
 
 <span class="n">data_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">db_train</span><span class="p">,</span> <span class="n">db_test</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span> <span class="n">data_test</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span> <span class="n">db_train</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span> <span class="n">db_test</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/84a12eafff7dfc939384cc746826f7bd527ce0d28d2036f330f1d734cc077332.png" src="../_images/84a12eafff7dfc939384cc746826f7bd527ce0d28d2036f330f1d734cc077332.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(57020, 350)
-</pre></div>
+<img alt="../_images/b5360c6b52fb378beed0788ec72e70575b62372ab24aa0519ebc86a7828f45d8.png" src="../_images/b5360c6b52fb378beed0788ec72e70575b62372ab24aa0519ebc86a7828f45d8.png" />
 </div>
 </div>
 </div>
-</section>
-<section id="methods">
+<div class="section" id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
-<section id="max-value">
+<div class="section" id="max-value">
 <h3>Max Value<a class="headerlink" href="#max-value" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_MAX</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
-   <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span>
 <span class="p">)</span>
+<span class="n">X_l_MAX</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(57020, 1)
 </pre></div>
 </div>
 </div>
@@ -615,9 +613,9 @@ The file is programmed to load the results if they are available in <code class=
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
    <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_MAX</span><span class="p">,</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">,</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
    <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span>
@@ -633,7 +631,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7ee57af6059dff8e6b7b69104b83ea5ea68731e1d0965a245c2238faea611b14.png" src="../_images/7ee57af6059dff8e6b7b69104b83ea5ea68731e1d0965a245c2238faea611b14.png" />
+<img alt="../_images/82ff8226c40c8ae93a2879ed5d8a22c13f045cf5f8119ba3f198faea1a47c592.png" src="../_images/82ff8226c40c8ae93a2879ed5d8a22c13f045cf5f8119ba3f198faea1a47c592.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -648,11 +646,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/efa11138151724fd6b162a401b3e054b5cf8e9bb16bd7258b878f39c179eb0a6.png" src="../_images/efa11138151724fd6b162a401b3e054b5cf8e9bb16bd7258b878f39c179eb0a6.png" />
+<img alt="../_images/9b805d1d9e997ba25b578f09ec1f06dea717eed0723e947e5eb47eab4f170c33.png" src="../_images/9b805d1d9e997ba25b578f09ec1f06dea717eed0723e947e5eb47eab4f170c33.png" />
 </div>
 </div>
-</section>
-<section id="area">
+</div>
+<div class="section" id="area">
 <h3>Area<a class="headerlink" href="#area" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -661,13 +659,11 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
    <span class="n">plot_filter</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
    <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-   <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span>
+   <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/08a971117c7de612dd09131595dda41c264af77046cf2a4a6cb5dfa91321e1ba.png" src="../_images/08a971117c7de612dd09131595dda41c264af77046cf2a4a6cb5dfa91321e1ba.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -678,7 +674,7 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">34</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">,</span>
    <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span>
@@ -694,7 +690,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3c7dd7cf06ffeb0955f9ecc0aeb72b03dbf47544bd1fbfcab50b7ae1a4742dee.png" src="../_images/3c7dd7cf06ffeb0955f9ecc0aeb72b03dbf47544bd1fbfcab50b7ae1a4742dee.png" />
+<img alt="../_images/ab583de8d4d193dfe82f974092d19d7e5e4db6df25dacdae02face14240be9ce.png" src="../_images/ab583de8d4d193dfe82f974092d19d7e5e4db6df25dacdae02face14240be9ce.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -709,11 +705,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/966ff89d1aad5d7b449ab5ae90c9265355a5ee833a0623acb315757e1c05a983.png" src="../_images/966ff89d1aad5d7b449ab5ae90c9265355a5ee833a0623acb315757e1c05a983.png" />
+<img alt="../_images/660c47cb5d59bea2ac858558ec9a31a0e8a438c7ba2d52b07d0ca01f3601c57e.png" src="../_images/660c47cb5d59bea2ac858558ec9a31a0e8a438c7ba2d52b07d0ca01f3601c57e.png" />
 </div>
 </div>
-</section>
-<section id="principal-component-analysis-pca">
+</div>
+<div class="section" id="principal-component-analysis-pca">
 <h3>Principal Component Analysis (PCA)<a class="headerlink" href="#principal-component-analysis-pca" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -733,12 +729,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">28</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">,</span>
    <span class="n">info_sweep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
    <span class="n">plot_sweep</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
    <span class="n">latex</span> <span class="o">=</span> <span class="kc">False</span>
@@ -754,11 +750,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
-  warnings.warn(
-</pre></div>
-</div>
-<img alt="../_images/7935027ee169ede65c0cbe906c98fa0b6cf3ee3113b263b74de167c15c7888ca.png" src="../_images/7935027ee169ede65c0cbe906c98fa0b6cf3ee3113b263b74de167c15c7888ca.png" />
+<img alt="../_images/3ed15323eefbfe5b01791d7a09c2aa476a905b1dd9ac91afe20bfa298ea0e44c.png" src="../_images/3ed15323eefbfe5b01791d7a09c2aa476a905b1dd9ac91afe20bfa298ea0e44c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -773,7 +765,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6222048d8b90d6cc0a00dab0006cca1923c124c8a85e5e0ff04a69b87dc36cac.png" src="../_images/6222048d8b90d6cc0a00dab0006cca1923c124c8a85e5e0ff04a69b87dc36cac.png" />
+<img alt="../_images/e076bda8c110c47254c24fb4417e0fc478d0a3d92c61a1917360ffef9203d892.png" src="../_images/e076bda8c110c47254c24fb4417e0fc478d0a3d92c61a1917360ffef9203d892.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -794,11 +786,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 2D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span><span class="o">=</span><span class="mi">6</span>
@@ -814,11 +806,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/7e020c1ff5f6025d18ace5a458e7a6042ff7907650759cc2b27f46c348203669.png" src="../_images/7e020c1ff5f6025d18ace5a458e7a6042ff7907650759cc2b27f46c348203669.png" />
+<img alt="../_images/ea617767ce17a608ccf706d39ced663602b6bdbc0739606864b6e4663051e941.png" src="../_images/ea617767ce17a608ccf706d39ced663602b6bdbc0739606864b6e4663051e941.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -833,11 +825,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3772014672d844a24e1074fa02ef5a9a226a988bc595c9504294a781969d55f9.png" src="../_images/3772014672d844a24e1074fa02ef5a9a226a988bc595c9504294a781969d55f9.png" />
+<img alt="../_images/8d2a818a2be99086794c9cf93fc238a09a92552dcff22762c844b37ad795ecf0.png" src="../_images/8d2a818a2be99086794c9cf93fc238a09a92552dcff22762c844b37ad795ecf0.png" />
 </div>
 </div>
-</section>
-<section id="kernel-pca-radial-basis-function">
+</div>
+<div class="section" id="kernel-pca-radial-basis-function">
 <h3>Kernel PCA (Radial basis function)<a class="headerlink" href="#kernel-pca-radial-basis-function" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -859,12 +851,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA RBF&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_RBF</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_RBF</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -879,11 +871,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/41fe464d39128eaa9c1140e1073d3d1accf772f5511e8e0cc9e2e450df273f29.png" src="../_images/41fe464d39128eaa9c1140e1073d3d1accf772f5511e8e0cc9e2e450df273f29.png" />
+<img alt="../_images/834e367b83daec828c5145d77ae5281b97e68539a71c9cd738b61a6c4af85bc9.png" src="../_images/834e367b83daec828c5145d77ae5281b97e68539a71c9cd738b61a6c4af85bc9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -898,11 +890,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5679e4fa9f11d9d79306c2fd078fc188f55e468cc9f76bafdcdb382d54e75a13.png" src="../_images/5679e4fa9f11d9d79306c2fd078fc188f55e468cc9f76bafdcdb382d54e75a13.png" />
+<img alt="../_images/3863935a3062a9ead4405b3f015c6ca06f7bd6cd710773af2afff060328c3210.png" src="../_images/3863935a3062a9ead4405b3f015c6ca06f7bd6cd710773af2afff060328c3210.png" />
 </div>
 </div>
-</section>
-<section id="kernel-pca-sigmoid">
+</div>
+<div class="section" id="kernel-pca-sigmoid">
 <h3>Kernel PCA (Sigmoid)<a class="headerlink" href="#kernel-pca-sigmoid" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -924,12 +916,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Sig&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_S</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_S</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -944,7 +936,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f3acb989650b2b3f68116861db7f4a416354cc5b5a527aee384a53ba46e27d35.png" src="../_images/f3acb989650b2b3f68116861db7f4a416354cc5b5a527aee384a53ba46e27d35.png" />
+<img alt="../_images/e17f8efad29b97a59050e0c9989f4c0924eae80686975a3b255340905a0fcf40.png" src="../_images/e17f8efad29b97a59050e0c9989f4c0924eae80686975a3b255340905a0fcf40.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -959,11 +951,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/61347416158cceeceae1704541fea024658d6e4781baf7242096e133b5412ef2.png" src="../_images/61347416158cceeceae1704541fea024658d6e4781baf7242096e133b5412ef2.png" />
+<img alt="../_images/1c29a7054addd1fb93ce35022b3d2a9a5085ab9f239cf96d1ef2b0310149aff6.png" src="../_images/1c29a7054addd1fb93ce35022b3d2a9a5085ab9f239cf96d1ef2b0310149aff6.png" />
 </div>
 </div>
-</section>
-<section id="kernel-pca-cosine">
+</div>
+<div class="section" id="kernel-pca-cosine">
 <h3>Kernel PCA (Cosine)<a class="headerlink" href="#kernel-pca-cosine" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -985,12 +977,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Cos&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_C</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_C</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -1005,11 +997,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/92424a688a4d87d7c04545d651f177838243624b6b8415b14a109e7aea27bd84.png" src="../_images/92424a688a4d87d7c04545d651f177838243624b6b8415b14a109e7aea27bd84.png" />
+<img alt="../_images/1d1436c9689ecdfb399bb472518027cb117a80e62f2b765f7a8b35f85a4b83ec.png" src="../_images/1d1436c9689ecdfb399bb472518027cb117a80e62f2b765f7a8b35f85a4b83ec.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1024,11 +1016,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3f068c527bfc0ca909fbb5adad00367307c778660f677eef36e39875bbbd5873.png" src="../_images/3f068c527bfc0ca909fbb5adad00367307c778660f677eef36e39875bbbd5873.png" />
+<img alt="../_images/f562548ffc1675db7d64e08cab7f203d8af4c4aaff8d86d2cede226bd59d50e1.png" src="../_images/f562548ffc1675db7d64e08cab7f203d8af4c4aaff8d86d2cede226bd59d50e1.png" />
 </div>
 </div>
-</section>
-<section id="t-distributed-stochastic-neighbor-embedding-t-sne">
+</div>
+<div class="section" id="t-distributed-stochastic-neighbor-embedding-t-sne">
 <h3>t-distributed Stochastic Neighbor Embedding (t-SNE)<a class="headerlink" href="#t-distributed-stochastic-neighbor-embedding-t-sne" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1049,12 +1041,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 2D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -1069,11 +1061,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/1d5d9de2c77b3ccc58744344e66ce0afea9dcced2372d735c68ec00a7dfbb5ce.png" src="../_images/1d5d9de2c77b3ccc58744344e66ce0afea9dcced2372d735c68ec00a7dfbb5ce.png" />
+<img alt="../_images/8053bc33542e4584295cc124b62425985ed1ee83d475126d277436c9ac81acc2.png" src="../_images/8053bc33542e4584295cc124b62425985ed1ee83d475126d277436c9ac81acc2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1088,7 +1080,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c3ef15caf599238273bcd2c4427ed1d5378b23d2c462b1b83a052d93577fe4bb.png" src="../_images/c3ef15caf599238273bcd2c4427ed1d5378b23d2c462b1b83a052d93577fe4bb.png" />
+<img alt="../_images/a52b22ed87d4e8d3f05ea74ff68f1cdb520c3722059ffc4df1096381a1df083d.png" src="../_images/a52b22ed87d4e8d3f05ea74ff68f1cdb520c3722059ffc4df1096381a1df083d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1110,12 +1102,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="p">)</span>
@@ -1130,7 +1122,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b449d8d377a2dd96dd731d11c598b6a4edd5511b653d5d2a842d2db026268295.png" src="../_images/b449d8d377a2dd96dd731d11c598b6a4edd5511b653d5d2a842d2db026268295.png" />
+<img alt="../_images/b8a8d74ba93f9a928b8700dcd3f6a52a16ed420b31e63c8289933c3208dc428e.png" src="../_images/b8a8d74ba93f9a928b8700dcd3f6a52a16ed420b31e63c8289933c3208dc428e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1145,11 +1137,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3ab5201dbf1dcc3a9a092a6fe5832ad56677e232b9461b14bc0030a0f3ebca93.png" src="../_images/3ab5201dbf1dcc3a9a092a6fe5832ad56677e232b9461b14bc0030a0f3ebca93.png" />
+<img alt="../_images/f1aeb5aee3eba24fadb81d6341f8f6d4dfa476c1d4aa8b09fd18402fd604cdba.png" src="../_images/f1aeb5aee3eba24fadb81d6341f8f6d4dfa476c1d4aa8b09fd18402fd604cdba.png" />
 </div>
 </div>
-</section>
-<section id="umap">
+</div>
+<div class="section" id="umap">
 <h3>UMAP<a class="headerlink" href="#umap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1171,11 +1163,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1191,11 +1183,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
   warnings.warn(
 </pre></div>
 </div>
-<img alt="../_images/e4fa5a798435a94c15f53ff1897074aaff5b549f9f556d36264272cfe92fd8f1.png" src="../_images/e4fa5a798435a94c15f53ff1897074aaff5b549f9f556d36264272cfe92fd8f1.png" />
+<img alt="../_images/ca9129a99f9cc4a762cc53005877469a32b79c749fb07a7c13970380266a98da.png" src="../_images/ca9129a99f9cc4a762cc53005877469a32b79c749fb07a7c13970380266a98da.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1210,7 +1202,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d2ea25f4f9b6c5f9a0366d6a8bddd4b64bb08d73df5164941b7e04fabcdb0111.png" src="../_images/d2ea25f4f9b6c5f9a0366d6a8bddd4b64bb08d73df5164941b7e04fabcdb0111.png" />
+<img alt="../_images/de7c7b50e0061a1c5f5d2606072739f3ca914cb3a9772e6cfb87fa693a3831a6.png" src="../_images/de7c7b50e0061a1c5f5d2606072739f3ca914cb3a9772e6cfb87fa693a3831a6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1233,12 +1225,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 2D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -1253,129 +1245,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 2D&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>    <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>    <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">gm</span><span class="o">.</span><span class="n">plot_density</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>    <span class="n">bw_adjust</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>    <span class="n">plot_gaussians</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
-<span class="g g-Whitespace">     </span><span class="mi">16</span>    <span class="n">text</span> <span class="o">=</span> <span class="n">name_method</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>    <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_D</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="p">)</span>
-
-<span class="nn">File ~/Documents/GitHub/Public/Neurolibre-Photon-Number-Classification/content/Sections/src/GaussianMixture.py:149,</span> in <span class="ni">gaussian_mixture.__init__</span><span class="nt">(self, X_low, X_high, number_cluster, label_shift, critical_frequency, cluster_iter, means_init, tol, seed, info_sweep, plot_sweep, metric_sweep, width_plot, height_plot, dpi, style, latex)</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Sklearn object</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="c1"># Ordered clustering with initialized means</span>
-<span class="ne">--&gt; </span><span class="mi">149</span> <span class="bp">self</span><span class="o">.</span><span class="n">clustering_order</span><span class="p">(</span><span class="n">cluster_iter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cluster_iter</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>                       <span class="n">means_init</span> <span class="o">=</span> <span class="n">means_init</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span> <span class="c1"># Labels</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_shift</span> <span class="o">=</span> <span class="n">label_shift</span>
-
-<span class="nn">File ~/Documents/GitHub/Public/Neurolibre-Photon-Number-Classification/content/Sections/src/GaussianMixture.py:276,</span> in <span class="ni">gaussian_mixture.clustering_order</span><span class="nt">(self, cluster_iter, means_init)</span>
-<span class="g g-Whitespace">    </span><span class="mi">249</span> <span class="k">def</span> <span class="nf">clustering_order</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cluster_iter</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span>                      <span class="n">means_init</span> <span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">251</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span><span class="sd">     Definition of the Gaussian Mixture for the optimal number of clusters.</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span><span class="sd">     The labels are also initialized to follow photon numbers (label shift</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>     <span class="n">fit_</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_cluster</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>                             <span class="n">tol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tol</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>                             <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>                             <span class="n">n_init</span> <span class="o">=</span> <span class="n">cluster_iter</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span>                             <span class="n">init_params</span> <span class="o">=</span> <span class="s1">&#39;k-means++&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span>                             <span class="n">means_init</span> <span class="o">=</span> <span class="n">means_init</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">276</span>                             <span class="n">random_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_low</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="c1"># Get prediction</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>     <span class="n">predict_init</span> <span class="o">=</span> <span class="n">fit_</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_low</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:181,</span> in <span class="ni">BaseMixture.fit</span><span class="nt">(self, X, y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Estimate model parameters with the EM algorithm.</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd"> The method fits the model ``n_init`` times and sets the parameters with</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span><span class="sd">     The fitted mixture.</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span> <span class="c1"># parameters are validated in fit_predict</span>
-<span class="ne">--&gt; </span><span class="mi">181</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="k">return</span> <span class="bp">self</span>
-
-<span class="nn">File ~/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/base.py:1473,</span> in <span class="ni">_fit_context.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(estimator, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1466</span>     <span class="n">estimator</span><span class="o">.</span><span class="n">_validate_params</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1468</span> <span class="k">with</span> <span class="n">config_context</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1469</span>     <span class="n">skip_parameter_validation</span><span class="o">=</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1470</span>         <span class="n">prefer_skip_nested_validation</span> <span class="ow">or</span> <span class="n">global_skip_validation</span>
-<span class="g g-Whitespace">   </span><span class="mi">1471</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1472</span> <span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1473</span>     <span class="k">return</span> <span class="n">fit_method</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:219,</span> in <span class="ni">BaseMixture.fit_predict</span><span class="nt">(self, X, y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span> <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_components</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>         <span class="s2">&quot;Expected n_samples &gt;= n_components &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span>         <span class="sa">f</span><span class="s2">&quot;but got n_components = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">n_components</span><span class="si">}</span><span class="s2">, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span>         <span class="sa">f</span><span class="s2">&quot;n_samples = </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">219</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_parameters</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span> <span class="c1"># if we enable warm_start, we will have a unique initialisation</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span> <span class="n">do_init</span> <span class="o">=</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">warm_start</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;converged_&quot;</span><span class="p">))</span>
-
-<span class="nn">File ~/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_gaussian_mixture.py:745,</span> in <span class="ni">GaussianMixture._check_parameters</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">742</span>     <span class="bp">self</span><span class="o">.</span><span class="n">weights_init</span> <span class="o">=</span> <span class="n">_check_weights</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weights_init</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_components</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">744</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">means_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">745</span>     <span class="bp">self</span><span class="o">.</span><span class="n">means_init</span> <span class="o">=</span> <span class="n">_check_means</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">746</span>         <span class="bp">self</span><span class="o">.</span><span class="n">means_init</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_components</span><span class="p">,</span> <span class="n">n_features</span>
-<span class="g g-Whitespace">    </span><span class="mi">747</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">749</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">precisions_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">750</span>     <span class="bp">self</span><span class="o">.</span><span class="n">precisions_init</span> <span class="o">=</span> <span class="n">_check_precisions</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">751</span>         <span class="bp">self</span><span class="o">.</span><span class="n">precisions_init</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">752</span>         <span class="bp">self</span><span class="o">.</span><span class="n">covariance_type</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">753</span>         <span class="bp">self</span><span class="o">.</span><span class="n">n_components</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">754</span>         <span class="n">n_features</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">755</span>     <span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_gaussian_mixture.py:73,</span> in <span class="ni">_check_means</span><span class="nt">(means, n_components, n_features)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Validate the provided &#39;means&#39;.</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="sd"> Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd"> means : array, (n_components, n_features)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="n">means</span> <span class="o">=</span> <span class="n">check_array</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">],</span> <span class="n">ensure_2d</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">73</span> <span class="n">_check_shape</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="p">(</span><span class="n">n_components</span><span class="p">,</span> <span class="n">n_features</span><span class="p">),</span> <span class="s2">&quot;means&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span> <span class="k">return</span> <span class="n">means</span>
-
-<span class="nn">File ~/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:37,</span> in <span class="ni">_check_shape</span><span class="nt">(param, param_shape, name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="n">param</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="k">if</span> <span class="n">param</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">param_shape</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">37</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="s2">&quot;The parameter &#39;</span><span class="si">%s</span><span class="s2">&#39; should have the shape of </span><span class="si">%s</span><span class="s2">, but got </span><span class="si">%s</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span>         <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">param_shape</span><span class="p">,</span> <span class="n">param</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="p">)</span>
-
-<span class="ne">ValueError</span>: The parameter &#39;means&#39; should have the shape of (31, 2), but got (30, 2)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+  cset = contour_func(
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">remove_clusters</span><span class="p">([</span><span class="mi">15</span><span class="p">])</span>
-<span class="n">means</span> <span class="o">=</span> <span class="n">gm</span><span class="o">.</span><span class="n">cluster_means</span>
-</pre></div>
-</div>
+<img alt="../_images/6a481ef0faca83ddd39a523d501ce02fa9eae0431f14e043420322c24c9ff511.png" src="../_images/6a481ef0faca83ddd39a523d501ce02fa9eae0431f14e043420322c24c9ff511.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1390,11 +1264,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4081eadaffa1854f676ab860918fb0a115fe999335ea99c8f352b86332a76ab0.png" src="../_images/4081eadaffa1854f676ab860918fb0a115fe999335ea99c8f352b86332a76ab0.png" />
+<img alt="../_images/10235920e2b238819c548f6beec2e283082fbf7461c66749568eb4e6026c2e98.png" src="../_images/10235920e2b238819c548f6beec2e283082fbf7461c66749568eb4e6026c2e98.png" />
 </div>
 </div>
-</section>
-<section id="non-negative-matrix-factorization-nmf">
+</div>
+<div class="section" id="non-negative-matrix-factorization-nmf">
 <h3>Non-Negative Matrix Factorization (NMF)<a class="headerlink" href="#non-negative-matrix-factorization-nmf" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1418,11 +1292,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;NMF 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">37</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1438,11 +1312,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
   warnings.warn(
 </pre></div>
 </div>
-<img alt="../_images/6ef36381fa29ed4fb77fd126fb9a05dc46e0195bf586123af2e85ea4ccfadc98.png" src="../_images/6ef36381fa29ed4fb77fd126fb9a05dc46e0195bf586123af2e85ea4ccfadc98.png" />
+<img alt="../_images/62eb32d8d0b41f88c2c6433d718b562933cce91dfe12244b189a74b55cb47425.png" src="../_images/62eb32d8d0b41f88c2c6433d718b562933cce91dfe12244b189a74b55cb47425.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1457,11 +1331,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/955c6c8dfe57b6043371b9527d553b722226c4a8ea88a7b9355079262e484436.png" src="../_images/955c6c8dfe57b6043371b9527d553b722226c4a8ea88a7b9355079262e484436.png" />
+<img alt="../_images/c52a93f6dd3264a8b61510b13d7b80ef383d7e42d9efafea2f8f145f69052fcc.png" src="../_images/c52a93f6dd3264a8b61510b13d7b80ef383d7e42d9efafea2f8f145f69052fcc.png" />
 </div>
 </div>
-</section>
-<section id="isomap">
+</div>
+<div class="section" id="isomap">
 <h3>Isomap<a class="headerlink" href="#isomap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1482,11 +1356,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;ISO 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">37</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1502,7 +1376,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f446d1dffc53283018cda5117e6894c951b62d697b5973693c85f22c12ac2bb5.png" src="../_images/f446d1dffc53283018cda5117e6894c951b62d697b5973693c85f22c12ac2bb5.png" />
+<img alt="../_images/6bd3a3828dc6dd6b19b6d7c78cb44e37d21c7ffbed32356f31da1892dc40ee4b.png" src="../_images/6bd3a3828dc6dd6b19b6d7c78cb44e37d21c7ffbed32356f31da1892dc40ee4b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1517,11 +1391,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b3d09670f5988751e73ea976dc3847b0b454d7924dd4ade48ad91a6230481078.png" src="../_images/b3d09670f5988751e73ea976dc3847b0b454d7924dd4ade48ad91a6230481078.png" />
+<img alt="../_images/61308e8bf39912bbea131ca27cd65e84014f92346f33cd7f3cbb1efd998a5b3e.png" src="../_images/61308e8bf39912bbea131ca27cd65e84014f92346f33cd7f3cbb1efd998a5b3e.png" />
 </div>
 </div>
-</section>
-<section id="parametric-t-sne">
+</div>
+<div class="section" id="parametric-t-sne">
 <h3>Parametric t-SNE<a class="headerlink" href="#parametric-t-sne" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1544,7 +1418,7 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1560,7 +1434,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ddf7588529eb72f10178b98262e574b22c4b5f57205b6d7f566cfe25a5f4933f.png" src="../_images/ddf7588529eb72f10178b98262e574b22c4b5f57205b6d7f566cfe25a5f4933f.png" />
+<img alt="../_images/ef2771f7e362470a179b54a035f64fc27cbd1304ac9491b0bff4c8c167c87b11.png" src="../_images/ef2771f7e362470a179b54a035f64fc27cbd1304ac9491b0bff4c8c167c87b11.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1575,11 +1449,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1478637b3792bcc826464131c70422ca20511caf4efe9b1d7219322a4eff2246.png" src="../_images/1478637b3792bcc826464131c70422ca20511caf4efe9b1d7219322a4eff2246.png" />
+<img alt="../_images/e8f10a39e9d4f2047e79329736c97e85e405b8487a68df22a27c47dd8272f23a.png" src="../_images/e8f10a39e9d4f2047e79329736c97e85e405b8487a68df22a27c47dd8272f23a.png" />
 </div>
 </div>
-</section>
-<section id="parametric-umap">
+</div>
+<div class="section" id="parametric-umap">
 <h3>Parametric UMAP<a class="headerlink" href="#parametric-umap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1589,7 +1463,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/pytorch_lightning/utilities/parsing.py:208: Attribute &#39;encoder&#39; is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=[&#39;encoder&#39;])`.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/pytorch_lightning/utilities/parsing.py:208: Attribute &#39;encoder&#39; is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=[&#39;encoder&#39;])`.
 </pre></div>
 </div>
 </div>
@@ -1602,7 +1476,7 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span>
 <span class="p">)</span>
 
@@ -1616,7 +1490,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ecbeb3b0b94c90d89482f198a290b37394ea5dfed676fb46559b26233d23766a.png" src="../_images/ecbeb3b0b94c90d89482f198a290b37394ea5dfed676fb46559b26233d23766a.png" />
+<img alt="../_images/e9eac541baaebe67d8a6d7ae79c037ab5392988a1ea1a1dcb6a517fbb45a40ab.png" src="../_images/e9eac541baaebe67d8a6d7ae79c037ab5392988a1ea1a1dcb6a517fbb45a40ab.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1631,12 +1505,12 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7fd957a770bd5da7ff8bb956eac1953384b916814d654433c97224b113295e89.png" src="../_images/7fd957a770bd5da7ff8bb956eac1953384b916814d654433c97224b113295e89.png" />
+<img alt="../_images/e8b53c69ff5817c63f486b876d02b16dd7667100ed19cb60db01fe68e4756022.png" src="../_images/e8b53c69ff5817c63f486b876d02b16dd7667100ed19cb60db01fe68e4756022.png" />
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1696,11 +1570,6 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compute">
-   Compute
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data">
    Data

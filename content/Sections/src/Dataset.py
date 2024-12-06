@@ -39,15 +39,17 @@ def stand(X : np.array):
     """
     return (X - X.mean()) / X.std()
 
-def dataset_dat(weights,
-                path_data : str,
-                path_random_index : str,
-                signal_size : int = 8192,
-                interval : list = [0,270],
-                n_photon_number : int = 100,
-                standardize : bool = False,
-                plot_traces : bool= False,
-                plot_expected : bool = False):
+def dataset_dat(
+        weights,
+        path_data : str,
+        path_random_index : str,
+        signal_size : int = 8192,
+        interval : list = [0,270],
+        n_photon_number : int = 100,
+        standardize : bool = False,
+        plot_traces : bool= False,
+        plot_expected : bool = False,
+        SKIP : int = 1):
 
     init_size = len(weights)
     weights = np.array([0]*(len(Average) - init_size) + weights)
@@ -71,11 +73,12 @@ def dataset_dat(weights,
             if w > 1:
 
                 if float(file_[111:113]) < 11: # Train 
-
-                    X_train.append(
-                        np.frombuffer(
+                    
+                    data_ = np.frombuffer(
                             archive.read(file_), dtype=np.float16
                             ).reshape(-1,signal_size)[:w,interval[0]:interval[1]]
+                    X_train.append(
+                            data_[::SKIP]
                         )
                     X_dB_train.append(
                         np.full(w, file_[84:88])
@@ -151,9 +154,12 @@ def dataset_dat(weights,
     return data_train, data_test, expected_prob, X_dB_train, X_dB_test
 
 
-def dataset_csv(path_data : str, 
-                files : Union[list,None] = None,
-                plot_traces : bool = False):
+def dataset_csv(
+        path_data : str, 
+        files : Union[list,None] = None,
+        plot_traces : bool = False,
+        SKIP : int = 1
+    ):
 
     archive = zipfile.ZipFile(path_data, 'r')
 
@@ -172,9 +178,9 @@ def dataset_csv(path_data : str,
                 archive.read(file_), 
                 has_header = False, 
                 separator = ","
-                ).to_numpy()
+                ).to_numpy().astype(dtype=np.float16)
             
-            data.append((data_[:,::3] - data_[:,:10].mean()))
+            data.append((data_[:,::3] - data_[:,:10].mean())[::SKIP])
 
         else:
             pass

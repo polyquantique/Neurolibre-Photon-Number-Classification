@@ -2,43 +2,26 @@
 Neurolibre format for `Nonlinear Dimensionality Reduction for Enhanced Unsupervised Classification in Transition Edge Sensors`
 
 
-## Build Process (TODO)
+## Structure
 
-### content
+### Pipeline
 
-- `_config.yml` : Configuration (reference [here](https://jupyterbook.org/en/stable/customize/config.html))
-    - Used default
-- `_toc.yml` : File structure (reference [here](https://jupyterbook.org/en/stable/structure/toc.html))
+The repo is divided to be executed in stages :
 
-### binder
+- First Preprocessing (On external machine):
+    - Run `Methods_Geometric.ipynb`, `Methods_Uniform.ipynb`, and `Methods_Large.ipynb`.
+        - Compute `Preprocess/Low_Dimensional` (Done on computer with more than 32Gb of RAM)
+        - Specify initial position in `Preprocess/Mean_Clusters`.
+        - This step requires the data from Zenodo.
+- Second Preprocessing (On Neurolibre with 12Gb of RAM):
+    - Run `Methods_Geometric.ipynb`, `Methods_Uniform.ipynb`, and `Methods_Large.ipynb`
+        - Since `Preprocess/Low_Dimensional` exists the file loads the data instead of computing the low-dimensional spaces.
+        - This step requires the data from Zenodo.
+        - In this step 
+- Plot (On Neurolibre with 4 Gb of RAM)
+    - Run `Results.ipynb`
+        - Load preprocessed data saved in `Results`
+        - We could add density plots from the `Methods_XXXX.ipynb` files in this step.
+        - This step does not require the data from Zenodo.
 
-- `data_requirement.json` : Template for Zenodo
-- `requirements.txt` : Necessary packages
-- `runtime.txt` : Python-3.12
 
-### Build
-
-```
-cd /your/repo/directory
-jupyter-book build ./content
-```
-
-### draft pdf
-
-- `draft-pdf.yml` : Github now requires v4 instead of `actions/checkout@v3`
-
-    ```
-    jobs:
-    paper:
-        runs-on: ubuntu-latest
-        name: Paper Draft
-        steps:
-        - name: Checkout
-            uses: actions/checkout@v4
-    ```
-- `draft-pdf.yml` :  Github now requires v4 instead of `actions/upload-artifact@v1`
-
-    ```
-    - name: Upload
-        uses: actions/upload-artifact@v4
-    ```

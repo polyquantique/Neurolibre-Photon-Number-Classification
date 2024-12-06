@@ -4,8 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Synthetic Uniform &#8212; Accurate Unsupervised
 Photon Counting from
 Transition Edge Sensor Signal</title>
@@ -319,7 +318,6 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Confidence</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Synthetic Uniform</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="Methods_Geometric.html">Synthetic Geometric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Methods_Large.html">Large</a></li>
 </ul>
@@ -445,87 +443,75 @@ title="Print to PDF"
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Synthetic Uniform
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compute">
-   Compute
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   Methods
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-value">
+     Max Value
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methods">
-     Methods
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area">
+     Area
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#max-value">
-       Max Value
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#area">
-       Area
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principal-component-analysis-pca">
-       Principal Component Analysis (PCA)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
-       Kernel PCA (Radial basis function)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
-       Kernel PCA (Sigmoid)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kernel-pca-cosine">
-       Kernel PCA (Cosine)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
-       t-distributed Stochastic Neighbor Embedding (t-SNE)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#umap">
-       UMAP
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
-       Non-Negative Matrix Factorization (NMF)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#isomap">
-       Isomap
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametric-t-sne">
-       Parametric t-SNE
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametric-umap">
-       Parametric UMAP
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+     Principal Component Analysis (PCA)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
+     Kernel PCA (Radial basis function)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
+     Kernel PCA (Sigmoid)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-cosine">
+     Kernel PCA (Cosine)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
+     t-distributed Stochastic Neighbor Embedding (t-SNE)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#umap">
+     UMAP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
+     Non-Negative Matrix Factorization (NMF)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#isomap">
+     Isomap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-t-sne">
+     Parametric t-SNE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-umap">
+     Parametric UMAP
+    </a>
    </li>
   </ul>
  </li>
@@ -538,7 +524,7 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="synthetic-uniform">
+  <div class="tex2jax_ignore mathjax_ignore section" id="synthetic-uniform">
 <h1>Synthetic Uniform<a class="headerlink" href="#synthetic-uniform" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -561,20 +547,20 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="compute">
-<h1>Compute<a class="headerlink" href="#compute" title="Permalink to this heading">#</a></h1>
-<p>The entire file is precomputed and the results are saved in <code class="docutils literal notranslate"><span class="pre">src/Results_Uniform</span></code>.
-The file is programmed to load the results if they are available in <code class="docutils literal notranslate"><span class="pre">PATH_RESULTS</span></code>.</p>
-<section id="data">
+<div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/Low Dimension&#39;</span>
-<span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/Density&#39;</span>
-<span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform&#39;</span>
-<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;src/Dataset/Data_Boulder/data.zip&#39;</span>
-<span class="n">PATH_R</span> <span class="o">=</span> <span class="s1">&#39;src/Results_Uniform/randomIndexUniform.npy&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SKIP</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># DATA</span>
+<span class="n">PATH_DATA</span> <span class="o">=</span> <span class="s1">&#39;Dataset/Data_Boulder/data.zip&#39;</span>
+<span class="n">PATH_RANDOM</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Uniform/randomIndexUniform.npy&#39;</span>
+<span class="c1"># PREPROCESS</span>
+<span class="n">PATH_INIT_MEANS</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Uniform/Mean_Clusters&#39;</span>
+<span class="n">PATH_SAVE_LD</span> <span class="o">=</span> <span class="s1">&#39;Preprocess/Uniform/Low_Dimension&#39;</span>
+<span class="c1"># SAVE PLOTS</span>
+<span class="n">PATH_SAVE_D</span> <span class="o">=</span> <span class="s1">&#39;Results/Uniform/Density&#39;</span>
+<span class="n">PATH_RESULTS</span> <span class="o">=</span> <span class="s1">&#39;Results/Uniform&#39;</span>
 
 <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0003478958721172963</span><span class="p">,</span> <span class="mf">0.0003456379713743067</span><span class="p">,</span> <span class="mf">0.0003744276723215052</span><span class="p">,</span> <span class="mf">2.7560595871623853e-07</span><span class="p">,</span>
            <span class="mf">5.1048808392493295e-18</span><span class="p">,</span> <span class="mf">0.28842984940480537</span><span class="p">,</span> <span class="mf">0.9999999999999999</span><span class="p">,</span> <span class="mf">0.4483193456686096</span><span class="p">,</span>
@@ -583,7 +569,7 @@ The file is programmed to load the results if they are available in <code class=
 <span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">expected_prob</span><span class="p">,</span> <span class="n">db_train</span><span class="p">,</span> <span class="n">db_test</span> <span class="o">=</span> <span class="n">dataset_dat</span><span class="p">(</span>
    <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span><span class="p">,</span>
    <span class="n">path_data</span> <span class="o">=</span> <span class="n">PATH_DATA</span><span class="p">,</span>
-   <span class="n">path_random_index</span> <span class="o">=</span> <span class="n">PATH_R</span><span class="p">,</span>
+   <span class="n">path_random_index</span> <span class="o">=</span> <span class="n">PATH_RANDOM</span><span class="p">,</span>
    <span class="n">signal_size</span> <span class="o">=</span> <span class="mi">8192</span><span class="p">,</span>
    <span class="n">interval</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">350</span><span class="p">],</span>
    <span class="n">standardize</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -591,23 +577,25 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">plot_traces</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
    <span class="n">n_photon_number</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="p">)</span>
+<span class="n">data_train</span><span class="p">,</span> <span class="n">data_test</span><span class="p">,</span> <span class="n">db_train</span><span class="p">,</span> <span class="n">db_test</span> <span class="o">=</span> <span class="n">data_train</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span> <span class="n">data_test</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span> <span class="n">db_train</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span> <span class="n">db_test</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a12e710fdc52139a837ba1f3dd2a0425cb4e88932d240fdaf29def451bec8728.png" src="../_images/a12e710fdc52139a837ba1f3dd2a0425cb4e88932d240fdaf29def451bec8728.png" />
+<img alt="../_images/44d4e3cea23985de4abec1093b7e114c6b645b7795aa7811b0ed9fc657153c7f.png" src="../_images/44d4e3cea23985de4abec1093b7e114c6b645b7795aa7811b0ed9fc657153c7f.png" />
 </div>
 </div>
-</section>
-<section id="methods">
+</div>
+<div class="section" id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
-<section id="max-value">
+<div class="section" id="max-value">
 <h3>Max Value<a class="headerlink" href="#max-value" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_l_MAX</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span> 
-   <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -619,7 +607,7 @@ The file is programmed to load the results if they are available in <code class=
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
    <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_MAX</span><span class="p">,</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">17</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
@@ -638,8 +626,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6f8e93e737839d2620819dd06a5fd319a8ea0a1e799b3793d3c58ed4feee40a5.png" src="../_images/6f8e93e737839d2620819dd06a5fd319a8ea0a1e799b3793d3c58ed4feee40a5.png" />
-<img alt="../_images/a69386104870389eec59e82ace5bd06b08529e84b1a99e5a1e4e02be69990d55.png" src="../_images/a69386104870389eec59e82ace5bd06b08529e84b1a99e5a1e4e02be69990d55.png" />
+<img alt="../_images/cb28d914ac93e7ceb8a3132eab9e90a8fa0346d2e4b9d3e6733003e332a02aea.png" src="../_images/cb28d914ac93e7ceb8a3132eab9e90a8fa0346d2e4b9d3e6733003e332a02aea.png" />
+<img alt="../_images/7724ed345719c46af6a38105d243a3313eede478deac1a662756ba5378588760.png" src="../_images/7724ed345719c46af6a38105d243a3313eede478deac1a662756ba5378588760.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -654,11 +642,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/15fe6c89c6e996b8033c1e4880be56105ab246a2845235ae70f5e6c5a2fda718.png" src="../_images/15fe6c89c6e996b8033c1e4880be56105ab246a2845235ae70f5e6c5a2fda718.png" />
+<img alt="../_images/b3ff1a4297d676d6344508104009891bb54b65d2d756a0f9809b0fadaa84860b.png" src="../_images/b3ff1a4297d676d6344508104009891bb54b65d2d756a0f9809b0fadaa84860b.png" />
 </div>
 </div>
-</section>
-<section id="area">
+</div>
+<div class="section" id="area">
 <h3>Area<a class="headerlink" href="#area" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -667,13 +655,11 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">filtering</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
    <span class="n">plot_filter</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
    <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> 
-   <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span>
+   <span class="n">critical_frequency</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+   <span class="n">save_path</span> <span class="o">=</span> <span class="n">PATH_SAVE_LD</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/cfe9d5e320e7f4dd0f946a8cf068e7e297412018e9c6f5251cf7ad54eba33c8b.png" src="../_images/cfe9d5e320e7f4dd0f946a8cf068e7e297412018e9c6f5251cf7ad54eba33c8b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -682,9 +668,9 @@ The file is programmed to load the results if they are available in <code class=
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
    <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_AREA</span><span class="p">,</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
-   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span><span class="o">=</span><span class="mi">3</span>
@@ -701,8 +687,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ef6ba7abfb27a97dd9eaa5a27f374a5d5b2100f4ecfffecdcaaf2fc8894ea9bf.png" src="../_images/ef6ba7abfb27a97dd9eaa5a27f374a5d5b2100f4ecfffecdcaaf2fc8894ea9bf.png" />
-<img alt="../_images/a7baf61dcd87453d9c218a0ce45f1fecb2fcbe44f94931e8d5479508c5faed6e.png" src="../_images/a7baf61dcd87453d9c218a0ce45f1fecb2fcbe44f94931e8d5479508c5faed6e.png" />
+<img alt="../_images/a865ed2227960d9c9f8c1a27eaaf2b032121af0cfc4cd6e8835dbf430840d3c9.png" src="../_images/a865ed2227960d9c9f8c1a27eaaf2b032121af0cfc4cd6e8835dbf430840d3c9.png" />
+<img alt="../_images/9fc1b7759533f14f9c864ae491e8442cc19ffcf4ebd1e725afe439644d704695.png" src="../_images/9fc1b7759533f14f9c864ae491e8442cc19ffcf4ebd1e725afe439644d704695.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -717,11 +703,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/294fc92ae43ffe79d77b8c6f6a24e290fe2dac1d8fa359621ec76d3df0ce3c4c.png" src="../_images/294fc92ae43ffe79d77b8c6f6a24e290fe2dac1d8fa359621ec76d3df0ce3c4c.png" />
+<img alt="../_images/282bab1827e4e59d75a643146e3f2d1021573e02d844f780fba700602a8d7d96.png" src="../_images/282bab1827e4e59d75a643146e3f2d1021573e02d844f780fba700602a8d7d96.png" />
 </div>
 </div>
-</section>
-<section id="principal-component-analysis-pca">
+</div>
+<div class="section" id="principal-component-analysis-pca">
 <h3>Principal Component Analysis (PCA)<a class="headerlink" href="#principal-component-analysis-pca" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -741,11 +727,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">info_sweep</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
    <span class="n">plot_sweep</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -763,8 +749,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f2f858f6a2d3c0c01222b30878cc93266cac301761f91f12a39b4879da12917e.png" src="../_images/f2f858f6a2d3c0c01222b30878cc93266cac301761f91f12a39b4879da12917e.png" />
-<img alt="../_images/6f13011983e3ad361367b563d657b923b42593b5c110514afdba59bc4238a0b3.png" src="../_images/6f13011983e3ad361367b563d657b923b42593b5c110514afdba59bc4238a0b3.png" />
+<img alt="../_images/b8589e5d3c59c5ce882cc7c921f284ac5326d1cd21c0626193d482dfda89e702.png" src="../_images/b8589e5d3c59c5ce882cc7c921f284ac5326d1cd21c0626193d482dfda89e702.png" />
+<img alt="../_images/8c094016bed6519106779cb677737b289725bfa11ac9b596df181e2561d86220.png" src="../_images/8c094016bed6519106779cb677737b289725bfa11ac9b596df181e2561d86220.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -779,7 +765,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6265c7eab441bcee41010351ac5123e76e0c013fa6efff3b14fd8293226336c3.png" src="../_images/6265c7eab441bcee41010351ac5123e76e0c013fa6efff3b14fd8293226336c3.png" />
+<img alt="../_images/9577790174f0f13bf0a10f7671b7f56f982dcb25a3fdc3a2a1561cf3d86d01f9.png" src="../_images/9577790174f0f13bf0a10f7671b7f56f982dcb25a3fdc3a2a1561cf3d86d01f9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -800,11 +786,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;PCA 2D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_PCA</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span><span class="o">=</span><span class="mi">6</span>
@@ -821,12 +807,12 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/45b1787afa3c1776b7ce179ffdbdadb6e63765b3a670c5915542a9176119b084.png" src="../_images/45b1787afa3c1776b7ce179ffdbdadb6e63765b3a670c5915542a9176119b084.png" />
-<img alt="../_images/224726c68182cc18e45fe788b68a01747e3656ec94efe6f4d26bf15636d76b6b.png" src="../_images/224726c68182cc18e45fe788b68a01747e3656ec94efe6f4d26bf15636d76b6b.png" />
+<img alt="../_images/351173006e71127d19acbdabf67f727f192e8d037b22a9b6ed7b9b5fa72f8d9d.png" src="../_images/351173006e71127d19acbdabf67f727f192e8d037b22a9b6ed7b9b5fa72f8d9d.png" />
+<img alt="../_images/43b874496cefc6738a5956532081247b709e28e23c3fdb4f96046ec768f7dc3f.png" src="../_images/43b874496cefc6738a5956532081247b709e28e23c3fdb4f96046ec768f7dc3f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -841,11 +827,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4eb08124338de2ea6ec39f51cc2f24acfb0aaea1870e274d708d29536065ba15.png" src="../_images/4eb08124338de2ea6ec39f51cc2f24acfb0aaea1870e274d708d29536065ba15.png" />
+<img alt="../_images/3092a262b791714d00ea7238f4861c3985a0aa8690d8e523bf00dcaf97b7e12e.png" src="../_images/3092a262b791714d00ea7238f4861c3985a0aa8690d8e523bf00dcaf97b7e12e.png" />
 </div>
 </div>
-</section>
-<section id="kernel-pca-radial-basis-function">
+</div>
+<div class="section" id="kernel-pca-radial-basis-function">
 <h3>Kernel PCA (Radial basis function)<a class="headerlink" href="#kernel-pca-radial-basis-function" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -867,12 +853,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA RBF&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_RBF</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_RBF</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -888,18 +874,18 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3596: RuntimeWarning: Mean of empty slice.
   return _methods._mean(a, axis=axis, dtype=dtype,
-/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/numpy/_core/_methods.py:138: RuntimeWarning: invalid value encountered in scalar divide
   ret = ret.dtype.type(ret / rcount)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/2f0030ccdd049800fd0861496563a8c502c82eab558b7bb659a28a6cfcc0b21b.png" src="../_images/2f0030ccdd049800fd0861496563a8c502c82eab558b7bb659a28a6cfcc0b21b.png" />
-<img alt="../_images/d8f872602e4a3ac0a499092efba6dc5b930e697f4b839391978937396b6d149e.png" src="../_images/d8f872602e4a3ac0a499092efba6dc5b930e697f4b839391978937396b6d149e.png" />
+<img alt="../_images/16a5b766f79135ca35c66f52d319f921ae428d1f8799cbab1511191f77277532.png" src="../_images/16a5b766f79135ca35c66f52d319f921ae428d1f8799cbab1511191f77277532.png" />
+<img alt="../_images/791f771aae5bc57a1f7b94c0250da2d193a73dc4386ba43a6055634830777df8.png" src="../_images/791f771aae5bc57a1f7b94c0250da2d193a73dc4386ba43a6055634830777df8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -915,11 +901,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5293957696fc83e5ce33698e2f0eaf85bc65e812e2fd8e64a3411be6f83d74ca.png" src="../_images/5293957696fc83e5ce33698e2f0eaf85bc65e812e2fd8e64a3411be6f83d74ca.png" />
+<img alt="../_images/7c4582e781a560078da75a076f85719681464bbeb6f3dcd5fe125dfb73a800d5.png" src="../_images/7c4582e781a560078da75a076f85719681464bbeb6f3dcd5fe125dfb73a800d5.png" />
 </div>
 </div>
-</section>
-<section id="kernel-pca-sigmoid">
+</div>
+<div class="section" id="kernel-pca-sigmoid">
 <h3>Kernel PCA (Sigmoid)<a class="headerlink" href="#kernel-pca-sigmoid" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -941,12 +927,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Sig&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_S</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_S</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -962,8 +948,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a8750fd6fb240a58f2e3d5496874d04279428694dc4ac319cda863f0b623b2e0.png" src="../_images/a8750fd6fb240a58f2e3d5496874d04279428694dc4ac319cda863f0b623b2e0.png" />
-<img alt="../_images/4adc6baffa72418ab8c5185cd3ede23e6e5c1f5b62354b9ec559c3f19b6bb4b2.png" src="../_images/4adc6baffa72418ab8c5185cd3ede23e6e5c1f5b62354b9ec559c3f19b6bb4b2.png" />
+<img alt="../_images/9146208a3bfb90402f1162a4fe5b6d0d2ef905f5e1b3e73dd8f5e79809a9f59b.png" src="../_images/9146208a3bfb90402f1162a4fe5b6d0d2ef905f5e1b3e73dd8f5e79809a9f59b.png" />
+<img alt="../_images/187744330e0256d9d5c3ea96a7874ac54acf6a9f5f088d6370348903a8d41a9d.png" src="../_images/187744330e0256d9d5c3ea96a7874ac54acf6a9f5f088d6370348903a8d41a9d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -978,11 +964,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2ef180efd84ab06459ef3a407ff314b1580457f4e751f46e83b5d9537174daf6.png" src="../_images/2ef180efd84ab06459ef3a407ff314b1580457f4e751f46e83b5d9537174daf6.png" />
+<img alt="../_images/716996d06b15988b1e23424a9595a10f5fcb7a6c0b504c5bec9dbabf0d0d472f.png" src="../_images/716996d06b15988b1e23424a9595a10f5fcb7a6c0b504c5bec9dbabf0d0d472f.png" />
 </div>
 </div>
-</section>
-<section id="kernel-pca-cosine">
+</div>
+<div class="section" id="kernel-pca-cosine">
 <h3>Kernel PCA (Cosine)<a class="headerlink" href="#kernel-pca-cosine" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1004,12 +990,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;KPCA Cos&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_C</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_KPCA_C</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -1025,12 +1011,12 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/e919fbba3a818338ce48f13433f71139f81862da594c4dad84e8b05dbda1bd29.png" src="../_images/e919fbba3a818338ce48f13433f71139f81862da594c4dad84e8b05dbda1bd29.png" />
-<img alt="../_images/03aba19c4a5893e7b5f1794d36fa1298602c0ff9a49a5c6c810bc53bf676b260.png" src="../_images/03aba19c4a5893e7b5f1794d36fa1298602c0ff9a49a5c6c810bc53bf676b260.png" />
+<img alt="../_images/d032e218e4c0f34dbc27c3728b82565adcb6ba1156f33c9521b5ccb50f28e706.png" src="../_images/d032e218e4c0f34dbc27c3728b82565adcb6ba1156f33c9521b5ccb50f28e706.png" />
+<img alt="../_images/ea7054ba2a3b6dbdfca2103b800d3d3993296e6c3fefecfb30569ab338513f61.png" src="../_images/ea7054ba2a3b6dbdfca2103b800d3d3993296e6c3fefecfb30569ab338513f61.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1045,11 +1031,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6dfdbda1b2501dcf3ece46934d997c4bd91e76438bf2b716a4c0425c99ddd903.png" src="../_images/6dfdbda1b2501dcf3ece46934d997c4bd91e76438bf2b716a4c0425c99ddd903.png" />
+<img alt="../_images/42c0952b5f60030f142d87a829b6bf40485787376c3f7837f7bf2b0cbc6316f9.png" src="../_images/42c0952b5f60030f142d87a829b6bf40485787376c3f7837f7bf2b0cbc6316f9.png" />
 </div>
 </div>
-</section>
-<section id="t-distributed-stochastic-neighbor-embedding-t-sne">
+</div>
+<div class="section" id="t-distributed-stochastic-neighbor-embedding-t-sne">
 <h3>t-distributed Stochastic Neighbor Embedding (t-SNE)<a class="headerlink" href="#t-distributed-stochastic-neighbor-embedding-t-sne" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1070,12 +1056,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 2D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -1091,12 +1077,12 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/8a1a1268bc1fba7ae4bc434875fe6fcd445052eda145a43764d54584c16519e3.png" src="../_images/8a1a1268bc1fba7ae4bc434875fe6fcd445052eda145a43764d54584c16519e3.png" />
-<img alt="../_images/edc1b53fd11fdd0abfa570fddd2581a04eaa3c07f344d597421eb8e1f5a34cfe.png" src="../_images/edc1b53fd11fdd0abfa570fddd2581a04eaa3c07f344d597421eb8e1f5a34cfe.png" />
+<img alt="../_images/72d7b5eea0d46e30c78f2701493b3c5c557c549cd7a932b2d1690215e166790b.png" src="../_images/72d7b5eea0d46e30c78f2701493b3c5c557c549cd7a932b2d1690215e166790b.png" />
+<img alt="../_images/422ecff5d1e12f4b274e9d6a28a0066d161c8fb1097a9ff3299389059c0dfa44.png" src="../_images/422ecff5d1e12f4b274e9d6a28a0066d161c8fb1097a9ff3299389059c0dfa44.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1111,7 +1097,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e0762352ff2df691f5f39312c43d8d7b7c050ba97aa71f16514a4429f5909103.png" src="../_images/e0762352ff2df691f5f39312c43d8d7b7c050ba97aa71f16514a4429f5909103.png" />
+<img alt="../_images/bec0ef52ccfd4a44bcfac27b927ef973e52ff6376a572d97ce93562e53f6b974.png" src="../_images/bec0ef52ccfd4a44bcfac27b927ef973e52ff6376a572d97ce93562e53f6b974.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1133,12 +1119,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="p">)</span>
@@ -1154,8 +1140,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8857b2aa773bcd22b539918a41a0901297087fa24592c05bbdc90784413c31e7.png" src="../_images/8857b2aa773bcd22b539918a41a0901297087fa24592c05bbdc90784413c31e7.png" />
-<img alt="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" src="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" />
+<img alt="../_images/9cbdb885e0a146ebdd13d659d3d09c6239733d57f2c29baeef41eeb4d6e8afab.png" src="../_images/9cbdb885e0a146ebdd13d659d3d09c6239733d57f2c29baeef41eeb4d6e8afab.png" />
+<img alt="../_images/ccc71a8e3e7fae0f5ecc07e6aea8192e8f6ba21a2bbc02e68aca72750abea6a8.png" src="../_images/ccc71a8e3e7fae0f5ecc07e6aea8192e8f6ba21a2bbc02e68aca72750abea6a8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1170,19 +1156,19 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f07eb1e0f370ec64db9345510409bf8acb7caa10f9fe1c3df67b72714fde5ac6.png" src="../_images/f07eb1e0f370ec64db9345510409bf8acb7caa10f9fe1c3df67b72714fde5ac6.png" />
+<img alt="../_images/555840c3a71c9e4b50bb14a1dee137d9a2c939b9a69c7a8391cad2b09931bd85.png" src="../_images/555840c3a71c9e4b50bb14a1dee137d9a2c939b9a69c7a8391cad2b09931bd85.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;tSNE 1D genGauss&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_tSNE</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="p">)</span>
@@ -1199,8 +1185,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7a86247736086cdd29e1bf26a20c7b73e0753aef8a780f76cbab9202a6529703.png" src="../_images/7a86247736086cdd29e1bf26a20c7b73e0753aef8a780f76cbab9202a6529703.png" />
-<img alt="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" src="../_images/89583e3ea2aaa8d51f374feef41ece1283e7cc5dd79b76d1ba948610d6fded47.png" />
+<img alt="../_images/9972080072c59ccd7a8c5ee7d579b21fc877b8145726ddea863dcb7d20fec1ca.png" src="../_images/9972080072c59ccd7a8c5ee7d579b21fc877b8145726ddea863dcb7d20fec1ca.png" />
+<img alt="../_images/ccc71a8e3e7fae0f5ecc07e6aea8192e8f6ba21a2bbc02e68aca72750abea6a8.png" src="../_images/ccc71a8e3e7fae0f5ecc07e6aea8192e8f6ba21a2bbc02e68aca72750abea6a8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1216,11 +1202,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c5821b16c1e28e8492d9645c18ace9bb7533d4b12009692a00ca2e203f957b73.png" src="../_images/c5821b16c1e28e8492d9645c18ace9bb7533d4b12009692a00ca2e203f957b73.png" />
+<img alt="../_images/f53ae03ba1a4178724bc73dade105ba9598f9c8ce67d98fa3780ddadf27a8d12.png" src="../_images/f53ae03ba1a4178724bc73dade105ba9598f9c8ce67d98fa3780ddadf27a8d12.png" />
 </div>
 </div>
-</section>
-<section id="umap">
+</div>
+<div class="section" id="umap">
 <h3>UMAP<a class="headerlink" href="#umap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1242,11 +1228,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">28</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1263,8 +1249,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/170db883056ddc9958c467f71fb8866644d996732307c9b1f32761a6ee4a3c14.png" src="../_images/170db883056ddc9958c467f71fb8866644d996732307c9b1f32761a6ee4a3c14.png" />
-<img alt="../_images/be60932cfc17a1f0325c9d50d58b74c1684147bc209d9f4acfa7b0320548d9ca.png" src="../_images/be60932cfc17a1f0325c9d50d58b74c1684147bc209d9f4acfa7b0320548d9ca.png" />
+<img alt="../_images/c69fde597d567a07b065b98e4816da9f6ce44a3ccb22bd79a2032f6061587704.png" src="../_images/c69fde597d567a07b065b98e4816da9f6ce44a3ccb22bd79a2032f6061587704.png" />
+<img alt="../_images/ca2ca8e70b78ba8b4d9fb368319d66c6f308243d1a4f891ec79ab1d437d96881.png" src="../_images/ca2ca8e70b78ba8b4d9fb368319d66c6f308243d1a4f891ec79ab1d437d96881.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1279,7 +1265,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c5e1c47a96680993f7642c83fe249994095ca5f04462386507ea12f9b2b2f58a.png" src="../_images/c5e1c47a96680993f7642c83fe249994095ca5f04462386507ea12f9b2b2f58a.png" />
+<img alt="../_images/a484843ce3e499558fac138cd59d507fcb64e0aa3c1aa94f766f291715c3007d.png" src="../_images/a484843ce3e499558fac138cd59d507fcb64e0aa3c1aa94f766f291715c3007d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1302,12 +1288,12 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;UMAP 2D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_UMAP</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
-   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
+   <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="p">)</span>
@@ -1323,16 +1309,12 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/sklearn/mixture/_base.py:270: ConvergenceWarning: Best performing initialization did not converge. Try different init parameters, or increase max_iter, tol, or check for degenerate data.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/seaborn/distributions.py:1176: UserWarning: Log scale: values of z &lt;= 0 have been masked
   cset = contour_func(
 </pre></div>
 </div>
-<img alt="../_images/971b87ed57a7906e38b11a03a1c658cfd1a86ee7977523abf8558e272b99d981.png" src="../_images/971b87ed57a7906e38b11a03a1c658cfd1a86ee7977523abf8558e272b99d981.png" />
-<img alt="../_images/592e95ab8fffe2d66c953d78f083b3a5f5101148ef617275959ddc0b84b71b91.png" src="../_images/592e95ab8fffe2d66c953d78f083b3a5f5101148ef617275959ddc0b84b71b91.png" />
+<img alt="../_images/c9ed04a52ca0266b0f0d1e5fb464c4cba5d1cb968a81b4ca6414e89d65e8f36c.png" src="../_images/c9ed04a52ca0266b0f0d1e5fb464c4cba5d1cb968a81b4ca6414e89d65e8f36c.png" />
+<img alt="../_images/5261de0e0a31acc780459b4cbe296212f91f254f160dd3dc5b2635a2f72ff5ab.png" src="../_images/5261de0e0a31acc780459b4cbe296212f91f254f160dd3dc5b2635a2f72ff5ab.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1347,11 +1329,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1c7677eea567e2cf703a4807ef41ed946e3d4b0ca2689a0dfabba54e06065608.png" src="../_images/1c7677eea567e2cf703a4807ef41ed946e3d4b0ca2689a0dfabba54e06065608.png" />
+<img alt="../_images/ac6dc45aaf3d8c82927317ec1f8ba5caacf7656dc5f863d4ac4c74750993cc55.png" src="../_images/ac6dc45aaf3d8c82927317ec1f8ba5caacf7656dc5f863d4ac4c74750993cc55.png" />
 </div>
 </div>
-</section>
-<section id="non-negative-matrix-factorization-nmf">
+</div>
+<div class="section" id="non-negative-matrix-factorization-nmf">
 <h3>Non-Negative Matrix Factorization (NMF)<a class="headerlink" href="#non-negative-matrix-factorization-nmf" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1375,11 +1357,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;NMF 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_NMF</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1396,8 +1378,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c9415bb308eff7999332c73162a7849219da83a534b4ce68a1670aa51f3b1ac8.png" src="../_images/c9415bb308eff7999332c73162a7849219da83a534b4ce68a1670aa51f3b1ac8.png" />
-<img alt="../_images/0f3fd3392d488d6164539a0039b05cce2641aa97b973f444f3828b6f57f92608.png" src="../_images/0f3fd3392d488d6164539a0039b05cce2641aa97b973f444f3828b6f57f92608.png" />
+<img alt="../_images/12d063b7d82fd00318b9202c5731a0c4ae291b30ac1792dce5b4950fa9ca1ed7.png" src="../_images/12d063b7d82fd00318b9202c5731a0c4ae291b30ac1792dce5b4950fa9ca1ed7.png" />
+<img alt="../_images/4fd0d7df413b3b271c8d1e4de645e69df26dca31ecc5917c221f259758928166.png" src="../_images/4fd0d7df413b3b271c8d1e4de645e69df26dca31ecc5917c221f259758928166.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1412,11 +1394,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0cab212f6b690498da407f9a5e0c75d721a5dc563af8242934f1207e5a23202c.png" src="../_images/0cab212f6b690498da407f9a5e0c75d721a5dc563af8242934f1207e5a23202c.png" />
+<img alt="../_images/e34bac9aff379866f9c72901beed05efee97451f1d0e7bf939bb76c68fb66238.png" src="../_images/e34bac9aff379866f9c72901beed05efee97451f1d0e7bf939bb76c68fb66238.png" />
 </div>
 </div>
-</section>
-<section id="isomap">
+</div>
+<div class="section" id="isomap">
 <h3>Isomap<a class="headerlink" href="#isomap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1437,11 +1419,11 @@ The file is programmed to load the results if they are available in <code class=
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_method</span> <span class="o">=</span> <span class="s1">&#39;ISO 1D&#39;</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">gaussian_mixture</span><span class="p">(</span>
-   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">,</span>
+   <span class="n">X_low</span> <span class="o">=</span> <span class="n">X_l_ISO</span><span class="p">[::</span><span class="n">SKIP</span><span class="p">],</span>
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">35</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1458,8 +1440,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b5a4f115316691a28680a5b601ebd0904abe5ebf8bf19a39835a51af3c18ffd0.png" src="../_images/b5a4f115316691a28680a5b601ebd0904abe5ebf8bf19a39835a51af3c18ffd0.png" />
-<img alt="../_images/fc1631ecd2bf6887ef1347862d6e0d10bd685aff56a3a7c9e9bbb52eddce4ece.png" src="../_images/fc1631ecd2bf6887ef1347862d6e0d10bd685aff56a3a7c9e9bbb52eddce4ece.png" />
+<img alt="../_images/0f721b179e3a5d7efecf483789b6d3929f2c01a6a531a85655ab69d263ead59c.png" src="../_images/0f721b179e3a5d7efecf483789b6d3929f2c01a6a531a85655ab69d263ead59c.png" />
+<img alt="../_images/693f784fd3d63bc6755b70a4ef67d84e49d6f9e3525266082cf4203ac617da76.png" src="../_images/693f784fd3d63bc6755b70a4ef67d84e49d6f9e3525266082cf4203ac617da76.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1474,11 +1456,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cff54049af2deb852991dfa32a41d60b1e896cd9ac95e7417f146a6409178c79.png" src="../_images/cff54049af2deb852991dfa32a41d60b1e896cd9ac95e7417f146a6409178c79.png" />
+<img alt="../_images/1bae1c318563b39a91eb502bd7d33219da83efd3511e98905299f7209f18b08b.png" src="../_images/1bae1c318563b39a91eb502bd7d33219da83efd3511e98905299f7209f18b08b.png" />
 </div>
 </div>
-</section>
-<section id="parametric-t-sne">
+</div>
+<div class="section" id="parametric-t-sne">
 <h3>Parametric t-SNE<a class="headerlink" href="#parametric-t-sne" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1501,7 +1483,7 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">26</span><span class="p">,</span> 
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
    <span class="n">width_plot</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
    <span class="n">height_plot</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1518,8 +1500,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4158f98268eb1b6f09aeb4057593dcdb6393b95f3d2fd2617463d086cfea937e.png" src="../_images/4158f98268eb1b6f09aeb4057593dcdb6393b95f3d2fd2617463d086cfea937e.png" />
-<img alt="../_images/3cadb49a6084d9fb21bf10c4b747bda2d94f6ea4958f098f62d9c7830e909a31.png" src="../_images/3cadb49a6084d9fb21bf10c4b747bda2d94f6ea4958f098f62d9c7830e909a31.png" />
+<img alt="../_images/dc56937ee1ee91786eae6d21762dcd17414daa79bef4b5a76eb94c384c2c919f.png" src="../_images/dc56937ee1ee91786eae6d21762dcd17414daa79bef4b5a76eb94c384c2c919f.png" />
+<img alt="../_images/56b59150122edd191184c4d26bd97c1d353c1fe2e964b044794e3e4279ebe9f8.png" src="../_images/56b59150122edd191184c4d26bd97c1d353c1fe2e964b044794e3e4279ebe9f8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1534,11 +1516,11 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b51585fd00e1eee1266c97c6f7372a8ed51a003306ed6db630dedd1c3e365374.png" src="../_images/b51585fd00e1eee1266c97c6f7372a8ed51a003306ed6db630dedd1c3e365374.png" />
+<img alt="../_images/0be2232944e24e529402cc331166911c96ddcd56a2ef1e19b40caa23559defe9.png" src="../_images/0be2232944e24e529402cc331166911c96ddcd56a2ef1e19b40caa23559defe9.png" />
 </div>
 </div>
-</section>
-<section id="parametric-umap">
+</div>
+<div class="section" id="parametric-umap">
 <h3>Parametric UMAP<a class="headerlink" href="#parametric-umap" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1548,7 +1530,7 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/anaconda3/envs/ML/lib/python3.12/site-packages/pytorch_lightning/utilities/parsing.py:208: Attribute &#39;encoder&#39; is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=[&#39;encoder&#39;])`.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nicolasdc/miniconda3/envs/ML/lib/python3.12/site-packages/pytorch_lightning/utilities/parsing.py:208: Attribute &#39;encoder&#39; is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=[&#39;encoder&#39;])`.
 </pre></div>
 </div>
 </div>
@@ -1561,7 +1543,7 @@ The file is programmed to load the results if they are available in <code class=
    <span class="n">X_high</span> <span class="o">=</span> <span class="n">data_test</span><span class="p">,</span>
    <span class="n">number_cluster</span> <span class="o">=</span> <span class="mi">27</span><span class="p">,</span>
    <span class="n">cluster_iter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_RESULTS</span><span class="p">),</span>
+   <span class="n">means_init</span> <span class="o">=</span> <span class="n">get_means</span><span class="p">(</span><span class="n">name_method</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">PATH_INIT_MEANS</span><span class="p">),</span>
    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-5</span>
 <span class="p">)</span>
 
@@ -1576,8 +1558,8 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5985718654ae43c4a8c0b5d790fc652e1ff66594cc51227b21a799d6ed2c420e.png" src="../_images/5985718654ae43c4a8c0b5d790fc652e1ff66594cc51227b21a799d6ed2c420e.png" />
-<img alt="../_images/47ebd9663a8a256fb21fefe8bf8fa7d2ce0575154d1ae4cb28483852dea06392.png" src="../_images/47ebd9663a8a256fb21fefe8bf8fa7d2ce0575154d1ae4cb28483852dea06392.png" />
+<img alt="../_images/f3e14c3a82e3c0684cc2a86028ea5a76c3b132bc4c7a55689ec1f984bc1df6df.png" src="../_images/f3e14c3a82e3c0684cc2a86028ea5a76c3b132bc4c7a55689ec1f984bc1df6df.png" />
+<img alt="../_images/52c499a0d274ae0e33757fe95673e21df92f97338bae085ccda9ac1e589d101a.png" src="../_images/52c499a0d274ae0e33757fe95673e21df92f97338bae085ccda9ac1e589d101a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1592,12 +1574,12 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5506860fe94ede14f118ad9fc99135331bb2e2342470e431fdbbfcfaeb9d39f1.png" src="../_images/5506860fe94ede14f118ad9fc99135331bb2e2342470e431fdbbfcfaeb9d39f1.png" />
+<img alt="../_images/23d0c09d7b3978fbc783b541896f1539cef15fab2d4f34f96c914b87b3ebf676.png" src="../_images/23d0c09d7b3978fbc783b541896f1539cef15fab2d4f34f96c914b87b3ebf676.png" />
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1657,87 +1639,75 @@ The file is programmed to load the results if they are available in <code class=
 </div>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Synthetic Uniform
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compute">
-   Compute
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   Methods
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-value">
+     Max Value
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methods">
-     Methods
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area">
+     Area
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#max-value">
-       Max Value
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#area">
-       Area
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principal-component-analysis-pca">
-       Principal Component Analysis (PCA)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
-       Kernel PCA (Radial basis function)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
-       Kernel PCA (Sigmoid)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kernel-pca-cosine">
-       Kernel PCA (Cosine)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
-       t-distributed Stochastic Neighbor Embedding (t-SNE)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#umap">
-       UMAP
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
-       Non-Negative Matrix Factorization (NMF)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#isomap">
-       Isomap
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametric-t-sne">
-       Parametric t-SNE
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametric-umap">
-       Parametric UMAP
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+     Principal Component Analysis (PCA)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-radial-basis-function">
+     Kernel PCA (Radial basis function)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-sigmoid">
+     Kernel PCA (Sigmoid)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-pca-cosine">
+     Kernel PCA (Cosine)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-t-sne">
+     t-distributed Stochastic Neighbor Embedding (t-SNE)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#umap">
+     UMAP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-negative-matrix-factorization-nmf">
+     Non-Negative Matrix Factorization (NMF)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#isomap">
+     Isomap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-t-sne">
+     Parametric t-SNE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametric-umap">
+     Parametric UMAP
+    </a>
    </li>
   </ul>
  </li>
