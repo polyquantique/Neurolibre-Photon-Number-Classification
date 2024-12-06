@@ -8,12 +8,14 @@ from scipy.integrate import simpson
 from .Utils import norm, plot_traces
 
 
-def sklearn_available(X_train : np.array, 
-                     X_test : np.array, 
-                     path_save : str, 
-                     function, 
-                     custom_name : Union[None, str] = None,
-                     **param):
+def sklearn_available(
+        X_train : np.array, 
+        X_test : np.array, 
+        path_save : str, 
+        function, 
+        custom_name : Union[None, str] = None,
+        **param
+    ):
     """
 
     Execute a dimensionality reduction available in the scikit-learn library.
@@ -67,11 +69,14 @@ def sklearn_available(X_train : np.array,
     return X_low
 
 
-def area(X_high : np.array,
-         filtering : bool = False,
-         critical_frequency : float = 0.1,
-         threshold : float = None,
-         plot_filter : bool = False):
+def area(
+        X_high : np.array,
+        filtering : bool = False,
+        critical_frequency : float = 0.1,
+        threshold : float = None,
+        plot_filter : bool = False,
+        save_path : Union[str,None] = None, 
+    ):
     """
     Area of signals.
 
@@ -88,25 +93,37 @@ def area(X_high : np.array,
     Area : ndarray
 
     """
+    file_name = f'{save_path}/AREA.npy'
 
-    if filtering:
-        b, a = butter(5, critical_frequency, 'low')
-        X_high = filtfilt(b, a, X_high)
+    if os.path.isfile(file_name):
+        X_low = np.load(file_name)
+    else:
+        if filtering:
+            b, a = butter(5, critical_frequency, 'low')
+            X_high = filtfilt(b, a, X_high)
 
-    if threshold is not None:
-        X_high[X_high < threshold] = threshold
+        if threshold is not None:
+            X_high[X_high < threshold] = threshold
 
-    if plot_filter:
-        plot_traces(X_high)
+        if plot_filter:
+            plot_traces(X_high)
 
-    X_low = simpson(X_high).reshape(-1,1)
+        X_low = simpson(X_high).reshape(-1,1)
+        X_low = norm(X_low).reshape(-1,1)
 
-    return norm(X_low).reshape(-1,1)
+        if save_path is not None:
+            np.save(file_name, X_low)
+        else:
+            pass
+
+    return X_low
 
 
-def max_value(X_high : np.array,
-              critical_frequency : float = 0.1,
-              filtering : bool = False):
+def max_value(
+        X_high : np.array,
+        critical_frequency : float = 0.1,
+        filtering : bool = False,
+        save_path : Union[str,None] = None):
     """
 
     Maximum value of signals.
@@ -120,12 +137,23 @@ def max_value(X_high : np.array,
     norm : ndarray
 
     """
+    file_name = f'{save_path}/MAX.npy'
 
-    if filtering:
-        b, a = butter(5, critical_frequency, 'low')
-        X_high = filtfilt(b, a, X_high)
+    if os.path.isfile(file_name):
+        X_low = np.load(file_name)
+    else:
+        if filtering:
+            b, a = butter(5, critical_frequency, 'low')
+            X_high = filtfilt(b, a, X_high)
 
-    return norm(X_high.max(axis = 1)).reshape(-1,1)
+        X_low = norm(X_high.max(axis = 1)).reshape(-1,1)
+
+        if save_path is not None:
+            np.save(file_name, X_low)
+        else:
+            pass
+
+    return X_low
 
 
 

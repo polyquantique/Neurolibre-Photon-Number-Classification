@@ -71,32 +71,35 @@ class gaussian_mixture():
     None
     """
 
-    def __init__(self, X_low : np.array,
-                 X_high : np.array,
-                 number_cluster : int = 10,
-                 label_shift : int = 0,
-                 critical_frequency : float = 0.01,
-                 cluster_iter : int = 10,
-                 means_init : Union[None,np.array] = None,
-                 tol : float = 1e-3,
-                 seed : any = 42,
-                 info_sweep : int = 0,
-                 plot_sweep : bool = False,
-                 metric_sweep : str = 'silhouette',
-                 width_plot : int = 6,
-                 height_plot : int = 3,
-                 dpi : int = 100,
-                 style : str = r'src/custom.mplstyle',
-                 latex : bool = False) -> None:
+    def __init__(self, 
+            X_low : np.array,
+            X_high : np.array,
+            number_cluster : int = 10,
+            label_shift : int = 0,
+            critical_frequency : float = 0.01,
+            cluster_iter : int = 10,
+            means_init : Union[None,np.array] = None,
+            tol : float = 1e-3,
+            seed : any = 42,
+            info_sweep : int = 0,
+            plot_sweep : bool = False,
+            metric_sweep : str = 'silhouette',
+            width_plot : int = 6,
+            height_plot : int = 3,
+            dpi : int = 100,
+            style : str = r'src/custom.mplstyle',
+            latex : bool = False,
+            interval : Union[None,tuple] = None
+        ) -> None:
 
         # Style
         self.style_name = style#"seaborn-v0_8"  # str
         self.cmap = 'Blues'  # str
         self.text_color = 'k'  # str
-        self.levels = 30  # int
+        self.levels = 15  # int
         self.width_plot = width_plot  # Union[int, float]
         self.height_plot = height_plot  # Union[int, float]
-        self.gridsize_density = 500  # int
+        self.gridsize_density = 300  # int
         self.min_log = 1e-2  # Bottom ylim when plotting (avoid plotting small values in log)
         self.dpi = dpi  # int
         self.seed = seed  # int
@@ -109,8 +112,16 @@ class gaussian_mixture():
         self.eps = 1e-10  # To reduce risk of divided by 0 in discrete integral
         self.tol = tol
         self.number_cluster = number_cluster  # int
-        self.min = self.X_low.min(axis=0)  # float
-        self.max = self.X_low.max(axis=0)  # float
+        if interval is None:
+            self.min = self.X_low.min(axis=0)  # float
+            self.max = self.X_low.max(axis=0)  # float
+        else:
+            self.min = np.full((self.dim,),interval[0])  # float
+            self.max = np.full((self.dim,),interval[1])  # float
+
+        # print(self.min, self.max)
+
+        
         self.X_low = (X_low - self.min) / (self.max - self.min)  # np.array (Number of samples , Dimension low dim space)
 
         assert 0 < self.dim <= 2, \

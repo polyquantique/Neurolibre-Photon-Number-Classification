@@ -1,10 +1,10 @@
 {
 "Boulder" : {
    "src": "10.5281/zenodo.14101974",
-   "dst": "../content/src/Dataset/Data_Boulder"
+   "dst": "../content/Dataset/Data_Boulder"
 },
 "Ottawa" : {
-   "src": "10.5281/zenodo.14101974",
-   "dst": "../content/src/Dataset/Data_Ottawa"
+   "src": "10.5281/zenodo.14042152",
+   "dst": "../content/Dataset/Data_Ottawa"
 }
 }

@@ -1,5 +1,26 @@
-content/Sections/src/Dataset/Data_Boulder/data.zip
-content/Sections/src/Dataset/Data_Ottawa/data.zip
+content/Sections/Dataset/Data_Boulder/data.zip
+content/Sections/Dataset/Data_Ottawa/data.zip
+
+content/Sections/Results/Geometric/Confidence/*
+content/Sections/Results/Geometric/Density/*
+content/Sections/Results/Uniform/Confidence/*
+content/Sections/Results/Uniform/Density/*
+content/Sections/Results/Uniform/g2/*
+content/Sections/Results/Large/Confidence/*
+content/Sections/Results/Large/Density/*
+
+!content/Sections/Results/Geometric/Confidence/.gitkeep
+!content/Sections/Results/Geometric/Density/.gitkeep
+!content/Sections/Results/Uniform/Confidence/.gitkeep
+!content/Sections/Results/Uniform/Density/.gitkeep
+!content/Sections/Results/Uniform/g2/.gitkeep
+!content/Sections/Results/Large/Confidence/.gitkeep
+!content/Sections/Results/Large/Density/.gitkeep
+
+!content/Sections/Results/Geometric/.gitkeep
+!content/Sections/Results/Uniform/.gitkeep
+!content/Sections/Results/Large/.gitkeep
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
