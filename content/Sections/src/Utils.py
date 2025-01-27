@@ -88,12 +88,15 @@ def get_means(
 
 
 
-def plot_results(config,
-                 pad = 0.5,
-                 xlim = (0,30),
-                 ylim = (0.7,1.01),
-                 yscale = 'linear',
-                 path_results = r'src/Results TES (Uniform)/'):
+def plot_results(
+        config,
+        pad = 0.5,
+        xlim = (0,30),
+        ylim = (0.7,1.01),
+        yscale = 'linear',
+        path_results = r'Results/Uniform',
+        path_results_precomp = r'Preprocess/Uniform'
+    ):
 
     texts = []
     objects = []
@@ -106,29 +109,40 @@ def plot_results(config,
 
             method_dict = config[method]
             i, f = method_dict['n_photons']
-            result = np.load(f'{path_results}/Confidence/{method}', allow_pickle=True)
+            try:
+                result = np.load(f'{path_results}/Confidence/{method}', allow_pickle=True)
+            except:
+                result = np.load(f'{path_results_precomp}/Confidence/{method}', allow_pickle=True)
             confidence = result[:f]
             photon_number = np.arange(i,f+i)
 
-            objects.append(ax.plot(photon_number, confidence, 
-                                    c = color, 
-                                    alpha=1, 
-                                    linewidth = 1,
-                                    linestyle = method_dict['line']))
+            objects.append(
+                ax.plot(photon_number, confidence, 
+                        c = color, 
+                        alpha=1, 
+                        linewidth = 1,
+                        linestyle = method_dict['line']
+                        )
+                    )
 
-            texts.append(ax.text(photon_number[-1]+pad, 
-                                    confidence[-1], 
-                                    method_dict['Name'], 
-                                    color = color, 
-                                    fontsize=10, 
-                                    weight="bold", 
-                                    va = "center"))
+            texts.append(
+                ax.text(photon_number[-1]+pad, 
+                        confidence[-1], 
+                        method_dict['Name'], 
+                        color = color, 
+                        fontsize=10, 
+                        weight="bold", 
+                        va = "center"
+                        )
+                    )
             
-        adjust_text(texts = texts,
-                    ax = ax, 
-                    expand=(1.05, 1.2),
-                    only_move = {"text": "xy", "static": "xy", "explode": "xy", "pull": "xy"},
-                    ensure_inside_axes = False) 
+        adjust_text(
+            texts = texts,
+            ax = ax, 
+            expand=(1.05, 1.2),
+            only_move = {"text": "xy", "static": "xy", "explode": "xy", "pull": "xy"},
+            ensure_inside_axes = False
+            ) 
         plt.ylabel('Confidence')
         plt.xlim(xlim)
         plt.ylim(ylim)

@@ -3,11 +3,14 @@ content/Sections/Dataset/Data_Ottawa/data.zip
 
 content/Sections/Results/Geometric/Confidence/*
 content/Sections/Results/Geometric/Density/*
+content/Sections/Results/Geometric/Confidence.pdf
 content/Sections/Results/Uniform/Confidence/*
 content/Sections/Results/Uniform/Density/*
 content/Sections/Results/Uniform/g2/*
+content/Sections/Results/Uniform/Confidence.pdf
 content/Sections/Results/Large/Confidence/*
 content/Sections/Results/Large/Density/*
+content/Sections/Results/Large/Confidence.pdf
 
 !content/Sections/Results/Geometric/Confidence/.gitkeep
 !content/Sections/Results/Geometric/Density/.gitkeep
