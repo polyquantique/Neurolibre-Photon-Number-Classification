@@ -1,11 +1,11 @@
 {
 "Boulder" : {
-   "src": "https://zenodo.org/api/records/14101974/files-archive",
+   "src": "10.5281/zenodo.14101974",
    "dst": "../data",
    "projectName": "photon-number-classification/Data_Boulder"
 },
 "Ottawa" : {
-   "src": "https://zenodo.org/api/records/14042152/files-archive",
+   "src": "10.5281/zenodo.14042152",
    "dst": "../data",
    "projectName": "photon-number-classification/Data_Ottawa"
 }
