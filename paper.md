@@ -72,7 +72,7 @@ Example of multiple voltage outputs measured by an oscilloscope to construct a d
 
 :::{figure} content/Sections/Figures/EXdensity.pdf
 :label: EXdensity
-The dataset $\mathbf{X}$ is transformed into $\mathbf{Y}$ which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
+The dataset X is transformed into Y which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
 :::
 
 :::{figure} content/Sections/Figures/EXdist.pdf
