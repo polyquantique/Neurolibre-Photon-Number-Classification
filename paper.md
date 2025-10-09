@@ -50,12 +50,12 @@ Our manuscript is structured as follows: in the next section, we formulate the p
 
 ## Problem Formulation
 
-Consider a data matrix $\bm{X}\in \mathbb{R}^{u \times t}$ that stores $u$ signals $x_i$ of size $t$. We assume there exists an operation $f(\bm{X})$ that can transform $\bm{X}$ into a vector $\bm{n}\in \mathbb{R}^{u\times 1}$ that contains the photon number associated with every signal. The goal of the classification becomes finding a parametric transformation $F(\theta', \bm{X})$ with user-defined parameters $\theta'$ that approximates as closely as possible the true transformation $f(\bm{X})$.
+Consider a data matrix $\mathbf{X}\in \mathbb{R}^{u \times t}$ that stores $u$ signals $x_i$ of size $t$. We assume there exists an operation $f(\mathbf{X})$ that can transform $\mathbf{X}$ into a vector $\mathbf{n}\in \mathbb{R}^{u\times 1}$ that contains the photon number associated with every signal. The goal of the classification becomes finding a parametric transformation $F(\theta', \mathbf{X})$ with user-defined parameters $\theta'$ that approximates as closely as possible the true transformation $f(\mathbf{X})$.
 
-The problem is defined as an unsupervised classification, meaning the true elements of $\bm{n}$ are unknown. Additionally, given an experiment, the method needs to accept arbitrarily high photon numbers within the visibility limit of the detector.
+The problem is defined as an unsupervised classification, meaning the true elements of $\mathbf{n}$ are unknown. Additionally, given an experiment, the method needs to accept arbitrarily high photon numbers within the visibility limit of the detector.
 
 \subsection{Dimensionality Reduction}
-To solve this unsupervised classification problem, dimensionality reduction techniques are used. This process describes the transformation of $\bm{X}$ into a lower-dimensional output $\bm{Y}\in \mathbb{R}^{u\times r}$ that retains a meaningful amount of the input information. The new space of dimension $r<t$ is referred to as a latent space and is limited to one and two dimensions in this study. The proposed approach could be used for an arbitrarily large latent space, although these higher dimensional spaces are harder to interpret.
+To solve this unsupervised classification problem, dimensionality reduction techniques are used. This process describes the transformation of $\mathbf{X}$ into a lower-dimensional output $\mathbf{Y}\in \mathbb{R}^{u\times r}$ that retains a meaningful amount of the input information. The new space of dimension $r<t$ is referred to as a latent space and is limited to one and two dimensions in this study. The proposed approach could be used for an arbitrarily large latent space, although these higher dimensional spaces are harder to interpret.
 
 We use dimensionality reduction since it is a natural extension of previous work that uses PCA [@humphreys_tomography_2015]. Moreover, this framework is used to make the current work compatible with existing tomography routines [@humphreys_tomography_2015].
 It also enables the visualization and interpretation of an entire dataset, a task difficult by directly observing the TES signals. Supposing an accurate transformation exists and is faster to process than the acquisition rate of the detector, the low-dimensional representation reduces the memory requirements of experiments by acting as a compression step.
@@ -67,12 +67,12 @@ Circuit diagram of a typical transition-edge sensor detection scheme. The circui
 
 :::{figure} content/Sections/Figures/EXtraces.png
 :label: EXtraces
-Example of multiple voltage outputs measured by an oscilloscope to construct a dataset $\bm{X}$ with $u=1\,024$ raw TES traces of size $t=100$.
+Example of multiple voltage outputs measured by an oscilloscope to construct a dataset $\mathbf{X}$ with $u=1\,024$ raw TES traces of size $t=100$.
 :::
 
 :::{figure} content/Sections/Figures/EXdensity.pdf
 :label: EXdensity
-The dataset $\bm{X}$ is transformed into $\bm{Y}$ which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
+The dataset $\mathbf{X}$ is transformed into $\mathbf{Y}$ which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
 :::
 
 :::{figure} content/Sections/Figures/EXdist.pdf
@@ -82,7 +82,7 @@ Clusters in the latent space are assigned a photon number $n\in\{0,1,...,8\}$. T
 
 **Figure:** Steps associated with the photon number detection process going from the device in {numref}`circuit` and the expected output signals in {numref}`EXtraces` to the abstract space describing similarities between samples in {numref}`EXdensity` and the final photon number distribution associated with an experiment in {numref}`EXdist`.
 
-Considering every signal in $\bm{X}$ can be associated with a photon number $n\in\{0,1,...,c\}$, where $c$ is the photon-number cutoff, i.e., the largest distinguishable photon number. We assume that effective dimensionality reduction organizes similar samples near each other, forming regions of high density.
+Considering every signal in $\mathbf{X}$ can be associated with a photon number $n\in\{0,1,...,c\}$, where $c$ is the photon-number cutoff, i.e., the largest distinguishable photon number. We assume that effective dimensionality reduction organizes similar samples near each other, forming regions of high density.
 
 We illustrate the process in Fig.~\ref{fig:latentSpaceEx} by transforming the TES signals (Fig.~\ref{fig:EXtraces}) into one-dimensional samples presented in Fig.~\ref{fig:EXdensity}. This low dimensional space is visualized using a kernel density estimation of the latent space (Gaussian kernel)~\cite{SeabornkdeplotSeaborn0132}. From the position of the samples in the latent space (never considering the density estimation in the computation) it is possible to find regions most likely to describe a photon number $n\in\{0,1,...,8\}$. We discuss this step in Sec.~\ref{sec:clustering}. Finally, from this interpretation of the low-dimensional space, a photon number can be assigned to every sample (Fig.~\ref{fig:EXdist}). The regions of high density in Fig.~\ref{fig:EXdensity} are called clusters and are associated with photon numbers. We note that clusters can be defined using other heuristics like neighbour distances.
 
