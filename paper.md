@@ -19,7 +19,7 @@ authors:
     email: nicolas.quesada@polymtl.ca
     affiliation: 1
 affiliations:
-  - name: D\'epartement de g\'enie physique, \'Ecole Polytechnique de Montr\'eal, Montr\'eal, QC, H3T 1J4, Canada
+  - name: Département de génie physique, École Polytechnique de Montréal, Montréal, QC, H3T 1J4, Canada
     index: 1
   - name: National Research Council of Canada, 100 Sussex Drive, Ottawa, Ontario K1N 5A2, Canada
     index: 2
