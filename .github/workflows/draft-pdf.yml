@@ -1,3 +1,4 @@
+name: math-compatibility
 # on: [push]
 on:
   push:

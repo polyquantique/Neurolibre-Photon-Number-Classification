@@ -62,12 +62,12 @@ It also enables the visualization and interpretation of an entire dataset, a tas
 
 :::{figure} content/Sections/Figures/circuit.pdf
 :label: circuit
-Circuit diagram of a typical transition-edge sensor detection scheme. The circuit can change slightly from one implementation to the other, the illustrated circuit is based on Ref.~\cite{moraisPreciselyDeterminingPhotonnumber2022a}. The superconducting phase transition of the TES is illustrated through the sharp variation of resistance as a function of temperature, giving the TES extremely sensitive energy resolution [@thekkadathPreparingCharacterizingQuantum2020b]..
+Circuit diagram of a typical transition-edge sensor detection scheme. The circuit can change slightly from one implementation to the other, the illustrated circuit is based on Ref.[@moraisPreciselyDeterminingPhotonnumber2022a]. The superconducting phase transition of the TES is illustrated through the sharp variation of resistance as a function of temperature, giving the TES extremely sensitive energy resolution [@thekkadathPreparingCharacterizingQuantum2020b]..
 :::
 
 :::{figure} content/Sections/Figures/EXtraces.png
 :label: EXtraces
-Example of multiple voltage outputs measured by an oscilloscope to construct a dataset $\mathbf{X}$ with $u=1\,024$ raw TES traces of size $t=100$.
+Example of multiple voltage outputs measured by an oscilloscope to construct a dataset with $u=1024$ raw TES traces of size $t=100$.
 :::
 
 :::{figure} content/Sections/Figures/EXdensity.pdf
