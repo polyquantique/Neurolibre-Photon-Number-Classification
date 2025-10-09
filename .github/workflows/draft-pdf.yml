@@ -1,9 +1,4 @@
-name: math-compatibility
-# on: [push]
-on:
-  push:
-    branches:
-    - post-review
+on: [push]
 
 jobs:
   paper:
