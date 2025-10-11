@@ -1,4 +1,0 @@
-format: jb-book
-root: paper.md
-chapters:
-  - file: content/Sections/Results.ipynb

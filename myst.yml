@@ -43,6 +43,8 @@ project:
       region: MD
       country: USA
       postal_code: "20899"
+  toc:
+      - file: paper.md
   keywords:
     - photon counting
     - transition edge sensor
