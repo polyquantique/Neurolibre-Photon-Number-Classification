@@ -3,25 +3,52 @@ title: 'Accurate Unsupervised Photon Counting from Transition Edge Sensor Signal
 authors:
   - name: Nicolas Dalbec-Constant
     email: nicolas.dalbec-constant@polymtl.ca
-    affiliation: 1
+    affiliations:
+      - name: Département de génie physique, École Polytechnique de Montréal
+        city: Montréal
+        region: QC
+        postal_code: H3T 1J4
+        country: Canada
   - name: Guillaume Thekkadath
-    affiliation: 2
+    affiliations:
+      - name: National Research Council of Canada
+        address: 100 Sussex Drive
+        city: Ottawa
+        region: Ontario
+        postal_code: K1N 5A2
+        country: Canada
   - name: Duncan England
-    affiliation: 2
+    affiliations:
+      - name: National Research Council of Canada
+        address: 100 Sussex Drive
+        city: Ottawa
+        region: Ontario
+        postal_code: K1N 5A2
+        country: Canada
   - name: Benjamin Sussman
-    affiliation: 2
+    affiliations:
+      - name: National Research Council of Canada
+        address: 100 Sussex Drive
+        city: Ottawa
+        region: Ontario
+        postal_code: K1N 5A2
+        country: Canada
   - name: Thomas Gerrits
-    affiliation: 3
+    affiliations:
+      - name: National Institute of Standards and Technology
+        address: 100 Bureau Drive
+        city: Gaithersburg
+        region: MD
+        postal_code: 20899
+        country: USA
   - name: Nicolás Quesada
     email: nicolas.quesada@polymtl.ca
-    affiliation: 1
-affiliations:
-  - name: Département de génie physique, École Polytechnique de Montréal, Montréal, QC, H3T 1J4, Canada
-    index: 1
-  - name: National Research Council of Canada, 100 Sussex Drive, Ottawa, Ontario K1N 5A2, Canada
-    index: 2
-  - name: National Institute of Standards and Technology, 100 Bureau Drive, Gaithersburg, MD 20899, USA
-    index: 3
+    affiliations:
+      - name: Département de génie physique, École Polytechnique de Montréal
+        city: Montréal
+        region: QC
+        postal_code: H3T 1J4
+        country: Canada
 date: 2024-12-03
 bibliography: content/paper.bib
 ---
@@ -34,7 +61,7 @@ We compare methods for signal classification applied to voltage traces from tran
 
 Photonics is a strong contender for building large-scale quantum information processing systems [@arrazola_quantum_2021] [@slussarenko_photonic_2019] [@rudolph2017optimistic] [@bourassa2021blueprint] [@maring2024versatile]; in many of these systems, photon-number detection plays an essential role, serving as a resource for quantum advantage. Photonic architectures often encode information in continuous variables or in multi-photon states, where precise knowledge of photon number is critical for state preparation, measurement, and error correction. For example, photon-number-resolving detectors have been used for the generation of non-Gaussian states [@takase2024generation] [@alexander2024manufacturable] [@yao2022design] [@chen2024generation] [@melalkia2023multiplexed] [@tiedau2019scalability] [@sonoyama2024generation] [@endo2024optically] [@gerritsGenerationOpticalCoherentstate2010] [@thekkadathEngineeringSchrodingerCat2020] [@larsenIntegratedPhotonicSource2025], for the sampling of classically-intractable probability distributions [@aaronson2011computational] [@hamilton2017gaussian] [@kruse2017limits] [@deshpande2022quantum] [@grier2022complexity] [@madsen2022quantum], or for directly resolving multiple quanta, thereby improving the Fisher information in interferometric protocols [@thekkadath2020quantum] [@Wildfeuer:09] [@youScalableMultiphotonQuantum2021]. In such protocols, quantum states of light such as N00N or Holland-Burnett states can, in principle, achieve a precision scaling of $\sqrt{N}$ (for $N$ detected photons), surpassing classical limits. However, this quantum advantage is highly sensitive to loss, making efficient photon-number resolution particularly valuable. The use of photon-number resolving detectors offers a significant advantage, as a single device can accurately determine the number of photons in a quantum state [@divochiy_superconducting_2008] [@moraisPreciselyDeterminingPhotonnumber2022a], thereby eliminating the need for a demultiplexed network of threshold detectors, which adds complexity and can reduce overall efficiency [@kruse2017limits] [@jonsson2019evaluating] [@jonsson2020temporal]. Transition-edge sensors (TES) have been used for this task, offering resolution over a wide energy range. Resolutions up to 30 photons have been demonstrated [@eaton2023], although this quantity is typically lower, on the order of 17 [@moraisPreciselyDeterminingPhotonnumber2022a].
 
-TESs exploit the superconducting phase transition of photosensitive materials (illustrated in Fig.{ref}`fig:circuit`) to achieve an extremely sensitive calorimeter [@irwin_transition-edge_2005]. During operation, the material is cooled below its critical temperature and then current-biased to the transition region between its superconducting and normal state. In this region, the temperature increase following the absorption of a single photon leads to a measurable change in the material's resistance [@phillips2020advanced] [@hadfield2009single]. The resistance change is read-out using a low noise amplifier such as superconducting quantum interference devices (SQUIDs), which also enable the creation of large arrays of TES detectors via read-out multiplexing [@irwin_transition-edge_2005]. Optimized materials and coupling techniques have demonstrated system efficiencies of up to 98\% [@fukuda_titanium-based_2011].
+TESs exploit the superconducting phase transition of photosensitive materials (illustrated in Fig.{ref}`fig_circuit`) to achieve an extremely sensitive calorimeter [@irwin_transition-edge_2005]. During operation, the material is cooled below its critical temperature and then current-biased to the transition region between its superconducting and normal state. In this region, the temperature increase following the absorption of a single photon leads to a measurable change in the material's resistance [@phillips2020advanced] [@hadfield2009single]. The resistance change is read-out using a low noise amplifier such as superconducting quantum interference devices (SQUIDs), which also enable the creation of large arrays of TES detectors via read-out multiplexing [@irwin_transition-edge_2005]. Optimized materials and coupling techniques have demonstrated system efficiencies of up to 98\% [@fukuda_titanium-based_2011].
 
 The readout of these devices is non-trivial as the quantity one wants to determine, the energy (or the photon number for monochromatic light), is reflected in a nonlinear fashion in the voltage signal produced by the detectors' electronics [@gerrits_extending_2012]. Historically, the integral (area) of the signals has been used to assign photon numbers [@moraisPreciselyDeterminingPhotonnumber2022a; @Schmidt_Bimodal_2021]. However, distinguishing large photon numbers becomes challenging with this technique. To address this issue, linear techniques such as Principal Component Analysis (PCA) have been used [@humphreys_tomography_2015]. A machine learning method, adapted from the K-means algorithm to account for the Poissonian statistics of laser sources, has also been developed [@levine_algorithm_2012]. However, these methods' simplicity or assumptions can limit their performance or usability for model-free photon-number detection and when measuring non-classical sources, which typically do not have Poisson photon-number statistics.
 
@@ -58,30 +85,30 @@ We use dimensionality reduction since it is a natural extension of previous work
 It also enables the visualization and interpretation of an entire dataset, a task difficult by directly observing the TES signals. Supposing an accurate transformation exists and is faster to process than the acquisition rate of the detector, the low-dimensional representation reduces the memory requirements of experiments by acting as a compression step.
 
 :::{figure} content/Figures/circuit.pdf
-:label: fig:circuit
+:label: fig_circuit
 Circuit diagram of a typical transition-edge sensor detection scheme. The circuit can change slightly from one implementation to the other, the illustrated circuit is based on Ref.[@moraisPreciselyDeterminingPhotonnumber2022a]. The superconducting phase transition of the TES is illustrated through the sharp variation of resistance as a function of temperature, giving the TES extremely sensitive energy resolution [@thekkadathPreparingCharacterizingQuantum2020b]..
 :::
 
 :::{figure} #traces
-:label: fig:EXtraces
+:label: fig_EXtraces
 Example of multiple voltage outputs measured by an oscilloscope to construct a dataset with $u=1024$ raw TES traces of size $t=100$.
 :::
 
 :::{figure} #density
-:label: fig:EXdensity
+:label: fig_EXdensity
 The dataset X is transformed into Y which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
 :::
 
 :::{figure} #dist
-:label: fig:EXdist
-Clusters in the latent space are assigned a photon number $n\in\{0,1,...,8\}$. This is done by dividing the space in regions most likely associated to specific photon numbers (see Sec.{ref}`sec:conf`). From labelled samples, a photon-number distribution can be generated
+:label: fig_EXdist
+Clusters in the latent space are assigned a photon number $n \text{ in } \{0,1,...,8\}$. This is done by dividing the space in regions most likely associated to specific photon numbers (see Sec.{ref}`sec:conf`). From labelled samples, a photon-number distribution can be generated
 :::
 
-**Figure:** Steps associated with the photon number detection process going from the device in {numref}`fig:circuit` and the expected output signals in {numref}`fig:EXtraces` to the abstract space describing similarities between samples in {numref}`fig:EXdensity` and the final photon number distribution associated with an experiment in {numref}`fig:EXdist`.
+**Figure:** Steps associated with the photon number detection process going from the device in {numref}`fig_circuit` and the expected output signals in {numref}`fig_EXtraces` to the abstract space describing similarities between samples in {numref}`fig_EXdensity` and the final photon number distribution associated with an experiment in {numref}`fig_EXdist`.
 
-Considering every signal in $\mathbf{X}$ can be associated with a photon number $n\in\{0,1,...,c\}$, where $c$ is the photon-number cutoff, i.e., the largest distinguishable photon number. We assume that effective dimensionality reduction organizes similar samples near each other, forming regions of high density.
+Considering every signal in $\mathbf{X}$ can be associated with a photon number $n \text{ in } \{0,1,...,c\}$, where $c$ is the photon-number cutoff, i.e., the largest distinguishable photon number. We assume that effective dimensionality reduction organizes similar samples near each other, forming regions of high density.
 
-We illustrate the process in Fig.{ref}`fig:EXdensity` by transforming the TES signals (Fig.{ref}`fig:EXtraces`) into one-dimensional samples presented in Fig.{ref}`fig:EXdensity`. This low dimensional space is visualized using a kernel density estimation of the latent space (Gaussian kernel) [@SeabornkdeplotSeaborn0132]. From the position of the samples in the latent space (never considering the density estimation in the computation) it is possible to find regions most likely to describe a photon number $n\in\{0,1,...,8\}$. We discuss this step in Sec.{ref}`sec:clustering`. Finally, from this interpretation of the low-dimensional space, a photon number can be assigned to every sample (Fig.{ref}`fig:EXdist`). The regions of high density in Fig.{ref}`fig:EXdensity` are called clusters and are associated with photon numbers. We note that clusters can be defined using other heuristics like neighbour distances.
+We illustrate the process in Fig.{ref}`fig_EXdensity` by transforming the TES signals (Fig.{ref}`fig_EXtraces`) into one-dimensional samples presented in Fig.{ref}`fig_EXdensity`. This low dimensional space is visualized using a kernel density estimation of the latent space (Gaussian kernel) [@SeabornkdeplotSeaborn0132]. From the position of the samples in the latent space (never considering the density estimation in the computation) it is possible to find regions most likely to describe a photon number $n \text{ in } \{0,1,...,8\}$. We discuss this step in Sec.{ref}`sec:clustering`. Finally, from this interpretation of the low-dimensional space, a photon number can be assigned to every sample (Fig.{ref}`fig_EXdist`). The regions of high density in Fig.{ref}`fig_EXdensity` are called clusters and are associated with photon numbers. We note that clusters can be defined using other heuristics like neighbour distances.
 
 An additional justification for the use of dimensionality reduction in combination with clustering instead of directly clustering over high dimensional data is that existing work has empirically demonstrated that creating a low dimensionality embedding increases the clustering capabilities in unsupervised settings [@allaoui_considerably_2020].
 
