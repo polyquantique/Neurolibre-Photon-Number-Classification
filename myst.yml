@@ -1,27 +1,36 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
+
 project:
-  title: 'Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals'
+  title: "Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals"
+  authors:
+  - name: "Nicolas Dalbec-Constant"
+    email: nicolas.dalbec-constant@polymtl.ca
+    affiliations:
+      - id: polytechnique
+  - name: "Guillaume Thekkadath"
+    affiliations:
+      - id: nrc
+  - name: "Duncan England"
+    affiliations:
+      - id: nrc
+  - name: "Benjamin Sussman"
+    affiliations:
+      - id: nrc
+  - name: "Thomas Gerrits"
+    affiliations:
+      - id: nist
+  - name: "Nicolás Quesada"
+    email: nicolas.quesada@polymtl.ca
+    affiliations:
+      - id: polytechnique
+  copyright: '2024'
+  github: NDalbec/Neurolibre-Photon-Number-Classification
+  banner: featured.jpg
   thebe:
     binder:
       url: https://terrarium.evidencepub.io
       repo: polyquantique/Neurolibre-Photon-Number-Classification
       ref: HEAD
-  authors:
-    - name: Nicolas Dalbec-Constant
-      email: nicolas.dalbec-constant@polymtl.ca
-      affiliations: polytechnique
-    - name: Guillaume Thekkadath
-      affiliations: nrc
-    - name: Duncan England
-      affiliations: nrc
-    - name: Benjamin Sussman
-      affiliations: nrc
-    - name: Thomas Gerrits
-      affiliations: nist
-    - name: Nicolás Quesada
-      email: nicolas.quesada@polymtl.ca
-      affiliations: polytechnique
   affiliations:
     - id: polytechnique
       institution: Département de génie physique, École Polytechnique de Montréal
@@ -47,13 +56,11 @@ project:
     - photon counting
     - transition edge sensor
     - unsupervised learning
-  github: https://github.com/polyquantique/Neurolibre-Photon-Number-Classification
-  banner: featured.jpg
   venue: Neurolibre
   subject: Living Preprint
   numbering:
     headings: true
-  doi: 10.55458/neurolibre.xxxxx # Production will override this.
+  doi: 10.55458/neurolibre.xxxxx
   open_access: true
   license:
     content: CC-BY-4.0
@@ -63,8 +70,37 @@ project:
     TES: Transition Edge Sensor
     SQUID: Superconducting Quantum Interference Device
   bibliography:
-    - paper.bib
+    - content/paper.bib
+  toc:
+    - file: paper.md
+      title: "Paper"
+    - file: content/Context.ipynb
+      title: "Context"
+    - file: content/Methods_Uniform.ipynb
+      title: "Methods: Uniform"
+    - file: content/Methods_Geometric.ipynb
+      title: "Methods: Geometric"
+    - file: content/Methods_Large.ipynb
+      title: "Methods: Large"
+    - file: content/Results.ipynb
+      title: "Results"
   resources:
-    - content/Sections/Results.ipynb
+    - content/Context.ipynb
+    - content/Methods_Uniform.ipynb
+    - content/Methods_Geometric.ipynb
+    - content/Methods_Large.ipynb
+    - content/Results.ipynb
+
+# Top-level execution configuration
+execution:
+  execute_notebooks: auto
+  timeout: -1
+
+# Site / HTML options
 site:
   template: article-theme
+  favicon: content/Figures/polytechnique_gauche_rgb.png
+  options:
+    logo_light: content/Figures/polytechnique_gauche_rgb.png
+    logo_dark: content/Figures/polytechnique_gauche_inverse_rgb.png
+    extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>

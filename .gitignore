@@ -1,29 +1,35 @@
-content/Sections/Dataset/Data_Boulder/data.zip
-content/Sections/Dataset/Data_Ottawa/data.zip
+content/Dataset/Data_Boulder/data.zip
+content/Dataset/Data_Ottawa/data.zip
 
-content/Sections/Results/Geometric/Confidence/*
-content/Sections/Results/Geometric/Density/*
-content/Sections/Results/Geometric/Confidence.pdf
-content/Sections/Results/Uniform/Confidence/*
-content/Sections/Results/Uniform/Density/*
-content/Sections/Results/Uniform/g2/*
-content/Sections/Results/Uniform/Confidence.pdf
-content/Sections/Results/Large/Confidence/*
-content/Sections/Results/Large/Density/*
-content/Sections/Results/Large/Confidence.pdf
+content/Results/Geometric/Confidence/*
+content/Results/Geometric/Density/*
+content/Results/Geometric/Confidence.pdf
+content/Results/Uniform/Confidence/*
+content/Results/Uniform/Density/*
+content/Results/Uniform/g2/*
+content/Results/Uniform/Confidence.pdf
+content/Results/Large/Confidence/*
+content/Results/Large/Density/*
+content/Results/Large/Confidence.pdf
+content/Results/Demo/Confidence/*
+content/Results/Demo/Density/*
 
-!content/Sections/Results/Geometric/Confidence/.gitkeep
-!content/Sections/Results/Geometric/Density/.gitkeep
-!content/Sections/Results/Uniform/Confidence/.gitkeep
-!content/Sections/Results/Uniform/Density/.gitkeep
-!content/Sections/Results/Uniform/g2/.gitkeep
-!content/Sections/Results/Large/Confidence/.gitkeep
-!content/Sections/Results/Large/Density/.gitkeep
+!content/Results/Geometric/Confidence/.gitkeep
+!content/Results/Geometric/Density/.gitkeep
+!content/Results/Uniform/Confidence/.gitkeep
+!content/Results/Uniform/Density/.gitkeep
+!content/Results/Uniform/g2/.gitkeep
+!content/Results/Large/Confidence/.gitkeep
+!content/Results/Large/Density/.gitkeep
+!content/Results/Demo/Confidence/.gitkeep
+!content/Results/Demo/Density/.gitkeep
 
-!content/Sections/Results/Geometric/.gitkeep
-!content/Sections/Results/Uniform/.gitkeep
-!content/Sections/Results/Large/.gitkeep
+!content/Results/Geometric/.gitkeep
+!content/Results/Uniform/.gitkeep
+!content/Results/Large/.gitkeep
+!content/Results/Demo/.gitkeep
 
+_build/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -188,3 +194,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+
+# MyST build outputs
+_build
