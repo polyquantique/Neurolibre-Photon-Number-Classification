@@ -3,26 +3,44 @@ version: 1
 project:
   title: "Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals"
   authors:
-  - name: "Nicolas Dalbec-Constant"
-    email: nicolas.dalbec-constant@polymtl.ca
-    affiliations:
-      - id: polytechnique
-  - name: "Guillaume Thekkadath"
-    affiliations:
-      - id: nrc
-  - name: "Duncan England"
-    affiliations:
-      - id: nrc
-  - name: "Benjamin Sussman"
-    affiliations:
-      - id: nrc
-  - name: "Thomas Gerrits"
-    affiliations:
-      - id: nist
-  - name: "Nicolás Quesada"
-    email: nicolas.quesada@polymtl.ca
-    affiliations:
-      - id: polytechnique
+    - name: "Nicolas Dalbec-Constant"
+      email: nicolas.dalbec-constant@polymtl.ca
+      affiliations:
+        - institution: Département de génie physique, École Polytechnique de Montréal
+          city: Montreal
+          region: Quebec
+          country: Canada
+    - name: "Guillaume Thekkadath"
+      affiliations:
+        - institution: National Research Council of Canada
+          city: Ottawa
+          region: Ontario
+          country: Canada
+    - name: "Duncan England"
+      affiliations:
+        - institution: National Research Council of Canada
+          city: Ottawa
+          region: Ontario
+          country: Canada
+    - name: "Benjamin Sussman"
+      affiliations:
+        - institution: National Research Council of Canada
+          city: Ottawa
+          region: Ontario
+          country: Canada
+    - name: "Thomas Gerrits"
+      affiliations:
+        - institution: National Institute of Standards and Technology
+          city: Gaithersburg
+          region: MD
+          country: USA
+    - name: "Nicolás Quesada"
+      email: nicolas.quesada@polymtl.ca
+      affiliations:
+        - institution: Département de génie physique, École Polytechnique de Montréal
+          city: Montreal
+          region: Quebec
+          country: Canada
   copyright: '2024'
   github: NDalbec/Neurolibre-Photon-Number-Classification
   banner: featured.jpg

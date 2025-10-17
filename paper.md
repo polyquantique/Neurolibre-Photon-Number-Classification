@@ -4,23 +4,41 @@ authors:
   - name: "Nicolas Dalbec-Constant"
     email: nicolas.dalbec-constant@polymtl.ca
     affiliations:
-      - id: polytechnique
+      - institution: Département de génie physique, École Polytechnique de Montréal
+        city: Montreal
+        region: Quebec
+        country: Canada
   - name: "Guillaume Thekkadath"
     affiliations:
-      - id: nrc
+      - institution: National Research Council of Canada
+        city: Ottawa
+        region: Ontario
+        country: Canada
   - name: "Duncan England"
     affiliations:
-      - id: nrc
+      - institution: National Research Council of Canada
+        city: Ottawa
+        region: Ontario
+        country: Canada
   - name: "Benjamin Sussman"
     affiliations:
-      - id: nrc
+      - institution: National Research Council of Canada
+        city: Ottawa
+        region: Ontario
+        country: Canada
   - name: "Thomas Gerrits"
     affiliations:
-      - id: nist
+      - institution: National Institute of Standards and Technology
+        city: Gaithersburg
+        region: MD
+        country: USA
   - name: "Nicolás Quesada"
     email: nicolas.quesada@polymtl.ca
     affiliations:
-      - id: polytechnique
+      - institution: Département de génie physique, École Polytechnique de Montréal
+        city: Montreal
+        region: Quebec
+        country: Canada
 date: 2024-12-03
 bibliography: content/paper.bib
 ---
