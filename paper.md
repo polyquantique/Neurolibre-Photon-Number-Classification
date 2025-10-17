@@ -1,5 +1,41 @@
 ---
 title: 'Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals'
+authors:
+  - name: Nicolas Dalbec-Constant
+    email: nicolas.dalbec-constant@polymtl.ca
+    affiliations: polytechnique
+  - name: Guillaume Thekkadath
+    affiliations: nrc
+  - name: Duncan England
+    affiliations: nrc
+  - name: Benjamin Sussman
+    affiliations: nrc
+  - name: Thomas Gerrits
+    affiliations: nist
+  - name: Nicolás Quesada
+    email: nicolas.quesada@polymtl.ca
+    affiliations: polytechnique
+affiliations:
+  - id: polytechnique
+    institution: Département de génie physique, École Polytechnique de Montréal
+    city: Montreal
+    region: Quebec
+    country: Canada
+    postal_code: H3T 1J4
+  - id: nrc
+    institution: National Research Council of Canada
+    address: 100 Sussex Drive
+    city: Ottawa
+    region: Ontario
+    country: Canada
+    postal_code: K1N 5A2
+  - id: nist
+    institution: National Institute of Standards and Technology
+    address: 100 Bureau Drive
+    city: Gaithersburg
+    region: MD
+    country: USA
+    postal_code: "20899"
 date: 2024-12-03
 bibliography: content/paper.bib
 ---
