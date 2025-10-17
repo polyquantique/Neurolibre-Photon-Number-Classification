@@ -41,7 +41,12 @@ authors:
         country: Canada
 date: 2024-12-03
 bibliography: content/paper.bib
+crowd:
+  reviewers: []
+  editors: []
+  translators: []
 ---
+
 
 # Abstract
 

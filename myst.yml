@@ -109,6 +109,12 @@ project:
     - content/Methods_Large.ipynb
     - content/Results.ipynb
 
+# Required for Neurolibre filters
+crowd:
+  reviewers: []
+  editors: []
+  translators: []
+
 # Top-level execution configuration
 execution:
   execute_notebooks: auto
