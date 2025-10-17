@@ -3,42 +3,56 @@ title: 'Accurate Unsupervised Photon Counting from Transition Edge Sensor Signal
 authors:
   - name: Nicolas Dalbec-Constant
     email: nicolas.dalbec-constant@polymtl.ca
-    affiliations: polytechnique
+    affiliation:
+      name: Département de génie physique, École Polytechnique de Montréal
+      city: Montreal
+      region: Quebec
+      country: Canada
+      postal_code: H3T 1J4
   - name: Guillaume Thekkadath
-    affiliations: nrc
+    affiliation:
+      name: National Research Council of Canada
+      address: 100 Sussex Drive
+      city: Ottawa
+      region: Ontario
+      country: Canada
+      postal_code: K1N 5A2
   - name: Duncan England
-    affiliations: nrc
+    affiliation:
+      name: National Research Council of Canada
+      address: 100 Sussex Drive
+      city: Ottawa
+      region: Ontario
+      country: Canada
+      postal_code: K1N 5A2
   - name: Benjamin Sussman
-    affiliations: nrc
+    affiliation:
+      name: National Research Council of Canada
+      address: 100 Sussex Drive
+      city: Ottawa
+      region: Ontario
+      country: Canada
+      postal_code: K1N 5A2
   - name: Thomas Gerrits
-    affiliations: nist
+    affiliation:
+      name: National Institute of Standards and Technology
+      address: 100 Bureau Drive
+      city: Gaithersburg
+      region: MD
+      country: USA
+      postal_code: "20899"
   - name: Nicolás Quesada
     email: nicolas.quesada@polymtl.ca
-    affiliations: polytechnique
-affiliations:
-  - id: polytechnique
-    institution: Département de génie physique, École Polytechnique de Montréal
-    city: Montreal
-    region: Quebec
-    country: Canada
-    postal_code: H3T 1J4
-  - id: nrc
-    institution: National Research Council of Canada
-    address: 100 Sussex Drive
-    city: Ottawa
-    region: Ontario
-    country: Canada
-    postal_code: K1N 5A2
-  - id: nist
-    institution: National Institute of Standards and Technology
-    address: 100 Bureau Drive
-    city: Gaithersburg
-    region: MD
-    country: USA
-    postal_code: "20899"
+    affiliation:
+      name: Département de génie physique, École Polytechnique de Montréal
+      city: Montreal
+      region: Quebec
+      country: Canada
+      postal_code: H3T 1J4
 date: 2024-12-03
 bibliography: content/paper.bib
 ---
+
 
 # Abstract
 
