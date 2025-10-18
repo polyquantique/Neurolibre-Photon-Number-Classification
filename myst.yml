@@ -1,12 +1,7 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
+
 project:
-  title: 'Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals'
-  thebe:
-    binder:
-      url: https://terrarium.evidencepub.io
-      repo: polyquantique/Neurolibre-Photon-Number-Classification
-      ref: HEAD
+  title: "Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals"
   authors:
     - name: Nicolas Dalbec-Constant
       email: nicolas.dalbec-constant@polymtl.ca
@@ -43,20 +38,22 @@ project:
       region: MD
       country: USA
       postal_code: "20899"
-  toc:
-      - file: paper.md
-      - file: content/Sections/Results.ipynb
+  copyright: '2024'
+  banner: featured.jpg
+  thebe:
+    binder:
+      url: https://terrarium.evidencepub.io
+      repo: polyquantique/Neurolibre-Photon-Number-Classification
+      ref: HEAD
   keywords:
     - photon counting
     - transition edge sensor
     - unsupervised learning
-  github: https://github.com/polyquantique/Neurolibre-Photon-Number-Classification
-  banner: featured.jpg
   venue: Neurolibre
   subject: Living Preprint
   numbering:
     headings: true
-  doi: 10.55458/neurolibre.xxxxx # Production will override this.
+  doi: 10.55458/neurolibre.xxxxx
   open_access: true
   license:
     content: CC-BY-4.0
@@ -66,8 +63,43 @@ project:
     TES: Transition Edge Sensor
     SQUID: Superconducting Quantum Interference Device
   bibliography:
-    - paper.bib
+    - content/paper.bib
+  toc:
+    - file: paper.md
+      title: "Paper"
+    - file: content/Context.ipynb
+      title: "Context"
+    - file: content/Methods_Uniform.ipynb
+      title: "Methods: Uniform"
+    - file: content/Methods_Geometric.ipynb
+      title: "Methods: Geometric"
+    - file: content/Methods_Large.ipynb
+      title: "Methods: Large"
+    - file: content/Results.ipynb
+      title: "Results"
   resources:
-    - content/Sections/Results.ipynb
+    - content/Context.ipynb
+    - content/Methods_Uniform.ipynb
+    - content/Methods_Geometric.ipynb
+    - content/Methods_Large.ipynb
+    - content/Results.ipynb
+
+# Required for Neurolibre filters
+crowd:
+  reviewers: []
+  editors: []
+  translators: []
+
+# Top-level execution configuration
+execution:
+  execute_notebooks: auto
+  timeout: -1
+
+# Site / HTML options
 site:
   template: article-theme
+  favicon: content/Figures/polytechnique_gauche_rgb.png
+  options:
+    logo_light: content/Figures/polytechnique_gauche_rgb.png
+    logo_dark: content/Figures/polytechnique_gauche_inverse_rgb.png
+    extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>

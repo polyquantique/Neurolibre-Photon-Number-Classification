@@ -1,8 +1,5 @@
 ---
 title: 'Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals'
-tags:
-  - Tag1
-  - Tag2
 authors:
   - name: Nicolas Dalbec-Constant
     email: nicolas.dalbec-constant@polymtl.ca
@@ -25,8 +22,8 @@ affiliations:
     index: 2
   - name: National Institute of Standards and Technology, 100 Bureau Drive, Gaithersburg, MD 20899, USA
     index: 3
-date: 3 december 2024
-bibliography: paper.bib
+date: 2024-12-03
+bibliography: content/paper.bib
 ---
 
 # Abstract
@@ -39,7 +36,7 @@ Photonics is a strong contender for building large-scale quantum information pro
 
 TESs exploit the superconducting phase transition of photosensitive materials (illustrated in Fig.{ref}`fig:circuit`) to achieve an extremely sensitive calorimeter [@irwin_transition-edge_2005]. During operation, the material is cooled below its critical temperature and then current-biased to the transition region between its superconducting and normal state. In this region, the temperature increase following the absorption of a single photon leads to a measurable change in the material's resistance [@phillips2020advanced] [@hadfield2009single]. The resistance change is read-out using a low noise amplifier such as superconducting quantum interference devices (SQUIDs), which also enable the creation of large arrays of TES detectors via read-out multiplexing [@irwin_transition-edge_2005]. Optimized materials and coupling techniques have demonstrated system efficiencies of up to 98\% [@fukuda_titanium-based_2011].
 
-The readout of these devices is non-trivial as the quantity one wants to determine, the energy (or the photon number for monochromatic light), is reflected in a nonlinear fashion in the voltage signal produced by the detectors' electronics [@gerrits_extending_2012]. Historically, the integral (area) of the signals has been used to assign photon numbers [@moraisPreciselyDeterminingPhotonnumber2022a; @Schmidt_Bimodal_2021]. However, distinguishing large photon numbers becomes challenging with this technique. To address this issue, linear techniques such as Principal Component Analysis (PCA) have been used [@humphreys_tomography_2015]. A machine learning method, adapted from the K-means algorithm to account for the Poissonian statistics of laser sources, has also been developed [@levine_algorithm_2012]. However, these methods' simplicity or assumptions can limit their performance or usability for model-free photon-number detection and when measuring non-classical sources, which typically do not have Poisson photon-number statistics.
+The readout of these devices is non-trivial as the quantity one wants to determine, the energy (or the photon number for monochromatic light), is reflected in a nonlinear fashion in the voltage signal produced by the detectors' electronics [@gerrits_extending_2012]. Historically, the integral (area) of the signals has been used to assign photon numbers [@moraisPreciselyDeterminingPhotonnumber2022a] [@Schmidt_Bimodal_2021]. However, distinguishing large photon numbers becomes challenging with this technique. To address this issue, linear techniques such as Principal Component Analysis (PCA) have been used [@humphreys_tomography_2015]. A machine learning method, adapted from the K-means algorithm to account for the Poissonian statistics of laser sources, has also been developed [@levine_algorithm_2012]. However, these methods' simplicity or assumptions can limit their performance or usability for model-free photon-number detection and when measuring non-classical sources, which typically do not have Poisson photon-number statistics.
 
 With the increased popularity of machine learning in the field of signal processing [@rajendran_deep_2018] and quantum systems [@nautrup_optimizing_2019], one might naturally ask whether employing more sophisticated methods could lead to enhanced resolution of photon numbers. In this work, we answer this question by assessing the performance of multiple techniques for photon number classification using TES signals. We do so by considering a confidence metric that quantifies the overlap of the photon-number clusters inside a latent space. We demonstrate that for our dataset previous methods such as the signal's area and PCA can resolve up to 16 photons with confidence above $90\%$ while nonlinear techniques can resolve up to 21 with the same confidence threshold. Furthermore, we also showcase implementations of neural networks to leverage information within local structures, aiming to increase confidence in assigning photon numbers. Finally, we demonstrate the advantage of some nonlinear methods to detect and remove outlier signals.
 
@@ -60,42 +57,35 @@ To solve this unsupervised classification problem, dimensionality reduction tech
 We use dimensionality reduction since it is a natural extension of previous work that uses PCA [@humphreys_tomography_2015]. Moreover, this framework is used to make the current work compatible with existing tomography routines [@humphreys_tomography_2015].
 It also enables the visualization and interpretation of an entire dataset, a task difficult by directly observing the TES signals. Supposing an accurate transformation exists and is faster to process than the acquisition rate of the detector, the low-dimensional representation reduces the memory requirements of experiments by acting as a compression step.
 
-:::{figure} content/Sections/Figures/circuit.pdf
-:label: circuit
-:width: 200px
-:align: center
+:::{figure} content/Figures/circuit.pdf
+:label: fig:circuit
 Circuit diagram of a typical transition-edge sensor detection scheme. The circuit can change slightly from one implementation to the other, the illustrated circuit is based on Ref.[@moraisPreciselyDeterminingPhotonnumber2022a]. The superconducting phase transition of the TES is illustrated through the sharp variation of resistance as a function of temperature, giving the TES extremely sensitive energy resolution [@thekkadathPreparingCharacterizingQuantum2020b]..
 :::
 
-:::{figure} content/Sections/Figures/EXtraces.png
-:label: EXtraces
-:width: 200px
-:align: center
+:::{figure} #traces
+:label: fig:EXtraces
 Example of multiple voltage outputs measured by an oscilloscope to construct a dataset with $u=1024$ raw TES traces of size $t=100$.
 :::
 
-:::{figure} content/Sections/Figures/EXdensity.pdf
-:label: EXdensity
-:width: 200px
-:align: center
+:::{figure} #density
+:label: fig:EXdensity
 The dataset X is transformed into Y which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
 :::
 
-:::{figure} content/Sections/Figures/EXdist.pdf
-:label: EXdist
-:width: 200px
-:align: center
+:::{figure} #dist
+:label: fig:EXdist
 Clusters in the latent space are assigned a photon number $n\in\{0,1,...,8\}$. This is done by dividing the space in regions most likely associated to specific photon numbers (see Sec.{ref}`sec:conf`). From labelled samples, a photon-number distribution can be generated
 :::
 
-**Figure:** Steps associated with the photon number detection process going from the device in {numref}`circuit` and the expected output signals in {numref}`EXtraces` to the abstract space describing similarities between samples in {numref}`EXdensity` and the final photon number distribution associated with an experiment in {numref}`EXdist`.
+**Figure:** Steps associated with the photon number detection process going from the device in {numref}`fig:circuit` and the expected output signals in {numref}`fig:EXtraces` to the abstract space describing similarities between samples in {numref}`fig:EXdensity` and the final photon number distribution associated with an experiment in {numref}`fig:EXdist`.
 
 Considering every signal in $\mathbf{X}$ can be associated with a photon number $n\in\{0,1,...,c\}$, where $c$ is the photon-number cutoff, i.e., the largest distinguishable photon number. We assume that effective dimensionality reduction organizes similar samples near each other, forming regions of high density.
 
-We illustrate the process in Fig.{ref}`fig:latentSpaceEx` by transforming the TES signals (Fig.{ref}`fig:EXtraces`) into one-dimensional samples presented in Fig.{ref}`fig:EXdensity`. This low dimensional space is visualized using a kernel density estimation of the latent space (Gaussian kernel)[@SeabornkdeplotSeaborn0132]. From the position of the samples in the latent space (never considering the density estimation in the computation) it is possible to find regions most likely to describe a photon number $n\in\{0,1,...,8\}$. We discuss this step in Sec.{ref}`sec:clustering`. Finally, from this interpretation of the low-dimensional space, a photon number can be assigned to every sample (Fig.{ref}`fig:EXdist`). The regions of high density in Fig.{ref}`fig:EXdensity` are called clusters and are associated with photon numbers. We note that clusters can be defined using other heuristics like neighbour distances.
+We illustrate the process in Fig.{ref}`fig:EXdensity` by transforming the TES signals (Fig.{ref}`fig:EXtraces`) into one-dimensional samples presented in Fig.{ref}`fig:EXdensity`. This low dimensional space is visualized using a kernel density estimation of the latent space (Gaussian kernel) [@SeabornkdeplotSeaborn0132]. From the position of the samples in the latent space (never considering the density estimation in the computation) it is possible to find regions most likely to describe a photon number $n\in\{0,1,...,8\}$. We discuss this step in Sec.{ref}`sec:clustering`. Finally, from this interpretation of the low-dimensional space, a photon number can be assigned to every sample (Fig.{ref}`fig:EXdist`). The regions of high density in Fig.{ref}`fig:EXdensity` are called clusters and are associated with photon numbers. We note that clusters can be defined using other heuristics like neighbour distances.
 
 An additional justification for the use of dimensionality reduction in combination with clustering instead of directly clustering over high dimensional data is that existing work has empirically demonstrated that creating a low dimensionality embedding increases the clustering capabilities in unsupervised settings [@allaoui_considerably_2020].
 
+(sec:clustering)=
 ## Clustering
 
 Clustering refers to identifying groups of similar samples inside a latent space. For this task we use a Gaussian mixture model, given a user-defined number of clusters, this method finds the parameters of a mixture of Gaussians to describe the sample's distribution.
@@ -118,9 +108,10 @@ where the problem can be computed in terms of sum instead of products.
 
 After computing the Gaussian mixture, photon numbers are assigned based on the average area of the samples inside each cluster. The mean area provides a reference for the cluster ordering, since a signal's area grows with energy and, consequently, the number of photons. This task is unambiguous because the average areas are well separated, unlike the individual samples.
 
+(sec:conf)=
 ## Quality Assessment
 
-Assessing the performance of dimensionality reduction techniques in an unsupervised setting is difficult since the ground truth is unknown. To tackle this task, we quantify cluster separation. To improve the performance evaluation it is also important to understand that the problem is not completely unsupervised considering photon sources used to generate samples follow known distributions. We include this knowledge of photon number distributions as an additional validation to cluster separation evaluation in the confidence metric. 
+Assessing the performance of dimensionality reduction techniques in an unsupervised setting is difficult since the ground truth is unknown. To tackle this task, we quantify cluster separation. To improve the performance evaluation it is also important to understand that the problem is not completely unsupervised considering photon sources used to generate samples follow known distributions. We include this knowledge of photon number distributions as an additional validation to cluster separation evaluation in the confidence metric.
 
 We consider the probability density of photon events can be approximated from the sample's distribution in the latent space following the Gaussian mixture model. Following previous work [@humphreys_tomography_2015], the confidence $C_n$ is used as a performance metric for the resolution of photon numbers in a latent space following,
 
@@ -132,7 +123,7 @@ In this equation, $p(s|n)$ is the probability density of observing a sample in p
 
 ## Datasets
 
-Experimental data from previous work at the National Institute of Standards and Technologies (NIST) is used to benchmark the different techniques in this work [@gerrits_extending_2012]. The original dataset was generated by progressively attenuating a coherent source from 29dB to 7dB, leading to 24 datasets each containing $u=20\,480$ signals and $t=8\,192$ time steps. This results in datasets that each have Poisson photon number distributions and mean photon number $\langle n_1 \rangle=2.26$ to $\langle n_{24} \rangle=7.08\times 10^6$. These values were independently measured using a calibrated photodetector. 
+Experimental data from previous work at the National Institute of Standards and Technologies (NIST) is used to benchmark the different techniques in this work [@gerrits_extending_2012]. The original dataset was generated by progressively attenuating a coherent source from 29dB to 7dB, leading to 24 datasets each containing $u=20\,480$ signals and $t=8\,192$ time steps. This results in datasets that each have Poisson photon number distributions and mean photon number $\langle n_1 \rangle=2.26$ to $\langle n_{24} \rangle=7.08\times 10^6$. These values were independently measured using a calibrated photodetector.
 
 Instead of directly using these distributions, we construct two synthetic datasets (made of real traces) that follow a close-to-uniform and close-to-geometric distributions $P(n)$. These datasets are labelled as Synthetic Uniform and Synthetic Geometric. Furthermore, for both of these datasets, a training and testing set were generated. Considering randomly selecting a portion of the samples in each experiment is equivalent to varying the weight $w_{{\langle n \rangle}}$ of a given Poisson distribution $P_{{\langle n \rangle}}(n)$ inside a mixture of Poisson distributions. The total expected distribution $P(n)$ can be described by
 
@@ -161,8 +152,6 @@ We present the confidence result for the different datasets and considering a va
 
 :::{figure} #synuniform
 :label: fig1
-:width: 200px
-:align: center
 
 Confidence of photon-number clusters for the different methods using the Synthetic Uniform dataset. In this figure, and the ones that follow, methods using a 1D latent space are represented by dotted lines, while those with 2D latent spaces are shown with solid lines.
 :::
@@ -171,8 +160,6 @@ Confidence of photon-number clusters for the different methods using the Synthet
 
 :::{figure} #syngeometric
 :label: fig2
-:width: 200px
-:align: center
 
 Confidence of photon-number clusters for the different methods using the Synthetic Geometric dataset.
 :::
@@ -182,8 +169,6 @@ Confidence of photon-number clusters for the different methods using the Synthet
 
 :::{figure} #large
 :label: fig4
-:width: 200px
-:align: center
 
 Confidence of Parametric UMAP compared with the non-parametric implementation and 1D PCA, for the Synthetic Large dataset taken at the National Research Council in Ottawa.
 :::
