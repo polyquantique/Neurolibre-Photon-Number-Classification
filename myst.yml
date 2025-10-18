@@ -39,7 +39,6 @@ project:
       country: USA
       postal_code: "20899"
   copyright: '2024'
-  github: NDalbec/Neurolibre-Photon-Number-Classification
   banner: featured.jpg
   thebe:
     binder:
