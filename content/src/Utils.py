@@ -54,8 +54,6 @@ def save_results(gm,
     if not os.path.isdir(path):
         try:
             os.mkdir(f'{path}/Confidence')
-            # os.mkdir(f'{path}/Mean_Clusters')
-            # os.mkdir(f'{path}/Trustworthiness Euclidian')
             os.mkdir(f'{path}/g2')
         except OSError as error:
             print(error)
@@ -65,12 +63,6 @@ def save_results(gm,
     if not gm.confidence_2D is None:
         np.save(f'{path}/Confidence/{name_method}.npy', gm.confidence_2D)
 
-    # if not gm.cluster_means is None:
-    #     np.save(f'{path}/Mean Clusters/{name_method}.npy', gm.cluster_means) 
-
-    # if not gm.trustworthiness_eucl[0] == 0:
-    #     np.save(f'{path}/Trustworthiness Euclidian/{name_method}.npy', gm.trustworthiness_eucl) 
-    
     if not gm.g2 is None:
         np.save(f'{path}/g2/{name_method}_g2.npy', gm.g2) 
         np.save(f'{path}/g2/{name_method}_db.npy', gm.unique_db)
