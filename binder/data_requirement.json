@@ -1,12 +1,12 @@
 {
 "Boulder" : {
-   "src": "10.5281/zenodo.14101974",
-   "dst": "data_boulder",
+   "src": "https://zenodo.org/records/14101974/files/data.zip?download=1",
+   "dst": "./data",
    "projectName": "data_boulder"
 },
 "Ottawa" : {
-   "src": "10.5281/zenodo.14042152",
-   "dst": "data_ottawa",
+   "src": "https://zenodo.org/records/14042152/files/data.zip?download=1",
+   "dst": "./data",
    "projectName": "data_ottawa"
 }
 }

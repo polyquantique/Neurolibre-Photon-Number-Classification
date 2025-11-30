@@ -1,5 +1,4 @@
-content/Dataset/Data_Boulder/data.zip
-content/Dataset/Data_Ottawa/data.zip
+content/data/*
 
 content/Results/Geometric/Confidence/*
 content/Results/Geometric/Density/*
