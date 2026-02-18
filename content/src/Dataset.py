@@ -195,7 +195,8 @@ def dataset_dat(
         else:  # TEST
             X_test.append(raw)
             X_dB_test.append(np.full(w, db_string))
-
+    print('==============================================================>>>> DEBUG')
+    print(X_test)
     X_test = -1 * np.concatenate(X_test).astype(float)
     X_train = -1 * np.concatenate(X_train).astype(float)
     X_dB_test = np.concatenate(X_dB_test)
