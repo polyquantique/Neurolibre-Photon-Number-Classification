@@ -155,16 +155,6 @@ def dataset_dat(
     weights = weights / weights.max()
     dB_ = [str(i) for i in dB]
 
-    print('==============================================================>>>> DEBUG DIRS')
-    print(path_data)
-    print(path_random_index)
-    os.listdir('/home/jovyan')
-    os.listdir('/home/jovyan/data')
-    # os.listdir(path_data)
-    # os.listdir(f"{path_data}/data")
-    # os.listdir(f"{path_data}/data/PIEdataRaw1")
-    # os.listdir(f"{path_data}/data/PIEdataRaw2")
-
     files = []
     for root, _, filenames in os.walk(path_data):
         for f in filenames:
@@ -172,8 +162,6 @@ def dataset_dat(
                 files.append(os.path.join(root, f))
 
     files = sorted(files)
-    print('==============================================================>>>> DEBUG files')
-    print(files)
 
     # filename example:
     # 2010-08-05_1616_TES_A2_tomo_saturation_1kHz__1550.0nm_att17.0+17.0+17.0dB-bias1.000V-thr00001.01.det.daq
@@ -206,9 +194,6 @@ def dataset_dat(
             continue
 
         last_int = int(m_last.group(1))
-
-        print('==============================================================>>>> DEBUG')
-        print(last_int)
 
         try:
             raw = np.fromfile(file_, dtype=np.float16)
