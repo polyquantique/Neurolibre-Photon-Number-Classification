@@ -123,6 +123,20 @@ def stand(X: np.array):
     return (X - X.mean()) / X.std()
 
 
+def find_repo_root(marker='myst.yml'):
+    """
+    Use an anchor to determine repo root 
+    for passing absolute path
+    """
+    path = os.path.abspath('')
+    while True:
+        if os.path.exists(os.path.join(path, marker)):
+            return path
+        parent = os.path.dirname(path)
+        if parent == path:
+            raise RuntimeError(f"Could not find {marker}")
+        path = parent
+
 def dataset_dat(
     weights,
     path_data: str,
