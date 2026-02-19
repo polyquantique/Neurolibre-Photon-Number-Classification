@@ -155,6 +155,14 @@ def dataset_dat(
     weights = weights / weights.max()
     dB_ = [str(i) for i in dB]
 
+    print('==============================================================>>>> DEBUG DIRS')
+    print(path_data)
+    print(path_random_index)
+    os.listdir(path_data)
+    os.listdir(f"{path_data}/data")
+    os.listdir(f"{path_data}/data/PIEdataRaw1")
+    os.listdir(f"{path_data}/data/PIEdataRaw2")
+
     files = []
     for root, _, filenames in os.walk(path_data):
         for f in filenames:
@@ -162,7 +170,7 @@ def dataset_dat(
                 files.append(os.path.join(root, f))
 
     files = sorted(files)
-    print('==============================================================>>>> DEBUG')
+    print('==============================================================>>>> DEBUG files')
     print(files)
 
     # filename example:
@@ -214,8 +222,7 @@ def dataset_dat(
         else:  # TEST
             X_test.append(raw)
             X_dB_test.append(np.full(w, db_string))
-    print('==============================================================>>>> DEBUG')
-    print(X_test)
+
     X_test = -1 * np.concatenate(X_test).astype(float)
     X_train = -1 * np.concatenate(X_train).astype(float)
     X_dB_test = np.concatenate(X_dB_test)
