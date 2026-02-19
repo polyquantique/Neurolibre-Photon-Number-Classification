@@ -158,10 +158,12 @@ def dataset_dat(
     print('==============================================================>>>> DEBUG DIRS')
     print(path_data)
     print(path_random_index)
-    os.listdir(path_data)
-    os.listdir(f"{path_data}/data")
-    os.listdir(f"{path_data}/data/PIEdataRaw1")
-    os.listdir(f"{path_data}/data/PIEdataRaw2")
+    os.listdir('/home/jovyan')
+    os.listdir('/home/jovyan/data')
+    # os.listdir(path_data)
+    # os.listdir(f"{path_data}/data")
+    # os.listdir(f"{path_data}/data/PIEdataRaw1")
+    # os.listdir(f"{path_data}/data/PIEdataRaw2")
 
     files = []
     for root, _, filenames in os.walk(path_data):
