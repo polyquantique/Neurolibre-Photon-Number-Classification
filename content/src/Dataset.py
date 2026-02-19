@@ -162,6 +162,8 @@ def dataset_dat(
                 files.append(os.path.join(root, f))
 
     files = sorted(files)
+    print('==============================================================>>>> DEBUG')
+    print(files)
 
     # filename example:
     # 2010-08-05_1616_TES_A2_tomo_saturation_1kHz__1550.0nm_att17.0+17.0+17.0dB-bias1.000V-thr00001.01.det.daq
@@ -194,6 +196,9 @@ def dataset_dat(
             continue
 
         last_int = int(m_last.group(1))
+
+        print('==============================================================>>>> DEBUG')
+        print(last_int)
 
         try:
             raw = np.fromfile(file_, dtype=np.float16)
