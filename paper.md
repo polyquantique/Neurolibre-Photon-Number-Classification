@@ -22,7 +22,11 @@ affiliations:
     index: 2
   - name: National Institute of Standards and Technology, 100 Bureau Drive, Gaithersburg, MD 20899, USA
     index: 3
-date: 2024-12-03
+tags: 
+  - photon counting
+  - transition edge sensor
+  - unsupervised learning
+date: "03 December 2024"
 bibliography: content/paper.bib
 ---
 
