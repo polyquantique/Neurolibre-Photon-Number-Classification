@@ -69,18 +69,21 @@ Circuit diagram of a typical transition-edge sensor detection scheme. The circui
 
 :::{figure} #traces
 :label: EXtraces
+:width: 100%
 
 Example of multiple voltage outputs measured by an oscilloscope to construct a dataset with $u=1024$ raw TES traces of size $t=100$.
 :::
 
 :::{figure} #density
 :label: EXdensity
+:width: 100%
 
 The dataset X is transformed into Y which has a single dimension ($r=1$), here plotted using a kernel density estimation [@SeabornkdeplotSeaborn0132]. The dimensionality reduction technique (maximum value of the signals in this case) creates a low-dimensional space where signal features become apparent. Each peak is a cluster that represents the underlying dominant feature of the signals: the photon numbers.
 :::
 
 :::{figure} #dist
 :label: EXdist
+:width: 100%
 
 Clusters in the latent space are assigned a photon number $n\in\{0,1,...,8\}$. This is done by dividing the space in regions most likely associated to specific photon numbers (see [Sec. %s](#quality-assessment)). From labelled samples, a photon-number distribution can be generated
 :::
