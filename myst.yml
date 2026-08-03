@@ -5,16 +5,21 @@ project:
   authors:
     - name: Nicolas Dalbec-Constant
       email: nicolas.dalbec-constant@polymtl.ca
+      orcid: 0009-0003-3432-9816 
       affiliations: polytechnique
     - name: Guillaume Thekkadath
+      orcid: 0000-0002-4366-2245
       affiliations: nrc
     - name: Duncan England
+      orcid: 0000-0002-9101-6897
       affiliations: nrc
     - name: Benjamin Sussman
       affiliations: nrc
     - name: Thomas Gerrits
       affiliations: nist
+      orcid: 0000-0001-8135-1811
     - name: Nicolás Quesada
+      orcid: 0000-0002-0175-1688
       email: nicolas.quesada@polymtl.ca
       affiliations: polytechnique
   affiliations:
@@ -49,11 +54,11 @@ project:
     - photon counting
     - transition edge sensor
     - unsupervised learning
-  venue: Neurolibre
+  venue: Evidence
   subject: Living Preprint
   numbering:
     headings: true
-  doi: 10.55458/neurolibre.xxxxx
+  doi: 10.55458/evidencepub.xxxxx
   open_access: true
   license:
     content: CC-BY-4.0
@@ -83,6 +88,7 @@ project:
     - content/Methods_Geometric.ipynb
     - content/Methods_Large.ipynb
     - content/Results.ipynb
+  date: "2024-03-12"
 
 # Site / HTML options
 site:
