@@ -86,7 +86,7 @@ class gaussian_mixture():
             metric_sweep : str = 'silhouette',
             width_plot : int = 6,
             height_plot : int = 3,
-            dpi : int = 100,
+            dpi : int = 200,
             style : str = r'src/custom.mplstyle',
             latex : bool = False,
             interval : Union[None,tuple] = None

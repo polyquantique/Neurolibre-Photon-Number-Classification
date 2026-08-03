@@ -23,7 +23,7 @@ def plot_traces(X_high : np.array):
     
     """
     with plt.style.context(STYLE):
-        plt.figure(figsize=(6,3), dpi=100)
+        plt.figure(figsize=(6,3), dpi=200)
         plt.plot(X_high[::10].T, alpha = 0.01)
         plt.xlabel('Time (a.u.)')
         plt.ylabel('Voltage (a.u.)')
@@ -96,7 +96,7 @@ def plot_results(
     colors = cmap(np.linspace(0, 1, len(config.keys())))
 
     with plt.style.context(STYLE):
-        fig, ax = plt.subplots(figsize = (6,3))
+        fig, ax = plt.subplots(figsize = (6,3), dpi = 200)
         for method, color in zip(config, colors):
 
             method_dict = config[method]
@@ -167,7 +167,7 @@ def plot_trust(config,
     y_pos = np.arange(4*len(trust1))
 
     with plt.style.context("seaborn-v0_8"):
-        plt.figure(figsize = (6,10))
+        plt.figure(figsize = (6,10), dpi = 200)
         ax = plt.gca()
         hbars1 = ax.barh(y_pos[0::4], trust1, align='center', alpha=0.7)
         hbars2 = ax.barh(y_pos[1::4], trust2, align='center', alpha=0.7)

@@ -239,7 +239,7 @@ def dataset_dat(
 
     if plot_expected:
         with plt.style.context("seaborn-v0_8"):
-            plt.figure(figsize=(6, 3), dpi=100)
+            plt.figure(figsize=(6, 3), dpi=200)
             plt.bar(n_arr, expected_prob, alpha=0.5, zorder=2)
             plt.xlabel("Photon number")
             plt.ylabel("Probability")
@@ -247,7 +247,7 @@ def dataset_dat(
 
     if plot_traces:
         with plt.style.context("seaborn-v0_8"):
-            plt.figure(figsize=(6, 3), dpi=100)
+            plt.figure(figsize=(6, 3), dpi=200)
             plt.plot(data_train[::10].T, alpha=0.05, linewidth=1)
             plt.plot(data_test[::10].T, alpha=0.05, linewidth=1)
             plt.xlabel("Time (a.u.)")
@@ -327,7 +327,7 @@ def dataset_csv(
 
     if plot_traces:
         with plt.style.context("seaborn-v0_8"):
-            plt.figure(figsize=(6, 3), dpi=100)
+            plt.figure(figsize=(6, 3), dpi=200)
             plt.plot(data_train[::10].T, alpha=0.05, linewidth=1)
             plt.plot(data_test[::10].T, alpha=0.05, linewidth=1)
             plt.xlabel("Time (a.u.)")
