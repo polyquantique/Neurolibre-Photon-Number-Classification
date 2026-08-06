@@ -1,0 +1,43 @@
+cff-version: "1.2.0"
+title: Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals
+authors:
+- email: nicolas.dalbec-constant@polymtl.ca
+  family-names: Dalbec-Constant
+  given-names: Nicolas
+- family-names: Thekkadath
+  given-names: Guillaume
+- family-names: England
+  given-names: Duncan
+- family-names: Sussman
+  given-names: Benjamin
+- family-names: Gerrits
+  given-names: Thomas
+- email: nicolas.quesada@polymtl.ca
+  family-names: Quesada
+  given-names: Nicolás
+message: To reference this work, please cite our reproducible preprint in NeuroLibre.
+preferred-citation:
+  authors:
+  - email: nicolas.dalbec-constant@polymtl.ca
+    family-names: Dalbec-Constant
+    given-names: Nicolas
+  - family-names: Thekkadath
+    given-names: Guillaume
+  - family-names: England
+    given-names: Duncan
+  - family-names: Sussman
+    given-names: Benjamin
+  - family-names: Gerrits
+    given-names: Thomas
+  - email: nicolas.quesada@polymtl.ca
+    family-names: Quesada
+    given-names: Nicolás
+  date-published: 2026-08-06
+  doi: 10.55458/neurolibre.00046
+  journal: NeuroLibre Reproducible Preprints
+  publisher:
+    name: NeuroLibre
+  start: 46
+  title: Accurate Unsupervised Photon Counting from Transition Edge Sensor Signals
+  type: preprint
+  url: "https://neurolibre.org/papers/10.55458/neurolibre.00046"
