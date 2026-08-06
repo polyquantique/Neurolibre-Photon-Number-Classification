@@ -1,3 +1,5 @@
+
+[![a](https://neurolibre.org/papers/10.55458/neurolibre.00046/status.svg)](https://doi.org/10.55458/neurolibre.00046)
 [![a](https://img.shields.io/static/v1?label=arXiv&message=2411.05737&color=active&style=flat-square)](https://arxiv.org/abs/2411.05737)
 [![a](https://img.shields.io/static/v1?label=Zenodo&message=10.5281/zenodo.14101974&color=active&style=flat-square)](https://doi.org/10.5281/zenodo.14101974)
 [![a](https://img.shields.io/static/v1?label=Zenodo&message=10.5281/zenodo.14042152&color=active&style=flat-square)](https://doi.org/10.5281/zenodo.14042152)
